@@ -2,7 +2,7 @@
 
 import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import parse_qs, unquote, urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 from engine import Engine
 from json_values import dumps, loads
@@ -55,7 +55,7 @@ class Handler(BaseHTTPRequestHandler):
                     raise APIError(400, 'malformed_request') from None
             target = urlsplit(self.path)
             query = {k: v[0] for k, v in parse_qs(target.query, keep_blank_values=True).items()}
-            status, value = self.engine.handle(self.command, unquote(target.path), query, self.headers, body)
+            status, value = self.engine.handle(self.command, target.path, query, self.headers, body)
         except APIError as error:
             status, value = error.status, {'error': {'code': error.code, 'message': error.message}}
         except (ValueError, OverflowError, RecursionError):

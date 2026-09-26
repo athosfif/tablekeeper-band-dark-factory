@@ -5,6 +5,7 @@ import secrets
 import threading
 import uuid
 from datetime import datetime, timedelta
+from urllib.parse import unquote
 from zoneinfo import ZoneInfo
 
 from json_values import clone, dumps
@@ -110,7 +111,9 @@ class Engine:
             return 200, {'restaurants': [{k: r[k] for k in ('id', 'name', 'timezone')} for r in state['restaurants']]}
         if method == 'GET' and re.fullmatch(r'/restaurants/[^/]+', path):
             from model import restaurant
-            return 200, restaurant(state, path.split('/')[2])
+            # Split the encoded route first: an encoded slash belongs to the
+            # opaque ID, not to the routing structure. Decode that ID once only.
+            return 200, restaurant(state, unquote(path.split('/')[2]))
         if method == 'GET' and path == '/availability':
             from model import restaurant
             require(all(k in query for k in ('restaurant_id', 'date', 'party_size')))
@@ -195,7 +198,7 @@ class Engine:
             return 201, response
         match = re.fullmatch(r'/reservations/([^/]+)(/cancel)?', path)
         if match:
-            record = self.owned(match[1], uid)
+            record = self.owned(unquote(match[1]), uid)
             if method == 'GET' and not match[2]:
                 return 200, public(record)
             if method == 'POST' and match[2]:

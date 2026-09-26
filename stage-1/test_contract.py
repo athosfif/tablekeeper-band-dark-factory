@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
 
@@ -386,6 +386,25 @@ class Contract(unittest.TestCase):
             current = self.request('GET', '/reservations/' + created[1]['reference'], token=self.ada)[1]
             self.assertEqual(current['table_id'], 't2')
             self.assertEqual(self.request('POST', '/reservation-moves', token=self.ada, key='failed', raw=encoded(move))[0], 201)
+
+    def test_opaque_restaurant_id_routes_decode_one_segment_once(self):
+        seed = fixture()
+        ids = ['branch/one', 'filial/ação', 'branch%2Fone', 'x?y#z', '../reservations', 'with space']
+        seed['restaurants'] = [{**copy.deepcopy(seed['restaurants'][0]), 'id': rid} for rid in ids]
+        self.assertEqual(self.request('POST', '/_test/reset', seed)[0], 204)
+        self.assertEqual([r['id'] for r in self.request('GET', '/restaurants')[1]['restaurants']], ids)
+        for rid in ids:
+            self.assertEqual(self.request('GET', '/restaurants/' + quote(rid, safe=''))[1]['id'], rid)
+            query = urlencode({'restaurant_id': rid, 'date': '2032-10-25', 'party_size': 2})
+            self.assertEqual(self.request('GET', '/availability?' + query)[0], 200)
+        for rid in ['unknown/name', 'missing%2Fname', 'missing/ação']:
+            self.error(self.request('GET', '/restaurants/' + quote(rid, safe='')), 404, 'not_found')
+        self.error(self.request('GET', '/reservations/anything%2Felse'), 401, 'unauthenticated')
+        self.error(self.request('POST', '/reservations/anything/cancel', {}), 401, 'unauthenticated')
+        self.ada = self.login('ada')
+        record = self.create('opaque', restaurant_id='branch/one')
+        encoded_reference = ''.join('%' + format(ord(c), '02X') for c in record['reference'])
+        self.assertEqual(self.request('GET', '/reservations/' + encoded_reference, token=self.ada), (200, record))
 
 
 class TransactionFailure(unittest.TestCase):
