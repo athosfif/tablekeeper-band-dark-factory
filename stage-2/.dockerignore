@@ -1,0 +1,9 @@
+*
+!model.py
+!legacy_model.py
+!static/
+!static/**
+!json_values.py
+!engine.py
+!server.py
+!Dockerfile
