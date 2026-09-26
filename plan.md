@@ -1,6 +1,6 @@
 # Tablekeeper — sequential stages 2–4 plan
 
-Status: Stage 2 independently accepted at 2e026c006569b2e749de79b7526f03ae9b6e44e3; Stage 3 is in progress from its complete copied folder. Stage 4 remains gated on Stage 3 independent acceptance. This replaces the Stage-1-only scope of the previous active plan; all earlier history and evidence remain intact.
+Status: Stage 3 independently accepted at 4b7b0620f3dd645fac18d840a6d612e8f4c6bed6. Stage 4 is the current authorized phase, starting from its complete copied folder; final four-folder packaging remains pending.
 
 ## Accepted baseline and immutable inputs
 
@@ -33,6 +33,15 @@ No new seats/rooms, human clarification or approval. Existing authorization cove
 - Independent: 36/36 API groups and 10/10 browser groups, including populated Stage 1 upgrade in the same open browser.
 - Initial 61949b2 was rejected for valid long restaurant names overflowing at 375px despite passing shipped checks. New CSS commit fixed wrapping; independent browser full-flow recheck and Planner's original regression both passed.
 - Stage-specific evidence and limits: [STAGE-2-REPORT.md](STAGE-2-REPORT.md).
+
+## Recorded Stage 3 outcome
+
+- Accepted source: 4b7b0620f3dd645fac18d840a6d612e8f4c6bed6; folder tree 6f4bee6bec0d5908de7ebe9345290f786b012b63.
+- Stage 1 and Stage 2 trees remain exactly as recorded above.
+- Isolated official: 120/120 Stage 1, 25/25 Stage 2 and 7/7 Stage 3. Stage 4 probe: four passed, one missing-endpoint failure, one unexecuted; it did not pass the whole next suite.
+- Independent: 55/55 API groups and 12 unique browser groups (11 full plus one targeted), including actual populated Stage 1 and Stage 2 upgrades. No application defect found or source repair requested.
+- Planner additionally verified selected-policy capacity displayed truthfully while original restaurant detail stays unchanged.
+- Stage-specific evidence and limits: [STAGE-3-REPORT.md](STAGE-3-REPORT.md).
 
 ## Product direction
 
