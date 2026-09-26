@@ -1,0 +1,12 @@
+*
+!model.py
+!legacy_model.py
+!stage2_model.py
+!stage3_model.py
+!planning.py
+!static/
+!static/**
+!json_values.py
+!engine.py
+!server.py
+!Dockerfile
