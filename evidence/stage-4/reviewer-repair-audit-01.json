@@ -1,0 +1,27 @@
+{
+  "at_utc": "2026-09-26T19:33:46Z",
+  "revision": "8c6df7f369f0041798abf8de0e10c0babf501df5",
+  "clean": true,
+  "trees": {
+    "stage-1": "0050accbdc6d0457ffdc73de6365158e65c1808b",
+    "stage-2": "2ebbd48a3ba2b6de7eba2a5fcd851a36efc4e2c8",
+    "stage-3": "6f4bee6bec0d5908de7ebe9345290f786b012b63",
+    "stage-4": "e4bae830ae426197911968153c97c4ef06f9e40d",
+    "mandates": "fbfd2dd5db832c375091a0b3a63bb944cd3ec859"
+  },
+  "repair_files": [
+    "stage-4/RUN.md",
+    "stage-4/static/app.js",
+    "stage-4/test_confirmation.py"
+  ],
+  "symlinks_submodules": [],
+  "nested_git_or_links": [],
+  "accepted_ancestry": {
+    "e5c256641653de82a97222d1126308fbde6188f6": true,
+    "2e026c006569b2e749de79b7526f03ae9b6e44e3": true,
+    "4b7b0620f3dd645fac18d840a6d612e8f4c6bed6": true,
+    "d6b3c0fee8af35dbb15bf98e26f62b8c938e86ce": true
+  },
+  "upstream_revision": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "upstream_tracked_status": ""
+}

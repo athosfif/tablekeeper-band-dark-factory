@@ -1,0 +1,42 @@
+test_01_public_configuration_and_seed (reviewer_inherited.SpecChecks.test_01_public_configuration_and_seed) ... ok
+test_02_authentication_and_sessions (reviewer_inherited.SpecChecks.test_02_authentication_and_sessions) ... ok
+test_03_type_format_and_missing_errors (reviewer_inherited.SpecChecks.test_03_type_format_and_missing_errors) ... ok
+test_04_past_dates_seed_ids_and_reset (reviewer_inherited.SpecChecks.test_04_past_dates_seed_ids_and_reset) ... ok
+test_05_create_errors_and_half_open (reviewer_inherited.SpecChecks.test_05_create_errors_and_half_open) ... ok
+test_06_parsed_json_idempotency_and_receipts (reviewer_inherited.SpecChecks.test_06_parsed_json_idempotency_and_receipts) ... ok
+test_07_50_concurrent_unique_create_contention (reviewer_inherited.SpecChecks.test_07_50_concurrent_unique_create_contention) ... ok
+test_08_50_concurrent_identical_create (reviewer_inherited.SpecChecks.test_08_50_concurrent_identical_create) ... ok
+test_09_list_privacy_patch_cancel (reviewer_inherited.SpecChecks.test_09_list_privacy_patch_cancel) ... ok
+test_10_cutoff_uses_old_start (reviewer_inherited.SpecChecks.test_10_cutoff_uses_old_start) ... ok
+test_11_dst_gaps_folds_absolute_duration (reviewer_inherited.SpecChecks.test_11_dst_gaps_folds_absolute_duration) ... ok
+test_12_moves_shapes_privacy_and_cross_restaurant (reviewer_inherited.SpecChecks.test_12_moves_shapes_privacy_and_cross_restaurant) ... ok
+test_13_eight_cycle_noop_and_rollback (reviewer_inherited.SpecChecks.test_13_eight_cycle_noop_and_rollback) ... ok
+test_14_moves_input_order_nonoccupancy_precedence (reviewer_inherited.SpecChecks.test_14_moves_input_order_nonoccupancy_precedence) ... ok
+test_15_50_identical_moves_and_original_replay (reviewer_inherited.SpecChecks.test_15_50_identical_moves_and_original_replay) ... ok
+test_16_50_amendments_single_destination (reviewer_inherited.SpecChecks.test_16_50_amendments_single_destination) ... ok
+test_17_independent_process_snapshot_restore (reviewer_inherited.SpecChecks.test_17_independent_process_snapshot_restore) ... ok
+test_18_50_logins_preserve_every_session (reviewer_inherited.SpecChecks.test_18_50_logins_preserve_every_session) ... ok
+test_19_fixture_numeric_types_and_invalid_ranges (reviewer_inherited.SpecChecks.test_19_fixture_numeric_types_and_invalid_ranges) ... ok
+test_20_dst_closing_and_grid_from_offset_open (reviewer_inherited.SpecChecks.test_20_dst_closing_and_grid_from_offset_open) ... ok
+test_21_deep_ignored_body_is_atomic_and_replayable (reviewer_inherited.SpecChecks.test_21_deep_ignored_body_is_atomic_and_replayable) ... ok
+test_22_same_body_cross_path_and_numeric_equality (reviewer_inherited.SpecChecks.test_22_same_body_cross_path_and_numeric_equality) ... ok
+test_23_concurrent_atomic_export_and_moves (reviewer_inherited.SpecChecks.test_23_concurrent_atomic_export_and_moves) ... ok
+test_24_deep_moves_commit_and_receipt_together (reviewer_inherited.SpecChecks.test_24_deep_moves_commit_and_receipt_together) ... ok
+test_25_table_ids_are_scoped_by_restaurant (reviewer_inherited.SpecChecks.test_25_table_ids_are_scoped_by_restaurant) ... ok
+test_26_opaque_restaurant_ids_remain_publicly_addressable (reviewer_inherited.SpecChecks.test_26_opaque_restaurant_ids_remain_publicly_addressable) ... ok
+test_27_deep_decoder_syntax_retry_and_portable_receipts (reviewer_inherited.SpecChecks.test_27_deep_decoder_syntax_retry_and_portable_receipts) ... ok
+test_28_encoded_reference_keeps_ownership_and_auth (reviewer_inherited.SpecChecks.test_28_encoded_reference_keeps_ownership_and_auth) ... ok
+test_pair_01_options_exact_order_and_capacity (reviewer_pair_checks.PairChecks.test_pair_01_options_exact_order_and_capacity) ... ok
+test_pair_02_validation_keys_and_canonical_order (reviewer_pair_checks.PairChecks.test_pair_02_validation_keys_and_canonical_order) ... ok
+test_pair_03_occupancy_adjacency_and_cancelled_seed (reviewer_pair_checks.PairChecks.test_pair_03_occupancy_adjacency_and_cancelled_seed) ... ok
+test_pair_04_patch_transitions_and_failed_atomicity (reviewer_pair_checks.PairChecks.test_pair_04_patch_transitions_and_failed_atomicity) ... ok
+test_pair_05_batch_swap_rollback_and_receipt (reviewer_pair_checks.PairChecks.test_pair_05_batch_swap_rollback_and_receipt) ... ok
+test_pair_06_fifty_conflicts_and_fifty_identical (reviewer_pair_checks.PairChecks.test_pair_06_fifty_conflicts_and_fifty_identical) ... ok
+test_pair_07_pair_snapshot_replacement (reviewer_pair_checks.PairChecks.test_pair_07_pair_snapshot_replacement) ... ok
+test_pair_08_actual_stage1_upgrade_original_receipts (reviewer_pair_checks.PairChecks.test_pair_08_actual_stage1_upgrade_original_receipts) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 14.461s
+
+OK
+{"errors": 0, "failures": 0, "groups_run": 36, "http_requests": 1205, "normal_max_seconds": 2.5517957100000785, "observed_5xx": 0, "test_control_max_seconds": 0.25925041699997564}

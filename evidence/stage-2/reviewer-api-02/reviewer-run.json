@@ -1,0 +1,415 @@
+{
+  "stage": 2,
+  "mode": "api",
+  "revision": "2e026c006569b2e749de79b7526f03ae9b6e44e3",
+  "started_utc": "2026-09-26T18:21:02Z",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.09832566700060852,
+      "log": "revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.1708654159992875,
+      "log": "status-before.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.020380916001158766,
+      "log": "stage1-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.023114999999961583,
+      "log": "stage2-tree.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "build",
+        "-t",
+        "reviewer-tablekeeper-s2:2e026c006569",
+        "."
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper/stage-2",
+      "exit": 0,
+      "seconds": 1.0595737079966057,
+      "log": "build-stage2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "build",
+        "-t",
+        "reviewer-tablekeeper-s1:0f96bf0cd889",
+        "."
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper/stage-1",
+      "exit": 0,
+      "seconds": 0.4274483330009389,
+      "log": "build-stage1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "network",
+        "create",
+        "--internal",
+        "reviewer-s2-reviewer-api-02"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.043553666000661906,
+      "log": "network-create.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s2-reviewer-api-02-source",
+        "--network",
+        "reviewer-s2-reviewer-api-02",
+        "--cpus=2",
+        "--memory=2g",
+        "reviewer-tablekeeper-s2:2e026c006569"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.19369274999917252,
+      "log": "start-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s2-reviewer-api-02-source",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.35623691599903395,
+      "log": "health-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s2-reviewer-api-02-source"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03897912499814993,
+      "log": "constraints-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s2-reviewer-api-02-destination",
+        "--network",
+        "reviewer-s2-reviewer-api-02",
+        "--cpus=2",
+        "--memory=2g",
+        "-e",
+        "PORT=8097",
+        "reviewer-tablekeeper-s2:2e026c006569"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.15469758299877867,
+      "log": "start-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s2-reviewer-api-02-destination",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8097/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.3328669580005226,
+      "log": "health-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s2-reviewer-api-02-destination"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.030745959000341827,
+      "log": "constraints-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s2-reviewer-api-02-old",
+        "--network",
+        "reviewer-s2-reviewer-api-02",
+        "--cpus=2",
+        "--memory=2g",
+        "reviewer-tablekeeper-s1:0f96bf0cd889"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.17169850000209408,
+      "log": "start-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s2-reviewer-api-02-old",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.30427258299823734,
+      "log": "health-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s2-reviewer-api-02-old"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.037721791999501875,
+      "log": "constraints-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "network",
+        "inspect",
+        "--format",
+        "{{.Internal}}",
+        "reviewer-s2-reviewer-api-02"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.028040166002028855,
+      "log": "network-internal.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s2-reviewer-api-02-source",
+        "python",
+        "-c",
+        "import socket\ns=socket.socket();s.settimeout(1)\ntry:\n s.connect(('1.1.1.1',443));raise SystemExit('OUTBOUND_CONNECTED')\nexcept OSError: print('outbound unavailable as required')"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.12964791700142086,
+      "log": "outbound-probe.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "--rm",
+        "-i",
+        "--network",
+        "reviewer-s2-reviewer-api-02",
+        "--cpus=2",
+        "--memory=2g",
+        "-e",
+        "REVIEW_BASE=http://reviewer-s2-reviewer-api-02-source:8080",
+        "-e",
+        "REVIEW_DEST=http://reviewer-s2-reviewer-api-02-destination:8097",
+        "-e",
+        "REVIEW_OLD=http://reviewer-s2-reviewer-api-02-old:8080",
+        "--entrypoint",
+        "python",
+        "reviewer-tablekeeper-s2:2e026c006569",
+        "-B",
+        "-"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 15.231537167001079,
+      "log": "checks.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s2-reviewer-api-02-source"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.3501171659991087,
+      "log": "cleanup-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s2-reviewer-api-02-destination"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.12101424999855226,
+      "log": "cleanup-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s2-reviewer-api-02-old"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.19145133300116868,
+      "log": "cleanup-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "network",
+        "rm",
+        "reviewer-s2-reviewer-api-02"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.10313583400056814,
+      "log": "network-remove.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s2-reviewer-api-02-runmd",
+        "--cpus=2",
+        "--memory=2g",
+        "-e",
+        "PORT=8080",
+        "-p",
+        "127.0.0.1:18093:8080",
+        "reviewer-tablekeeper-s2:2e026c006569"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.22548462499980815,
+      "log": "runmd-start.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s2-reviewer-api-02-runmd"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.14397341599760693,
+      "log": "runmd-cleanup.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.08900883300157147,
+      "log": "final-revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.06037204099993687,
+      "log": "final-stage1-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.06190091700045741,
+      "log": "status-after.log"
+    }
+  ],
+  "stage2_tree": "2ebbd48a3ba2b6de7eba2a5fcd851a36efc4e2c8",
+  "test_hashes": {
+    "reviewer_inherited.py": "807c635085e0d8ed15603a57f2e54b2f7a606c00d860cad94329fe19286164fe",
+    "reviewer_pair_checks.py": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "reviewer_browser_checks.py": "9e4fcb4090ee9c96c317ed43156f0d26fabec3fb109d46b370c877ff52464c38",
+    "reviewer_run.py": "1ae75a73c7686b26da5ec032767d159d146f3ad541bedbd3c74bc925fa00acc1"
+  },
+  "health_seconds": [
+    0.5500739169983717,
+    0.4876781659986591,
+    0.4761264160006249
+  ],
+  "exit": 0,
+  "runmd_health_seconds": 0.4702775000005204,
+  "elapsed_seconds": 20.50310412500039
+}

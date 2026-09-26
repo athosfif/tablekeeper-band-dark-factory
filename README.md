@@ -27,6 +27,16 @@ Open `http://localhost:8080`. Browser routes are `/`, `/signup`, `/login` and `/
 - [Stage 1 report](STAGE-1-REPORT.md), [Stage 2 report](STAGE-2-REPORT.md), [Stage 3 report](STAGE-3-REPORT.md), [Stage 4 report](STAGE-4-REPORT.md): exact source trees, independent/official local results and evidence.
 - [Mandates](mandates/): original generic seat instructions, unchanged.
 
-Evidence remains in the assigned local `/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-N` directories. No private state exports or live tokens are committed. Per-seat token usage and monetary spend are unavailable, not estimated.
+Evidence copies and original provenance are in [evidence/](evidence/). Historical reports retain the original local paths; use the matching stage subfolder here. The genuine full BAND download is [room.json](room.json), with its export timestamp and SHA-256 in [PACKAGING.json](evidence/PACKAGING.json). No edits or replacement log were made. Per-seat token usage and monetary spend are unavailable, not estimated.
 
-Local verification is not official judging or submission. The official full-room export and privacy review, presentation/video, public publication, clean-clone submission checks and event submission remain operator tasks. No replacement room log or submission receipt is fabricated here.
+Local verification is not official judging or submission. This publication preserves the accepted agent-authored source and history. A later operator packaging commit adds public evidence, the room export and presentation materials; it does not change the service or mandates. The competition portal confirms submission separately.
+
+## See it and try it
+
+- [Presentation (English PDF)](presentation/Tablekeeper-Presentation-EN.pdf)
+- [Run the real service with a synthetic fixture](docs/DEMO.md): `bash docs/run-demo.sh`
+- [Final independent delivery audit](evidence/stage-4/reviewer-delivery-audit-03/report.md)
+- [Stage 4 review and whole-package results](evidence/stage-4/reviewer-final-report.md)
+- [Full exported factory record](room.json)
+
+The narrated demonstration uses actual BAND and application recordings, with timelapse labeled. Narration is AI-generated using Envato; visual direction and presentation are by Athos Figueiredo. No performance or model-spend figure is invented.

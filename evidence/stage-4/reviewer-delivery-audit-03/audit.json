@@ -1,0 +1,3927 @@
+{
+  "revision": "40bb319c25fed8ee3c57b3364e997e71b1c87e6c",
+  "started_utc": "2026-09-26T19:56:37.836138+00:00",
+  "runtime_tests_rerun": false,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.09906262500226148
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.20663558299929718
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c^"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.021497707999515114
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.05119837500024005
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.02876754200042342
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.06163804199968581
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02653466700212448
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013126541998644825
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014499540997348959
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013690374998986954
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01440958400053205
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c:stage-3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01441858299949672
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5:stage-3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.04180112500034738
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c:stage-4"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.019113750000542495
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5:stage-4"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0176542499975767
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c:mandates"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016008624999813037
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5:mandates"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016006916001060745
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "0f96bf0cd889959d134ca6f8a5ee3066bbe459f8:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03145491699979175
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "2e026c006569b2e749de79b7526f03ae9b6e44e3:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.027024416001950158
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "4b7b0620f3dd645fac18d840a6d612e8f4c6bed6:stage-3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.037709333999373484
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5:stage-4"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01958224999907543
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--reverse",
+        "--format=%H %P %s",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.15077725000082864
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "0f96bf0cd889959d134ca6f8a5ee3066bbe459f8",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02140779099863721
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "2e026c006569b2e749de79b7526f03ae9b6e44e3",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01565495799877681
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "4b7b0620f3dd645fac18d840a6d612e8f4c6bed6",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014651041001343401
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016239708002103725
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "e5c256641653de82a97222d1126308fbde6188f6",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018122250003216323
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "d6b3c0fee8af35dbb15bf98e26f62b8c938e86ce",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.019532750000507804
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "61949b2abbb444a9ac082ee48c7109ef9423a3a2",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01822208299927297
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "9e02c181e3bcefdf3abbe272ba777eed614b8256",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.04677758300022106
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "9e02c181e3bcefdf3abbe272ba777eed614b8256",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c",
+        "--",
+        "mandates"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.026450375000422355
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c",
+        "--",
+        "STAGE-1-REPORT.md",
+        "STAGE-2-REPORT.md",
+        "STAGE-3-REPORT.md"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016244040998572018
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c:plan.md"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03037962500093272
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.08582100000057835
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2d7220cbb431137c5ddd6fe6d8beec434c72599"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03532404099678388
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3c4beafae86010a207647f742f4cc27bfcbac418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.024497083002643194
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1adc868e15666adbb3d6ca84e33f9de783b5a9e8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015071917001478141
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b0fb25883e3df87bdca18103efe173910eebd472"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03523895900070784
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1df880332cbbfaf67363e47c4d9004fb946b8e46"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.024344540997844888
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f3b8170c8adc66e78a04e9ded3405fb53d3ae3e9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.033548333998624
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ede66ecc105c10462cb4b9267bde1bc84c19c364"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0213271659995371
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e67450e7bddfd6b5caf84e6fda9ac4d871e0ed13"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03048129200033145
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c5d20940d798d701ec8d16de2014352c06b444e3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014430125000217231
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "39b78965851352b8dbaf2208714dd5e35c34d35b"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015563624998321757
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "eb9e23b887c75c55d8eae76cf1937339a61f3a49"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03713745799905155
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "6b42568e0094381051d6b587d86b6c518236209f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03969012499874225
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "4c14fa4b4ce5c0e95c1aecc9dabc33562213f6b8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01636279100057436
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "eb1584fbb2557b327559ad94ddb975817274f524"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0414889999992738
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "73a7497b68b4768f72af301213d6f4c556946869"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014369833003001986
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.05076595900027314
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.05573254200135125
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "dfbc7adf55356066d57eca9db2a0be3b39dd580b"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0277661670006637
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016798124997876585
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c12a82fa40b7b866216fe1ff8388deabef10c370"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.032602125000266824
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "80b215f34e85fc3a127e8dde6bcd9a3fbea7172e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.030090959000517614
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "2db1e5ac75270e1a328efa60dae17dced4c01193"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.027981417002592934
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ec7d89e6ba64ee14c2c71f5caa5dfe90aed517df"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.05154233400025987
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01655645800201455
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013974249999591848
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017822084002546035
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017415415997675154
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ba5b17472f20f6fadec9c200c81a48888cc2a8ad"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03210949999993318
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015684292000514688
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.04864879200249561
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015288916998542845
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03183112499755225
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e0d64aaa44b91d963e2c6d2710d67f22a836b26f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02254825000272831
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3a5e6d08e0bad51f8f344f1ab06a62b5c418bf1e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014115917001618072
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bd0ec04e374b222fbcd4890223d4132eea9f7e42"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018346332999499282
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "0d54dce40d086ebe39257f6e80b4b7d92b2d66e8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03223254199838266
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015427833001012914
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013926750001701294
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "843157483b65fe34c573ea28e949fb358cb80844"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02946054100175388
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0178544160007732
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018901708997873357
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "4447f80527089b6c2990579f1f5a13f6df9be684"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.036914416999934474
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015256750000844477
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015424291999806883
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013827583999955095
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014489708999462891
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cb71bb4369e6721fac085b7938561abc3bc2d526"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.024445541999739362
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "36a5e616dab2762cb036a000246452ba64c25fd8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.051852583997970214
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e11b30082a25392b9e6cd7ed8b739c2cc4eabdba"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.029771249999612337
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "99e95ff62baf7616701dbaae959ff251dab8351a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03257241699975566
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "9d83ebbba0208a28fc21db4031b76224373e032a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0365856669995992
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015484125000511995
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01489166600003955
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "a8d862cab47b9a4b7dd22283e17696fcd4ec8217"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.022482667001895607
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "dd49ae9fa2c9f85ef26c377b1d769484d0a95e0f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.021820124999067048
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014467791999777546
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014819833002547966
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "843157483b65fe34c573ea28e949fb358cb80844"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014285833000030834
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "49a44b3e8af59be2a082b9ea6b0fe05539df5d01"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0329937910028093
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01488216700090561
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014214792001439491
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "2f047379cc8a831a07d04100f257bc38f8a68349"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01367704199947184
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0234134999991511
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018857125000067754
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cb71bb4369e6721fac085b7938561abc3bc2d526"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017279166997468565
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d71c7fd995271336d941b3176137fc229202f3bc"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03396837500258698
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2d7220cbb431137c5ddd6fe6d8beec434c72599"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01773075000164681
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3c4beafae86010a207647f742f4cc27bfcbac418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01497358399865334
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1adc868e15666adbb3d6ca84e33f9de783b5a9e8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014798290998442098
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b0fb25883e3df87bdca18103efe173910eebd472"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014088084000832168
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1df880332cbbfaf67363e47c4d9004fb946b8e46"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014895917000103509
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f3b8170c8adc66e78a04e9ded3405fb53d3ae3e9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014099457999691367
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ede66ecc105c10462cb4b9267bde1bc84c19c364"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013840957999491366
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e67450e7bddfd6b5caf84e6fda9ac4d871e0ed13"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018832624999049585
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c5d20940d798d701ec8d16de2014352c06b444e3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013716500001464738
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "39b78965851352b8dbaf2208714dd5e35c34d35b"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016020959003071766
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "eb9e23b887c75c55d8eae76cf1937339a61f3a49"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014309209000202827
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "6b42568e0094381051d6b587d86b6c518236209f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015902625000308035
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "4c14fa4b4ce5c0e95c1aecc9dabc33562213f6b8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014826375001575798
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "eb1584fbb2557b327559ad94ddb975817274f524"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014790083001571475
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "73a7497b68b4768f72af301213d6f4c556946869"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014803416997892782
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014593042000342393
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.031975458998203976
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "dfbc7adf55356066d57eca9db2a0be3b39dd580b"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016421500000433298
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015247291998093715
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c12a82fa40b7b866216fe1ff8388deabef10c370"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016500417001225287
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "80b215f34e85fc3a127e8dde6bcd9a3fbea7172e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014037125001777895
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "2db1e5ac75270e1a328efa60dae17dced4c01193"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017174833999888506
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ec7d89e6ba64ee14c2c71f5caa5dfe90aed517df"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014215375002095243
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01700804099891684
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014021000002685469
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016299499999149702
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013675916001375299
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ba5b17472f20f6fadec9c200c81a48888cc2a8ad"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014704166002047714
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015339375000621658
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013237250001111533
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015656749998015584
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013398708000750048
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e0d64aaa44b91d963e2c6d2710d67f22a836b26f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015129499999602558
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3a5e6d08e0bad51f8f344f1ab06a62b5c418bf1e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013708375001442619
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bd0ec04e374b222fbcd4890223d4132eea9f7e42"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015080249999300577
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "0d54dce40d086ebe39257f6e80b4b7d92b2d66e8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01536866699825623
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014755750002223067
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015605083000991726
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "843157483b65fe34c573ea28e949fb358cb80844"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013866207998944446
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015745417000289308
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013619334000395611
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "4447f80527089b6c2990579f1f5a13f6df9be684"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01657658299882314
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013962583001557505
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015493375001824461
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013853791002475191
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014704000001074746
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cb71bb4369e6721fac085b7938561abc3bc2d526"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015047084001707844
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "36a5e616dab2762cb036a000246452ba64c25fd8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014454916999966372
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e11b30082a25392b9e6cd7ed8b739c2cc4eabdba"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01627212499806774
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "99e95ff62baf7616701dbaae959ff251dab8351a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013649042000906775
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "9d83ebbba0208a28fc21db4031b76224373e032a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015410500000143657
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013182041999243665
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016944499999226537
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "a8d862cab47b9a4b7dd22283e17696fcd4ec8217"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014069416996790096
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "dd49ae9fa2c9f85ef26c377b1d769484d0a95e0f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018339916001423262
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015364833001513034
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01541904199984856
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "843157483b65fe34c573ea28e949fb358cb80844"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014448333000473212
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "49a44b3e8af59be2a082b9ea6b0fe05539df5d01"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014525458998832619
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017314999997324776
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014039374997082632
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "2f047379cc8a831a07d04100f257bc38f8a68349"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015602625000610715
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014836624999588821
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016569999999774154
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cb71bb4369e6721fac085b7938561abc3bc2d526"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013482874997862382
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d71c7fd995271336d941b3176137fc229202f3bc"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01527087500289781
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "803560d2a678ace1414465c098eb0ab5380ffade"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.09713570800158777
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "6f44b2b24f0ca80e2b793087f37a77ce876a0521"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.015699250001489418
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b988541a4c950714db1ba070edc60fb597286530"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.01565916699837544
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "665f9e4fc4187279c303011028df9e46ab59fa21"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014928749998944113
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "9fbefc8198605475357ec169894f03b4e4acb62a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014961167002184084
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f99e99f43ce49aeddac88a2ab1ca1641fd4330a2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014308041998447152
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "257da9071fdf297a27a8886ecf3ca9b1261da77d"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.01507145800133003
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ff8a15dc5c423186ea7c536b29322425cf04af31"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.01422633299807785
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "2e9aae1b19021ae1c4feb2ac90c7e9a86faf9c37"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014221584002370946
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "5dfa5e284dc300a007dce885d3f908d1414a5420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014900125002895948
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "5ba9db2c443ed9612e220de492d75ffd90e0279c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.01606320899736602
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "af93b8a48afe816b9493f7a02ffa2b89115de54b"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014791166999202687
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bc7102f7fa098667dfbfd837112d26b5750f0be4"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014293124997493578
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "95f6f5d39e2ac38ce8869b42ccaa614dd5f60ed1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014206292002199916
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac407169fe75fc0d7299c81b6a5abc2451dbd050"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014524917001836002
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e743048e666084d23402143157a340c1edaa2231"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014494750001176726
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "30ed45842a4b0ce82c09cd71040c36c2cf579030"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.015086625000549247
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f643a6abe81ba6c617205ff59e44fd31d31eec09"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.013730709000810748
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f5aef52f554858a23b746d539ad5d6a8969a6e87"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014808457999606617
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "892cf3ccf835ee3ae78687545bece9bb77a900b7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.013975417001347523
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1d57ad55c1f525025e884b5f03976ff0ac71fec2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014471416998276254
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "a25e6b55a708005e5a5502a3058a66ee1ff0cb21"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014629332999902545
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "941b903d9d1d37b4726d384430a624eecdb9c472"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014566709000064293
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "5cad63b10f93d0ba40ab595882a33dd753de5b8c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014517583000269951
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d23ff2c4a557e223588bedcae7df76e4a3962842"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014554208999470575
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "be3112bd962cf05979b966e0957996c7680a50dd"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014577291996829445
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "5ece34d7397a964413fd7cb1862fe42232b0d228"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014458792000368703
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3270f8cc3d85e136d14ad9f3affb03862ddbf52f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.01637950000076671
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75fda71e1f65d942bad0bd4dca479534757cb90d"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.017606458000955172
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cc3bb056f76147f0b19f1723477b040552595b91"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.015078333999554161
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "759f0a1a7172219c147e636633f0e3a67efc4d49"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.014359041000716388
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "image",
+        "inspect",
+        "df-harness-runner",
+        "--format",
+        "{{.Id}}"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.22005154200087418
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--network=none",
+        "--cpus=2",
+        "--memory=2g",
+        "-i",
+        "-e",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "sha256:5affa5a904096b12fd9b881fdc597202a348ccfb9f39ee5202c8b52958ec15c4",
+        "python",
+        "-B",
+        "-c",
+        "import tarfile,sys,os; tarfile.open(fileobj=sys.stdin.buffer,mode='r|').extractall('/audit',filter='data'); os.chdir('/audit/official'); os.execv(sys.executable,[sys.executable,'-B','-m','harness','check','/audit/submission','--track','tablekeeper'])"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 1,
+      "seconds": 0.4009807920010644,
+      "log": "harness-check-linux.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0264746249995369
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "40bb319c25fed8ee3c57b3364e997e71b1c87e6c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.021040208997874288
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3c4beafae86010a207647f742f4cc27bfcbac418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017756459001248004
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1adc868e15666adbb3d6ca84e33f9de783b5a9e8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016986916001769714
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b0fb25883e3df87bdca18103efe173910eebd472"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015222207999613602
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1df880332cbbfaf67363e47c4d9004fb946b8e46"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.023093042000255082
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f3b8170c8adc66e78a04e9ded3405fb53d3ae3e9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017843042001914
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ede66ecc105c10462cb4b9267bde1bc84c19c364"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.019805208001344
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e67450e7bddfd6b5caf84e6fda9ac4d871e0ed13"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01706620799814118
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c5d20940d798d701ec8d16de2014352c06b444e3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013817208000546088
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "39b78965851352b8dbaf2208714dd5e35c34d35b"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015530291999311885
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "eb9e23b887c75c55d8eae76cf1937339a61f3a49"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01570045799962827
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "4c14fa4b4ce5c0e95c1aecc9dabc33562213f6b8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014556875001289882
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "eb1584fbb2557b327559ad94ddb975817274f524"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018872124997869832
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "73a7497b68b4768f72af301213d6f4c556946869"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014608957997552352
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01343908299895702
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013927041996794287
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "dfbc7adf55356066d57eca9db2a0be3b39dd580b"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02225012499911827
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016251249999186257
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "80b215f34e85fc3a127e8dde6bcd9a3fbea7172e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013909375000366708
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "2db1e5ac75270e1a328efa60dae17dced4c01193"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01425237500006915
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ec7d89e6ba64ee14c2c71f5caa5dfe90aed517df"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014753792002011323
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016046832999563776
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014133499997114995
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014902167000400368
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014284000000770902
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ba5b17472f20f6fadec9c200c81a48888cc2a8ad"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018455334000464063
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016166582998266676
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014732416999322595
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014913125000020955
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015593709002132528
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3a5e6d08e0bad51f8f344f1ab06a62b5c418bf1e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01466137500028708
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bd0ec04e374b222fbcd4890223d4132eea9f7e42"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014653707999968901
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "0d54dce40d086ebe39257f6e80b4b7d92b2d66e8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014586584002245218
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014304208998510148
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014546207999956096
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "843157483b65fe34c573ea28e949fb358cb80844"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014612332997785416
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015156124998611631
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014293666998128174
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "4447f80527089b6c2990579f1f5a13f6df9be684"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01443341699996381
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014531624998198822
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013753833001828752
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01521912500174949
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014257124999858206
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cb71bb4369e6721fac085b7938561abc3bc2d526"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014363542002683971
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "e11b30082a25392b9e6cd7ed8b739c2cc4eabdba"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014283708998846123
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "99e95ff62baf7616701dbaae959ff251dab8351a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014578709000488743
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "9d83ebbba0208a28fc21db4031b76224373e032a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015323625000746688
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d195ee28f588b320facf258e29a5f739f3ff3420"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014686082999105565
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "07ba9554f8b45ef66987acf8e67c54b61be479f7"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014181500002450775
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "a8d862cab47b9a4b7dd22283e17696fcd4ec8217"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014201834001141833
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "dd49ae9fa2c9f85ef26c377b1d769484d0a95e0f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014705459001561394
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1c19b067c53f98233d304329445da2391dfb87c9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013902416998462286
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "75ff41267cce93dbbadb588d2c334c85b4538418"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014622167000197805
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "843157483b65fe34c573ea28e949fb358cb80844"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.013699708000785904
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "49a44b3e8af59be2a082b9ea6b0fe05539df5d01"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014500999997835606
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "78b59f9b9ba0d765b8d4d6c534d7a1b313e0dba0"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014527833998727147
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c2f26d9c1e3844077649a7a9c306cfea15dd9d54"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014431042000069283
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "2f047379cc8a831a07d04100f257bc38f8a68349"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014501833000394981
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "538a15b26753517643e84c0b2554253e7b1454d3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015506625000853091
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ac820af37b1869a240038535bd585e48930d9bce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014637042000686051
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cb71bb4369e6721fac085b7938561abc3bc2d526"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014269499999500113
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "d71c7fd995271336d941b3176137fc229202f3bc"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.018113833997631446
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "8c6df7f369f0041798abf8de0e10c0babf501df5"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015072374997544102
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "96049479a8b49d803772a5880cd5aa82960ab43a"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.061380999999528285
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "fbb20559258bbd7e57f7a3b8553c7b45fe74537e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.016706375001376728
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "cd13aedf2b2b63bddd52353325f2e77ea292a1af"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.026358499999332707
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "d6b3c0fee8af35dbb15bf98e26f62b8c938e86ce"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.028677791997324675
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f24adc0b93f2e351a575e9c5216fa4f4bd17c348"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.025764125002751825
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "4447f80527089b6c2990579f1f5a13f6df9be684"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014859750001050998
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "bedeb731df4114ce5466a912825605efa547d333"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.020289791998948203
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "4b7b0620f3dd645fac18d840a6d612e8f4c6bed6"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01515366699823062
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "431af2cdbeb7366c1dd7e8595ec2e4c1fa4dbe3e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.024915041998610832
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "dbb92ecd1f3476002ab5042a5c93ba5517bb8432"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01522720800130628
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "2e026c006569b2e749de79b7526f03ae9b6e44e3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0147895409972989
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "8503c3eaa5f46f8d96fe8955bc048ffef64e3e62"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.021168207997106947
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "61949b2abbb444a9ac082ee48c7109ef9423a3a2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03978783400089014
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "3973f7c07f8c679ea4d82b01926353d151a6fcd3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.025287625001510605
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "1d1c936be1afdf0a69e7789a3ab01d9799c87f5f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.027743417002056958
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b866dbebead2fa7ccf66f2ff2519f02604da50a9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01613487499707844
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "1c73d0ed87275b8bc0909a4aca445baa53feb739"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.019315499997901497
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "e5c256641653de82a97222d1126308fbde6188f6"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.027982625000731787
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "8f55a715af8d818621fdd7712093472e779ef5e8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.020193500000459608
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "0f96bf0cd889959d134ca6f8a5ee3066bbe459f8"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014616708001994994
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "f9576b08ea16314b955c14d5aa696081d274cf87"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.029888417000620393
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "bdc743b2ea5d7f268836bbe1ce8c91f10fd08268"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014977334001741838
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "a1d1a8f195b8530d2ca029c92eac2cd6428589fd"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02231033400312299
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "bea7a7553ac240050dead490e0f42525d0a81f08"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03790633399694343
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "5d68f6c89f37a15ba7af93385d21b4d39838e446"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02174679200106766
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b7f3fbe0439abd7a78eb5d83c7132ef87ade953c"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014698457998747472
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "c768315d0c795750a838927f9101d8fbd05f0949"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015092208999703871
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "6a8c98b71628ca8cc311b0ecc57fa468ca1206c6"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015179875001194887
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "f95a5cbbfcbbb64bb8841d7fdcfb74f6150e5d40"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03278758300075424
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "ffbc8e4227edb4201e127cbbdb14c503512c6aab"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.023229375001392327
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "91dac7fb8467093ad55000a71a4c847a40ca0406"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.020005792001029477
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "111cd0557478a1f61317b24ab1c712d8fb30fe93"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0149991250000312
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "0f085d3423cf204cc23125fe94f9f61313e6aa4e"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01481966699793702
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "85a0b982e35a962d721fe55d5a1d2971566854fb"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015817292001884198
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "68ff5d90e744136e667e53687f4110b68059242f"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014973665998695651
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "c427c3ba23d830e2986624417a10bf554bf26daa"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.024111000002449146
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "db07618155fda329fa632d6b1ce4aa99d2376565"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02057983300255728
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "5fd9d6898dfcefe7d71ea7b973f0c90ca91d76b9"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.028547750000143424
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "9e02c181e3bcefdf3abbe272ba777eed614b8256"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014272041000367608
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "5572d4e1b4450af6d38445d30d8ce88d04e51d8d"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02689858300072956
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b606e7c1920509242e3a5970aa66e5b14080e7c1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.019951333000790328
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b606e7c1920509242e3a5970aa66e5b14080e7c1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.01738775000194437
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "blob",
+        "b606e7c1920509242e3a5970aa66e5b14080e7c1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.014879041998938192
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.015092166999238543
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.051215250001405366
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 0.013246499998786021
+    }
+  ],
+  "checks": {
+    "root_only_changed_files": [
+      "FACTORY.md",
+      "README.md",
+      "STAGE-4-REPORT.md",
+      "plan.md"
+    ],
+    "trees": {
+      "stage-1": "0050accbdc6d0457ffdc73de6365158e65c1808b",
+      "stage-2": "2ebbd48a3ba2b6de7eba2a5fcd851a36efc4e2c8",
+      "stage-3": "6f4bee6bec0d5908de7ebe9345290f786b012b63",
+      "stage-4": "e4bae830ae426197911968153c97c4ef06f9e40d",
+      "mandates": "fbfd2dd5db832c375091a0b3a63bb944cd3ec859"
+    },
+    "preserved_ancestors": [
+      "0f96bf0cd889959d134ca6f8a5ee3066bbe459f8",
+      "2e026c006569b2e749de79b7526f03ae9b6e44e3",
+      "4b7b0620f3dd645fac18d840a6d612e8f4c6bed6",
+      "8c6df7f369f0041798abf8de0e10c0babf501df5",
+      "e5c256641653de82a97222d1126308fbde6188f6",
+      "d6b3c0fee8af35dbb15bf98e26f62b8c938e86ce",
+      "61949b2abbb444a9ac082ee48c7109ef9423a3a2",
+      "9e02c181e3bcefdf3abbe272ba777eed614b8256"
+    ],
+    "history_commit_count": 17,
+    "active_plan": {
+      "immutable_snapshot": "/Users/athvs/.jam/cfg/artifacts/422f34ea4a74ee020305106ad87fb9f3a9bdd30010949ccc819ea7be3e105e43/plan.md",
+      "bytes": 16580,
+      "sha256": "422f34ea4a74ee020305106ad87fb9f3a9bdd30010949ccc819ea7be3e105e43",
+      "equals_committed_plan": true,
+      "label": "Four stages independently ready \u2014 final delivery acceptance map"
+    },
+    "materialization": {
+      "path": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/committed-package",
+      "file_count": 66,
+      "method": "git ls-tree plus git cat-file exact committed blobs, preserving executable modes",
+      "symlinks_gitlinks_nested_git": [],
+      "room_json_present": false
+    },
+    "self_containment": {
+      "1": {
+        "runtime_imports": [
+          "datetime",
+          "engine",
+          "hashlib",
+          "hmac",
+          "http",
+          "json",
+          "json_values",
+          "math",
+          "model",
+          "os",
+          "re",
+          "secrets",
+          "threading",
+          "urllib",
+          "uuid",
+          "zoneinfo"
+        ],
+        "dockerfile_sha256": "c37b382fa956adea89965fd2ba3af989a74d5a08a0fb4f2a3544c93f5ae596ed",
+        "run_md_sha256": "845786e0c1186a76b3c5cbbb2b81107cd616f62031db2f438e08902b482ad03d",
+        "stage_file_count": 8,
+        "local_copy_inputs_present": true,
+        "no_external_runtime_asset_reference": true
+      },
+      "2": {
+        "runtime_imports": [
+          "datetime",
+          "engine",
+          "hashlib",
+          "hmac",
+          "http",
+          "json",
+          "json_values",
+          "legacy_model",
+          "math",
+          "model",
+          "os",
+          "pathlib",
+          "re",
+          "secrets",
+          "threading",
+          "urllib",
+          "uuid",
+          "zoneinfo"
+        ],
+        "dockerfile_sha256": "8e7106f34988706c87b502ba71940a7ac110bfff92147e12baaa731ec81492ec",
+        "run_md_sha256": "e1f4f7aa202d82cb17e621223619a1f874c2638c597d591070bdd75c876172f9",
+        "stage_file_count": 13,
+        "local_copy_inputs_present": true,
+        "no_external_runtime_asset_reference": true
+      },
+      "3": {
+        "runtime_imports": [
+          "datetime",
+          "engine",
+          "hashlib",
+          "hmac",
+          "http",
+          "json",
+          "json_values",
+          "legacy_model",
+          "math",
+          "model",
+          "os",
+          "pathlib",
+          "re",
+          "secrets",
+          "stage2_model",
+          "threading",
+          "urllib",
+          "uuid",
+          "zoneinfo"
+        ],
+        "dockerfile_sha256": "cea52049550aa0d7337c84734ea62e422e361dce93b1070b2402e00984563e03",
+        "run_md_sha256": "71b893b726acc643e89305d3002d7cf1e3bbfa51ca46784f4c594ec0c655d4a2",
+        "stage_file_count": 15,
+        "local_copy_inputs_present": true,
+        "no_external_runtime_asset_reference": true
+      },
+      "4": {
+        "runtime_imports": [
+          "datetime",
+          "engine",
+          "hashlib",
+          "hmac",
+          "http",
+          "json",
+          "json_values",
+          "legacy_model",
+          "math",
+          "model",
+          "os",
+          "pathlib",
+          "planning",
+          "re",
+          "secrets",
+          "stage2_model",
+          "stage3_model",
+          "threading",
+          "urllib",
+          "uuid",
+          "zoneinfo"
+        ],
+        "dockerfile_sha256": "361ef91f127ac18842b90ba7234c92215a72abaf08e219e3661c3738d170595f",
+        "run_md_sha256": "759bbf817ab9342d5883860a394ab389a16c00d1d5891492e4c7c7da27b7be73",
+        "stage_file_count": 19,
+        "local_copy_inputs_present": true,
+        "no_external_runtime_asset_reference": true
+      }
+    },
+    "official_packaging_check": {
+      "output": "room.json is missing; open the room in the Band console (Band Desktop: the room's \u22ee menu, Open in Band), choose \u22ee, Download, Download full session, and save the file unchanged as room.json at the repository root\n1 problem(s)\n",
+      "exit": 1,
+      "container_image": "sha256:5affa5a904096b12fd9b881fdc597202a348ccfb9f39ee5202c8b52958ec15c4",
+      "network": "none",
+      "cpu": 2,
+      "memory": "2g",
+      "mounts": [],
+      "official_files_unchanged": true,
+      "archive_sha256": "e8aaa5513ca0eda96c46366a5296a4f6a7d686c8346855f98337bf3ce0b7ebbe",
+      "layout_mandates_credentials_passed": true,
+      "room_and_reciprocity_gates_unverified": true
+    },
+    "credential_and_export_scan": {
+      "unique_reachable_blob_path_versions": 95,
+      "matches": [],
+      "rules": "Unmodified official credential shapes/config treatment plus private-key headers; inventory excludes persisted state/export/database files",
+      "limitation": "Heuristic pattern and inventory inspection cannot prove every possible private value absent; official room export privacy review remains outstanding."
+    },
+    "existing_isolated_package": {
+      "tested_revision": "8c6df7f369f0041798abf8de0e10c0babf501df5",
+      "folder_trees_equal_delivery": true,
+      "path": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01",
+      "exit": 0,
+      "conformance_executions_passed": 575,
+      "counts": {
+        "1": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            },
+            "unexecuted": 0,
+            "summary": "120 passed, 1 warning in 20.69s"
+          },
+          "2": {
+            "collected": 25,
+            "passed": 0,
+            "failed": 1,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_2/test_sample.py": {
+                "passed": 0,
+                "total": 8
+              },
+              "stage_2/test_ui.py": {
+                "passed": 0,
+                "total": 17
+              }
+            },
+            "unexecuted": 24,
+            "summary": "1 failed, 2 warnings in 11.51s"
+          }
+        },
+        "2": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            },
+            "unexecuted": 0,
+            "summary": "120 passed, 1 warning in 16.95s"
+          },
+          "2": {
+            "collected": 25,
+            "passed": 25,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_2/test_sample.py": {
+                "passed": 8,
+                "total": 8
+              },
+              "stage_2/test_ui.py": {
+                "passed": 17,
+                "total": 17
+              }
+            },
+            "unexecuted": 0,
+            "summary": "25 passed, 1 warning in 16.62s"
+          },
+          "3": {
+            "collected": 7,
+            "passed": 0,
+            "failed": 1,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_3/test_sample.py": {
+                "passed": 0,
+                "total": 7
+              }
+            },
+            "unexecuted": 6,
+            "summary": "1 failed, 2 warnings in 0.22s"
+          }
+        },
+        "3": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            },
+            "unexecuted": 0,
+            "summary": "120 passed, 1 warning in 21.75s"
+          },
+          "2": {
+            "collected": 25,
+            "passed": 25,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_2/test_sample.py": {
+                "passed": 8,
+                "total": 8
+              },
+              "stage_2/test_ui.py": {
+                "passed": 17,
+                "total": 17
+              }
+            },
+            "unexecuted": 0,
+            "summary": "25 passed, 1 warning in 21.19s"
+          },
+          "3": {
+            "collected": 7,
+            "passed": 7,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_3/test_sample.py": {
+                "passed": 7,
+                "total": 7
+              }
+            },
+            "unexecuted": 0,
+            "summary": "7 passed, 1 warning in 1.06s"
+          },
+          "4": {
+            "collected": 6,
+            "passed": 4,
+            "failed": 1,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_4/test_sample.py": {
+                "passed": 4,
+                "total": 6
+              }
+            },
+            "unexecuted": 1,
+            "summary": "1 failed, 4 passed, 2 warnings in 0.82s"
+          }
+        },
+        "4": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            },
+            "unexecuted": 0,
+            "summary": "120 passed, 1 warning in 21.91s"
+          },
+          "2": {
+            "collected": 25,
+            "passed": 25,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_2/test_sample.py": {
+                "passed": 8,
+                "total": 8
+              },
+              "stage_2/test_ui.py": {
+                "passed": 17,
+                "total": 17
+              }
+            },
+            "unexecuted": 0,
+            "summary": "25 passed, 1 warning in 27.54s"
+          },
+          "3": {
+            "collected": 7,
+            "passed": 7,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_3/test_sample.py": {
+                "passed": 7,
+                "total": 7
+              }
+            },
+            "unexecuted": 0,
+            "summary": "7 passed, 1 warning in 1.28s"
+          },
+          "4": {
+            "collected": 6,
+            "passed": 6,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_4/test_sample.py": {
+                "passed": 6,
+                "total": 6
+              }
+            },
+            "unexecuted": 0,
+            "summary": "6 passed, 1 warning in 1.14s"
+          }
+        }
+      },
+      "command_seconds": 202.4423847500002,
+      "whole_run_seconds": 203.38514720799867,
+      "adapter_sha256": "db517e1e10039f5725044151cfbf6e13dc1ee3b944f31ec3f735800bd9ab7d02",
+      "runtime_rerun_on_delivery": false
+    },
+    "final_head": "40bb319c25fed8ee3c57b3364e997e71b1c87e6c",
+    "clean_before_after": true
+  },
+  "limitations": [],
+  "status": "PASS: assigned packaging audit; room export submission gate pending",
+  "elapsed_seconds": 8.421089750001556
+}

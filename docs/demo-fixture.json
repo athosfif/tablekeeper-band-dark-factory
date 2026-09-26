@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": "ada",
+      "email": "ada@example.test",
+      "password": "fixture-pass",
+      "display_name": "Ada"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "fern-room",
+      "name": "The Fern Room",
+      "timezone": "Europe/Berlin",
+      "slot_minutes": 30,
+      "reservation_duration_minutes": 90,
+      "cancellation_cutoff_minutes": 120,
+      "opening_hours": [
+        {
+          "weekday": "mon",
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "weekday": "tue",
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "weekday": "wed",
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "weekday": "thu",
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "weekday": "fri",
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "weekday": "sat",
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "weekday": "sun",
+          "opens": "18:00",
+          "closes": "23:00"
+        }
+      ],
+      "tables": [
+        {
+          "id": "t1",
+          "label": "Window table",
+          "capacity": 2
+        },
+        {
+          "id": "t2",
+          "label": "Garden booth",
+          "capacity": 4
+        },
+        {
+          "id": "t3",
+          "label": "Corner table",
+          "capacity": 6
+        },
+        {
+          "id": "t4",
+          "label": "Long table",
+          "capacity": 8
+        }
+      ],
+      "combinable": [
+        [
+          "t2",
+          "t1"
+        ],
+        [
+          "t2",
+          "t3"
+        ]
+      ],
+      "manager_user_ids": [
+        "ada"
+      ]
+    }
+  ],
+  "reservations": []
+}

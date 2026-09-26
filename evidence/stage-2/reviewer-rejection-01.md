@@ -1,0 +1,33 @@
+# Stage 2 independent rejection 01
+
+REJECT `61949b2abbb444a9ac082ee48c7109ef9423a3a2` for Stage 2 readiness. Stage-2 tree `acbd542ffc9ced8d3fb47ed12068c55aea1d5c83`. The unchanged accepted Stage-1 tree is `0050accbdc6d0457ffdc73de6365158e65c1808b`. All three completed runner modes verified exact HEAD and a clean worktree before/after. No implementation or official test files were edited by Reviewer.
+
+## Confirmed source defect
+
+At a 375×812 CSS-pixel viewport, seed an ordinary valid fixture with restaurant name `Restaurantwithanexceptionallylongsinglewordname`, sign in, search restaurant `r`, 2040-06-14, party 4. The results heading overflows: `document.documentElement.scrollWidth = 588`, `innerWidth = 375`, expected width <=375. Stage 2 explicitly requires no horizontal page scrolling; restaurant names have no word-length restriction. Independent reproduction is `reviewer-browser-02/checks.log`, test `test_browser_09_long_restaurant_name_mobile`, and `reviewer-browser-02/mobile-long-name-grid.png`. This confirms Planner's separately reported candidate (their environment measured594; this independent internal-network runner measured588). The product must wrap/constrain valid labels while retaining readable content, including results, empty states, booking/confirmation and lookup. Repair current Stage2 only; no artificial input restrictions or hidden/clipped names.
+
+## Completed evidence
+
+- `reviewer-api-01`: 36/36 groups (28 inherited independently derived groups +8 pair/upgrade groups), 1,205 instrumented HTTP calls, zero5xx, unittest13.048s, test container command13.667s, total18.721s. Ordinary max2.251833626s; test-control max0.226335625s. Actual accepted Stage1 service populated/exported to independent Stage2 destination; old sessions and original immutable receipts survived. Pair capacity/order/canonicalization, occupancy, atomic swaps, rollback and50-way conflicts/replays passed.
+- `reviewer-browser-02`: 9/10 groups pass; sole failing group is long-name overflow. Unittest19.257s, command20.389s, total25.292s.45 instrumented setup/control HTTP calls, zero5xx; browser network calls are additional and not included in45. Real Chromium flows passed signup/login/logout, public grid/API correspondence, unavailable inertness, keyboard focus, ordinary375px layout, single/pair success/replay/change, lookup/cancel/refusal/privacy, competing-client409, lost responses before/aftercommit, exact samebody/key recovery, late-searchA/B race and actual Stage1→Stage2 upgrade with same signed-in open pending form. Screenshots retained in the run directory. Long-name test stops at the first overflow assertion, so subsequent long-name lookup is not yet validated.
+- `reviewer-official-01/harness`: cumulative isolated Stage1 120/120 in19.87s; Stage2 25/25 in20.64s; zero fail/error/skip/deselect in both. Stage3 probe7 collected,0passed,1failed (missing policy endpoint404),6 not executed due official fail-fast,0.22s. Expected overshoot failure is separate from Stage2. Harness exit0, command49.224s, total49.623s; completed report claimsStage2 on shipped checks. The report temporarily showed an error while still running; only the completed report is authoritative. No infrastructure failure occurred in this run.
+
+The independent services and test client ran on an internal Docker network, each2CPU/2GiB, services without mounts, with network.Internal=true and outbound socket probe blocked. Source default8080 and separate destination PORT8097 both healthy. API-run health times0.483/0.401/0.413s (source/destination/Stage1); browser02 health0.431/0.336/0.370s. A separate RUN.md-style published-port smoke became healthy0.659s(API run) and0.462s(browser02). Source is standalone, with local fonts/assets; browser external-request guard observed none. Ordinary timings are under5s and controls under10s. Resource/health evidence and complete command argv/cwd/exit/timing are in each `reviewer-run.json` and constraint/network logs.
+
+## Reviewer/tool provenance and preserved mistakes
+
+Independent Stage2 design and original28+8+8 groups were authored before new implementation inspection. The long-name case was justified by Planner's candidate and the written responsive requirement. Signup/lookup refusal coverage was added as group10. In `reviewer-browser-01`,8 groups ran with3 subtest failures across groups03/05,26.872s. The reviewer login helper waited for a display name already rendered from the preceding session after reset; it could navigate away before the new login completed, leaving invalid old credentials. Fixed only the reviewer helper to await the actual200 login response and navigation; browser02 confirms the affected cases pass on identical unchanged source. This was a reviewer synchronization error, not a product defect. All original logs/test snapshots/screenshots remain preserved. Before the first browser execution, synthetic dispatch on a native disabled button was replaced with real pointer input: synthetic dispatch bypasses browser disabled behavior and is not a user click.
+
+Official runs reused an evidence-local copy of the documented Stage1 metadata-only Docker-context adapter; SHA256 `db517e1e10039f5725044151cfbf6e13dc1ee3b944f31ec3f735800bd9ab7d02`. It preserves ordinary official content/flags and filters pre-existing AppleDouble transport metadata. Stage1 tooling originals and evidence were not modified. Upstream authoritative revision remains803560d2a678ace1414465c098eb0ab5380ffade. Builder results were not used as independent proof. Tokens and exported state remained in process memory; only synthetic fixtures were used.
+
+## Reproduction
+
+Working directory `/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2`:
+
+```sh
+/Users/athvs/.cache/figueira-band-harness/bin/python -B reviewer_run.py api <new-name> --revision 61949b2abbb444a9ac082ee48c7109ef9423a3a2
+/Users/athvs/.cache/figueira-band-harness/bin/python -B reviewer_run.py browser <new-name> --revision 61949b2abbb444a9ac082ee48c7109ef9423a3a2
+/Users/athvs/.cache/figueira-band-harness/bin/python -B reviewer_run.py official <new-name> --revision 61949b2abbb444a9ac082ee48c7109ef9423a3a2
+```
+
+Each run requires a new directory. The official runner invokes the complete cumulative `python -m harness run --track tablekeeper --repo <output> --stage 2 --mode isolated --out <new-path>` from the read-only authoritative checkout. Source repair belongs to Builder in a new commit, followed by full frozen handoff and independent recheck. Stage3 remains gated. These are local results, not official event acceptance/publication/submission; held-back tests, final four-folder package, room export and presentation/video are not completed by this review.

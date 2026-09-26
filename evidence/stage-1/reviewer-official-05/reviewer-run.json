@@ -1,0 +1,79 @@
+{
+  "mode": "official",
+  "started_utc": "2026-09-26T17:13:16Z",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.18197641699953238,
+      "log": "revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.07374929200159386,
+      "log": "status-before.log"
+    },
+    {
+      "argv": [
+        "/Users/athvs/.cache/figueira-band-harness/bin/python",
+        "-m",
+        "harness",
+        "run",
+        "--track",
+        "tablekeeper",
+        "--repo",
+        "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+        "--stage",
+        "1",
+        "--mode",
+        "isolated",
+        "--out",
+        "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 40.533960958000534,
+      "log": "official.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.036830500001087785,
+      "log": "final-revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0790101250022417,
+      "log": "status-after.log"
+    }
+  ],
+  "revision": "0f96bf0cd889959d134ca6f8a5ee3066bbe459f8",
+  "test_sha256": "ae4201a6322ba37501654037568cdda35bb3e331c406f1fd92888f8a976e5bd8",
+  "docker_transport_adapter": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-docker-bin/docker",
+  "adapter_sha256": "db517e1e10039f5725044151cfbf6e13dc1ee3b944f31ec3f735800bd9ab7d02",
+  "exit": 0,
+  "final_revision": "0f96bf0cd889959d134ca6f8a5ee3066bbe459f8",
+  "elapsed_seconds": 40.96834987500188
+}

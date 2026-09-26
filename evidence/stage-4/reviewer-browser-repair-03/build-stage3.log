@@ -1,0 +1,42 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 816B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 156B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 328B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.12-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e
+#5 resolve docker.io/library/python:3.12-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e done
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /app
+#6 CACHED
+
+#7 [4/5] COPY --chmod=644 json_values.py legacy_model.py stage2_model.py model.py engine.py server.py ./
+#7 CACHED
+
+#8 [3/5] RUN apt-get update && apt-get install -y --no-install-recommends fonts-liberation2 && rm -rf /var/lib/apt/lists/* && mkdir -p /app/static && cp /usr/share/fonts/truetype/liberation2/LiberationSerif-Regular.ttf /app/static/Serif-Regular.ttf && cp /usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf /app/static/Sans-Regular.ttf && cp /usr/share/doc/fonts-liberation2/copyright /app/static/FONT-LICENSE
+#8 CACHED
+
+#9 [5/5] COPY --chmod=755 static/ ./static/
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 exporting manifest sha256:3994966aaf8ce401d63c4313136918c709b46dd96b5f76a4fd9d142d714fdbe2 done
+#10 exporting config sha256:484669465e9ba720457e770558f324ce8e074c68a6a99173dc0fb39b39bf00ec done
+#10 exporting attestation manifest sha256:98d5279c7a9c9189e57864888bb9445f226bd33e8c013a75e708ca4ee7c80648 done
+#10 exporting manifest list sha256:3dc79b20acb4924918a539e059e08ae46c8b48b06662b8340f610f48f1e0c26b done
+#10 naming to docker.io/library/reviewer-tablekeeper-s3:6f4bee6bec0d done
+#10 unpacking to docker.io/library/reviewer-tablekeeper-s3:6f4bee6bec0d done
+#10 DONE 0.0s

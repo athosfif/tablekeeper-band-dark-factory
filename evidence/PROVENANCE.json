@@ -1,0 +1,2618 @@
+[
+  {
+    "path": "stage-1/reviewer-final-report.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-final-report.md",
+    "sha256": "5f40736415351a82463c67bcf655dcd94e4792e5710b0218cdf38343dd4e8562",
+    "bytes": 14993
+  },
+  {
+    "path": "stage-1/reviewer-rejection-01.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-rejection-01.md",
+    "sha256": "0c1271aa0f3c9986c912e7f5865bd6604ce229d03f34e580cecc31fc9c84197b",
+    "bytes": 7800
+  },
+  {
+    "path": "stage-1/reviewer-rejection-02.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-rejection-02.md",
+    "sha256": "a04e7fcfdb40804e2157958dcfbd0f847e0bd09ddc27edce2f44129337c50f33",
+    "bytes": 5118
+  },
+  {
+    "path": "stage-1/reviewer-delivery-audit.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-delivery-audit.md",
+    "sha256": "8a693885dc2ca3c2df51ca9962be965f13216c5d488172ac4b8143194774372d",
+    "bytes": 8403
+  },
+  {
+    "path": "stage-1/reviewer-acceptance-design.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-acceptance-design.md",
+    "sha256": "6fbb949963033214f44e5d42417f573ac4753bcfe23da970d324be2581675215",
+    "bytes": 3804
+  },
+  {
+    "path": "stage-1/reviewer-coverage-notes.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-coverage-notes.md",
+    "sha256": "e531f3204761f0023ac67dbd5198812718bd75ec1b76bd7ed2ffec5b678b0db3",
+    "bytes": 6753
+  },
+  {
+    "path": "stage-1/reviewer-official-05/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/revision.log",
+    "sha256": "88ab30e800c8016f313c94085e1286c02e266e4aa67b869bf4991b2d300f2d1f",
+    "bytes": 41
+  },
+  {
+    "path": "stage-1/reviewer-official-05/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/status-before.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "stage-1/reviewer-official-05/reviewer_spec_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/reviewer_spec_checks.py",
+    "sha256": "ae4201a6322ba37501654037568cdda35bb3e331c406f1fd92888f8a976e5bd8",
+    "bytes": 40636
+  },
+  {
+    "path": "stage-1/reviewer-official-05/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/reviewer_run.py",
+    "sha256": "913b863ccf3272b7a841825d808fda51254fc4545978228f43a047d154900c66",
+    "bytes": 7004
+  },
+  {
+    "path": "stage-1/reviewer-official-05/reviewer-docker-adapter.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/reviewer-docker-adapter.py",
+    "sha256": "db517e1e10039f5725044151cfbf6e13dc1ee3b944f31ec3f735800bd9ab7d02",
+    "bytes": 1495
+  },
+  {
+    "path": "stage-1/reviewer-official-05/official.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/official.log",
+    "sha256": "cb7d31419fb5ac9ac7c4511ee29311e22e3e0be237db857498ad0e29504b7148",
+    "bytes": 783
+  },
+  {
+    "path": "stage-1/reviewer-official-05/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/final-revision.log",
+    "sha256": "88ab30e800c8016f313c94085e1286c02e266e4aa67b869bf4991b2d300f2d1f",
+    "bytes": 41
+  },
+  {
+    "path": "stage-1/reviewer-official-05/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/status-after.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "stage-1/reviewer-official-05/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/reviewer-run.json",
+    "sha256": "077613ff742219693c40af4eddc2940162b744c922cc7a4d8127ac9048b091b7",
+    "bytes": 2281
+  },
+  {
+    "path": "stage-1/reviewer-official-05/harness/report.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/report.json",
+    "sha256": "1b8f43035e12a84c302bb8f5d9ac47c0840dd151885c367a8cf9527d5f57ecdd",
+    "bytes": 1587
+  },
+  {
+    "path": "stage-1/reviewer-official-05/harness/stage-1.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/stage-1.counts.json",
+    "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "bytes": 499
+  },
+  {
+    "path": "stage-1/reviewer-official-05/harness/stage-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/stage-1.log",
+    "sha256": "0245e45d9edae2f878d8af3d1a26020c121f3a86f7b2f3e05597901a7e4553ce",
+    "bytes": 1463
+  },
+  {
+    "path": "stage-1/reviewer-official-05/harness/stage-2.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/stage-2.counts.json",
+    "sha256": "eda65c567c034428ce279c5889411791eb2abcdb677b963767db110ae8095fbd",
+    "bytes": 216
+  },
+  {
+    "path": "stage-1/reviewer-official-05/harness/stage-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/stage-2.log",
+    "sha256": "17a9f7b0ed649ce7df127aee1d56f8bb503f5ff34a645a28bf27e947d7ac9f44",
+    "bytes": 5547
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/revision.log",
+    "sha256": "88ab30e800c8016f313c94085e1286c02e266e4aa67b869bf4991b2d300f2d1f",
+    "bytes": 41
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/status-before.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/reviewer_spec_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/reviewer_spec_checks.py",
+    "sha256": "ae4201a6322ba37501654037568cdda35bb3e331c406f1fd92888f8a976e5bd8",
+    "bytes": 40636
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/reviewer_run.py",
+    "sha256": "913b863ccf3272b7a841825d808fda51254fc4545978228f43a047d154900c66",
+    "bytes": 7004
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/build.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/build.log",
+    "sha256": "13624821bf04b014ef29bbce603738693bebb54cd3beedab9c71b7ff3a9cdb79",
+    "bytes": 1573
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/network-create.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/network-create.log",
+    "sha256": "b2a54f94c1884ca85da5305e20995d4391a62bbd6db8c6ac9c0312fbb81fa177",
+    "bytes": 65
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/start-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/start-0.log",
+    "sha256": "359a1c06f960978eda939be6b24d4bfd177df19e743d6949f0f80601e3e0f786",
+    "bytes": 65
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/health-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/health-0.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/constraints-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/constraints-0.log",
+    "sha256": "0cd75e4f2e5d43cc5763536503d0cbd89e1af90cfc4d1828a44e73544a03318e",
+    "bytes": 58
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/start-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/start-1.log",
+    "sha256": "ccc99027cf4c08cebdfc8fcadeb8e1b2dcb8a0d820ebd59882f292505bee91a7",
+    "bytes": 65
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/health-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/health-1.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/constraints-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/constraints-1.log",
+    "sha256": "0cd75e4f2e5d43cc5763536503d0cbd89e1af90cfc4d1828a44e73544a03318e",
+    "bytes": 58
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/network-internal.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/network-internal.log",
+    "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+    "bytes": 5
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/outbound-probe.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/outbound-probe.log",
+    "sha256": "c390ec587a46e563e52e696bf3904490c6c050954c03690925971ae988242497",
+    "bytes": 33
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/independent.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/independent.log",
+    "sha256": "f043f042ea63918e3e039d59ffe5443b65156d5b24193b26019d8e3cbc8d1ada",
+    "bytes": 3364
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/cleanup-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/cleanup-0.log",
+    "sha256": "0aec9ad6bb8248bb11bc087f21af7b65e94041fe2044502b4bda0904da5eed35",
+    "bytes": 40
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/cleanup-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/cleanup-1.log",
+    "sha256": "ae30e07ec486ba7e1a17f9a2881df6845fd658a93f71641ab2a6b2560241c92c",
+    "bytes": 45
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/network-remove.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/network-remove.log",
+    "sha256": "d6d307ddad6e6ec20e055d07de8f0412b92be9a166872b9cc48ec4b1ee48c990",
+    "bytes": 33
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/runmd-start.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/runmd-start.log",
+    "sha256": "62bed62f3e3ba01e40f13e9a9d2370ad1856bce9895adbde36e848b329c5fd01",
+    "bytes": 65
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/runmd-cleanup.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/runmd-cleanup.log",
+    "sha256": "34ddea812e2416bf7c795a369d004fb752d647934d25a451667c4c59e5ba327e",
+    "bytes": 39
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/final-revision.log",
+    "sha256": "88ab30e800c8016f313c94085e1286c02e266e4aa67b869bf4991b2d300f2d1f",
+    "bytes": 41
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/status-after.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "stage-1/reviewer-independent-09/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-independent-09/reviewer-run.json",
+    "sha256": "acf9f2008d97eb0da41739ee9e6a1e220ad2528950c7eb429c3a8db8d626b837",
+    "bytes": 9387
+  },
+  {
+    "path": "stage-2/reviewer-final-report.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-final-report.md",
+    "sha256": "3a586fbc92fadacd79c82cb002984fa0eba4d413034729af8d06b3946d5161ac",
+    "bytes": 9025
+  },
+  {
+    "path": "stage-2/reviewer-rejection-01.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-rejection-01.md",
+    "sha256": "4adaec54cec5ae21442426b4387a949a9798cd118eaf4d7d7ca94a255d941536",
+    "bytes": 6726
+  },
+  {
+    "path": "stage-2/reviewer-acceptance-design.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-acceptance-design.md",
+    "sha256": "94607b622fc8a769af3e4f712ca9c653c3e265323e197c1e2233f90a27af945a",
+    "bytes": 6664
+  },
+  {
+    "path": "stage-2/reviewer-api-02/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/revision.log",
+    "sha256": "ade330517ea5e1404001ea8f044289e23317f0c090b9d9d4980fda3e56d76e93",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-api-02/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/status-before.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-api-02/stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-api-02/stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-api-02/reviewer_inherited.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/reviewer_inherited.py",
+    "sha256": "807c635085e0d8ed15603a57f2e54b2f7a606c00d860cad94329fe19286164fe",
+    "bytes": 42132
+  },
+  {
+    "path": "stage-2/reviewer-api-02/reviewer_pair_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/reviewer_pair_checks.py",
+    "sha256": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "bytes": 10940
+  },
+  {
+    "path": "stage-2/reviewer-api-02/reviewer_browser_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/reviewer_browser_checks.py",
+    "sha256": "9e4fcb4090ee9c96c317ed43156f0d26fabec3fb109d46b370c877ff52464c38",
+    "bytes": 20975
+  },
+  {
+    "path": "stage-2/reviewer-api-02/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/reviewer_run.py",
+    "sha256": "1ae75a73c7686b26da5ec032767d159d146f3ad541bedbd3c74bc925fa00acc1",
+    "bytes": 8822
+  },
+  {
+    "path": "stage-2/reviewer-api-02/build-stage2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/build-stage2.log",
+    "sha256": "32a852b10ccf0830b3a458b3a40e1f738301e4fa09c36257bd4c8e22a97291f2",
+    "bytes": 2030
+  },
+  {
+    "path": "stage-2/reviewer-api-02/build-stage1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/build-stage1.log",
+    "sha256": "609ad682d53233bbc66dc69044c8d3affadcda0d0ed3bd0f6bf877bf10e0fc18",
+    "bytes": 1587
+  },
+  {
+    "path": "stage-2/reviewer-api-02/network-create.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/network-create.log",
+    "sha256": "ef0e93efb0ba31d24e90343682d5ee73df3e6f6ce97417add1b012b9cf2bbd05",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-api-02/start-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/start-0.log",
+    "sha256": "b6556435c043d284cc4522749f3912afcaa88b3ee5e4dd54d3497661d2c4a6d9",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-api-02/health-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/health-0.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-api-02/constraints-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/constraints-0.log",
+    "sha256": "c953e5029892fd76729d3b4f882d0fc14c848fceccc012ae9fee0628865d2910",
+    "bytes": 53
+  },
+  {
+    "path": "stage-2/reviewer-api-02/start-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/start-1.log",
+    "sha256": "2933e4fbe0d6ef799ab5825e4d3e23acf1b4abc42e1e4e294b373640c224d35d",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-api-02/health-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/health-1.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-api-02/constraints-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/constraints-1.log",
+    "sha256": "c953e5029892fd76729d3b4f882d0fc14c848fceccc012ae9fee0628865d2910",
+    "bytes": 53
+  },
+  {
+    "path": "stage-2/reviewer-api-02/start-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/start-2.log",
+    "sha256": "826b92e365ead827ed36c8fad917410a78970d6078e43a1527f1643ce50fed92",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-api-02/health-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/health-2.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-api-02/constraints-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/constraints-2.log",
+    "sha256": "c953e5029892fd76729d3b4f882d0fc14c848fceccc012ae9fee0628865d2910",
+    "bytes": 53
+  },
+  {
+    "path": "stage-2/reviewer-api-02/network-internal.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/network-internal.log",
+    "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+    "bytes": 5
+  },
+  {
+    "path": "stage-2/reviewer-api-02/outbound-probe.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/outbound-probe.log",
+    "sha256": "c390ec587a46e563e52e696bf3904490c6c050954c03690925971ae988242497",
+    "bytes": 33
+  },
+  {
+    "path": "stage-2/reviewer-api-02/checks.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/checks.log",
+    "sha256": "7268aa1af907ea313ffd6321b6010350b2ad004a197a278e54349a7f5468f775",
+    "bytes": 4928
+  },
+  {
+    "path": "stage-2/reviewer-api-02/cleanup-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/cleanup-0.log",
+    "sha256": "bcdca3bb90d5885d722fdfc0bd703b2483e08b8bf95ed598c2f1760ea9e3fe9f",
+    "bytes": 35
+  },
+  {
+    "path": "stage-2/reviewer-api-02/cleanup-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/cleanup-1.log",
+    "sha256": "e2b57f068fc32ef5f49a4b048c6776edfadc0b589f59e0a62dd00242ef691178",
+    "bytes": 40
+  },
+  {
+    "path": "stage-2/reviewer-api-02/cleanup-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/cleanup-2.log",
+    "sha256": "70752e76b2908e156d765e0e4b5da2e057a35fd3730d31cb5cb6b5e801e2c601",
+    "bytes": 32
+  },
+  {
+    "path": "stage-2/reviewer-api-02/network-remove.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/network-remove.log",
+    "sha256": "61cebfdee9c5f338acca100d08894e4165f31a58d55a2281bd273dfcff02cf75",
+    "bytes": 28
+  },
+  {
+    "path": "stage-2/reviewer-api-02/runmd-start.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/runmd-start.log",
+    "sha256": "39371329a396f9f21d47f7e6c29bc71e4db8e440a09842bf2d6cbad3d0a25d9e",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-api-02/runmd-cleanup.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/runmd-cleanup.log",
+    "sha256": "83a8cc247c2e528ed91421d2731b937ca33e944b525b25f3dcd545fcedf37108",
+    "bytes": 34
+  },
+  {
+    "path": "stage-2/reviewer-api-02/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/final-revision.log",
+    "sha256": "ade330517ea5e1404001ea8f044289e23317f0c090b9d9d4980fda3e56d76e93",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-api-02/final-stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/final-stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-api-02/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/status-after.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-api-02/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-api-02/reviewer-run.json",
+    "sha256": "2b4b53841780096bca6d506769c59d27587c0a37c93a5f1f02e1a734263ca9d6",
+    "bytes": 12748
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/revision.log",
+    "sha256": "ade330517ea5e1404001ea8f044289e23317f0c090b9d9d4980fda3e56d76e93",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/status-before.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/reviewer_inherited.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/reviewer_inherited.py",
+    "sha256": "807c635085e0d8ed15603a57f2e54b2f7a606c00d860cad94329fe19286164fe",
+    "bytes": 42132
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/reviewer_pair_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/reviewer_pair_checks.py",
+    "sha256": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "bytes": 10940
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/reviewer_browser_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/reviewer_browser_checks.py",
+    "sha256": "71d050b1053559969dc7e0d778dd9d6e506cb12a7da655f019e90f8246e4ef48",
+    "bytes": 21189
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/reviewer_run.py",
+    "sha256": "1ae75a73c7686b26da5ec032767d159d146f3ad541bedbd3c74bc925fa00acc1",
+    "bytes": 8822
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/build-stage2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/build-stage2.log",
+    "sha256": "c239e9bd49434f9c7e33872e973199b92f0e51a54206ffa7490cb8071c40077c",
+    "bytes": 2157
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/build-stage1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/build-stage1.log",
+    "sha256": "582db6d5b238202a992b8fcb57be1f90ac7e7e337c13b70fa2816d113ca8d0fd",
+    "bytes": 1511
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/network-create.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/network-create.log",
+    "sha256": "2bbbf8115846199e584d5f3ea9caef791674aacdb8f522d283eeb20620bc9592",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/start-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/start-0.log",
+    "sha256": "bf2ba4e2578f66dc41517a22c0589d8844d37ccbcfc07d593bf96cdb77d2ed82",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/health-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/health-0.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/constraints-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/constraints-0.log",
+    "sha256": "aefeee5735f540a2c37a9c71866801c54b81ed016c96a0cb40ecbaa4becd48f7",
+    "bytes": 57
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/start-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/start-1.log",
+    "sha256": "42fcbadfc2ee0d81cf0c7272891b6fd88162cad0aa95a55a5b29602dbcee3dad",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/health-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/health-1.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/constraints-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/constraints-1.log",
+    "sha256": "aefeee5735f540a2c37a9c71866801c54b81ed016c96a0cb40ecbaa4becd48f7",
+    "bytes": 57
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/start-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/start-2.log",
+    "sha256": "0f3c2d5d304d599a919740778b5797b55ea29539a93d1640212f14577e6a8d47",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/health-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/health-2.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/constraints-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/constraints-2.log",
+    "sha256": "aefeee5735f540a2c37a9c71866801c54b81ed016c96a0cb40ecbaa4becd48f7",
+    "bytes": 57
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/network-internal.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/network-internal.log",
+    "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+    "bytes": 5
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/outbound-probe.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/outbound-probe.log",
+    "sha256": "c390ec587a46e563e52e696bf3904490c6c050954c03690925971ae988242497",
+    "bytes": 33
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/desktop-grid.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/desktop-grid.png",
+    "sha256": "02f8d9257a69bb053472af3e89a484ad0fc3186b2923b32f8e02ab5cfae3f3ab",
+    "bytes": 335453
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-grid-focus.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-grid-focus.png",
+    "sha256": "9750795f03f5a03af791ec86dd2bcb67676969e47e7730a3f7681fe88efbc717",
+    "bytes": 323472
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-grid-focus-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-grid-focus-viewport.png",
+    "sha256": "28c58258d58461b5d354a7cd1d80581fb849790f406c455850205b2fa262dcd8",
+    "bytes": 40673
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-empty.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-empty.png",
+    "sha256": "1d8e4cbe6bd6a22dd97b8372c829ec9e16cf30675c40411e415f93ac7845e63d",
+    "bytes": 49220
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-empty-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-empty-viewport.png",
+    "sha256": "3b6173300beedc007c08d53b91d21cb37913bb86762cd1eb1642523db9c2f3ad",
+    "bytes": 38804
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/single-confirmed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/single-confirmed.png",
+    "sha256": "53aab9dd4654d1aeba5f915efb23f0ec6e32dd6507d555723438383c2e256ecf",
+    "bytes": 319106
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/single-cancelled.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/single-cancelled.png",
+    "sha256": "6febd5f03dd96e186aa5ec262ed861dc8e67af17998e8899ed1fc9730fb43b46",
+    "bytes": 52450
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/pair-confirmed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/pair-confirmed.png",
+    "sha256": "4c2a01f9744b8f82062dfa208bbda098ccd1b5756c57e72c6f3f002fd177041f",
+    "bytes": 322654
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/pair-cancelled.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/pair-cancelled.png",
+    "sha256": "6e4c5d1b91e80a9068220a389c7a2377aac162056e709609211643cd91b24489",
+    "bytes": 53458
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/single-refused.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/single-refused.png",
+    "sha256": "df66b6efb4e84b2c718bf15dc381996bc98cca2c3f1043590dfb65fc94cd0f3b",
+    "bytes": 303943
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/pair-refused.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/pair-refused.png",
+    "sha256": "18660d5cea84fae685c78e28c87c4d99b3d4b73359e7b3bbe31aed1e96397200",
+    "bytes": 293206
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/single-uncertain-uncommitted.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/single-uncertain-uncommitted.png",
+    "sha256": "058e9a4665d24c033521d86a6cea788ba495aaf1913a1deecbd530e676321edb",
+    "bytes": 314082
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/single-uncertain-uncommitted-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/single-uncertain-uncommitted-viewport.png",
+    "sha256": "e8703e71428dded58b9ee785fa6e7591460fe277b9262047e94e60c02d9e282c",
+    "bytes": 104624
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/single-uncertain-committed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/single-uncertain-committed.png",
+    "sha256": "058e9a4665d24c033521d86a6cea788ba495aaf1913a1deecbd530e676321edb",
+    "bytes": 314082
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/single-uncertain-committed-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/single-uncertain-committed-viewport.png",
+    "sha256": "e8703e71428dded58b9ee785fa6e7591460fe277b9262047e94e60c02d9e282c",
+    "bytes": 104624
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/pair-uncertain.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/pair-uncertain.png",
+    "sha256": "74cad47c97f42a36df3c38177a3965f84a6f4384d5bc02846f6e504ee20c12a5",
+    "bytes": 316640
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/pair-uncertain-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/pair-uncertain-viewport.png",
+    "sha256": "1f31012b150f860b5563df5fb51dbfcd8abf592cc3c15c51e5ee3e2ebec521da",
+    "bytes": 105691
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-pair-selected.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-pair-selected.png",
+    "sha256": "253a783368ea669ea5ddcc16121d1fcdc93b22aca6146cd8be4c8cc8ba85ea81",
+    "bytes": 346620
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-pair-selected-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-pair-selected-viewport.png",
+    "sha256": "4fc3a15ae548c40117ffaa680fd2f447606293bca3c45ad5e4260c28aa5d27a9",
+    "bytes": 44483
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-pair-confirmed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-pair-confirmed.png",
+    "sha256": "87f2915cf577dbdc5f9258843f0c73c6ed6a20d42248df5d28ba998c454ce90c",
+    "bytes": 362238
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-pair-confirmed-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-pair-confirmed-viewport.png",
+    "sha256": "c9c21ac011bb32d3e37a52adec7ce40c60c3e6fa6eac0f18f4b2b6d2ce475476",
+    "bytes": 40660
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-long-name-grid.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-long-name-grid.png",
+    "sha256": "72f8fd8067128f3c268ec801e35e2c8058c592ef2fab78da7e5288cd2766d23b",
+    "bytes": 330780
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-long-name-grid-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-long-name-grid-viewport.png",
+    "sha256": "73d15afa72678d00d6fb2b31e3e32c1035a34d3a72bd357735dc12e6571ca933",
+    "bytes": 45669
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-long-name-lookup.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-long-name-lookup.png",
+    "sha256": "f41d33018a01328b3c23efef8869796766b62f19400e8f15524333dd2a8a553f",
+    "bytes": 54016
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-long-name-lookup-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-long-name-lookup-viewport.png",
+    "sha256": "47333e13d413406eb01ba03dae49481b2bf3d16fccff3f2a8f91dc877fee136a",
+    "bytes": 39689
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-long-name-empty.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-long-name-empty.png",
+    "sha256": "d84b38904709d3ea8eca7e954cd390d8cff1fcb09dd61aedd4268ff10da7b1f8",
+    "bytes": 52155
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/mobile-long-name-empty-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/mobile-long-name-empty-viewport.png",
+    "sha256": "23dd9f41329591fbd9c43f79c32ef8da1a72a58b9f658c86687a0a68926b545d",
+    "bytes": 40265
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/checks.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/checks.log",
+    "sha256": "f179a908da488808ef84045132ec7f7cfc1b033b8d664ac536465290d6f8c977",
+    "bytes": 153019
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/cleanup-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/cleanup-0.log",
+    "sha256": "3c1787bbe85aa52cf677c39719ca43723fcb816fb0e6eb55ef65ee3498e853fa",
+    "bytes": 39
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/cleanup-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/cleanup-1.log",
+    "sha256": "3fc92d65f8a4e913ee3f23310424ba4b8344f95774093770228477eef0429d48",
+    "bytes": 44
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/cleanup-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/cleanup-2.log",
+    "sha256": "ca3c0d3654a296faa73009b7611deaf5d4aea2f8cf9c5f2a82e94302341b4e24",
+    "bytes": 36
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/network-remove.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/network-remove.log",
+    "sha256": "0dff5b864d04dcc1e91be3388574e06955e112b030d8547eb9b614b40aa238b5",
+    "bytes": 32
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/runmd-start.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/runmd-start.log",
+    "sha256": "b8ab40e056ee75e5b545fe8d62c09cbc8cc96b1780cec13edb74e23a439ad29d",
+    "bytes": 65
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/runmd-cleanup.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/runmd-cleanup.log",
+    "sha256": "ce0d4c921794f6525df12a62838ee71f8f031f2f33f1783d5760d11ae7455ccd",
+    "bytes": 38
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/final-revision.log",
+    "sha256": "ade330517ea5e1404001ea8f044289e23317f0c090b9d9d4980fda3e56d76e93",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/final-stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/final-stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/status-after.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/reviewer-run.json",
+    "sha256": "4602d5d7afcbfa464cff5c8f67e200d1249958860fd67237964e4ec280afdfcb",
+    "bytes": 12830
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/desktop-loading.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/desktop-loading.png",
+    "sha256": "35139b4140831afcfcfa1b2ce0860f7ecb88fa824ceefc24205a4d6267641510",
+    "bytes": 55355
+  },
+  {
+    "path": "stage-2/reviewer-browser-03/lookup-cutoff-refused.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-browser-03/lookup-cutoff-refused.png",
+    "sha256": "91d16ba89e190ec103f8a69a86d507ba64936bc21ed69e76cb760e7f982fce08",
+    "bytes": 54774
+  },
+  {
+    "path": "stage-2/reviewer-official-02/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/revision.log",
+    "sha256": "ade330517ea5e1404001ea8f044289e23317f0c090b9d9d4980fda3e56d76e93",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-official-02/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/status-before.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-official-02/stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-official-02/stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-official-02/reviewer_inherited.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/reviewer_inherited.py",
+    "sha256": "807c635085e0d8ed15603a57f2e54b2f7a606c00d860cad94329fe19286164fe",
+    "bytes": 42132
+  },
+  {
+    "path": "stage-2/reviewer-official-02/reviewer_pair_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/reviewer_pair_checks.py",
+    "sha256": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "bytes": 10940
+  },
+  {
+    "path": "stage-2/reviewer-official-02/reviewer_browser_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/reviewer_browser_checks.py",
+    "sha256": "9e4fcb4090ee9c96c317ed43156f0d26fabec3fb109d46b370c877ff52464c38",
+    "bytes": 20975
+  },
+  {
+    "path": "stage-2/reviewer-official-02/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/reviewer_run.py",
+    "sha256": "1ae75a73c7686b26da5ec032767d159d146f3ad541bedbd3c74bc925fa00acc1",
+    "bytes": 8822
+  },
+  {
+    "path": "stage-2/reviewer-official-02/reviewer-docker-adapter.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/reviewer-docker-adapter.py",
+    "sha256": "db517e1e10039f5725044151cfbf6e13dc1ee3b944f31ec3f735800bd9ab7d02",
+    "bytes": 1495
+  },
+  {
+    "path": "stage-2/reviewer-official-02/official.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/official.log",
+    "sha256": "f10458549caac2406df1c5a86cfedd87e0a2728d35f6d794cc9b5a52fd6aad2c",
+    "bytes": 1031
+  },
+  {
+    "path": "stage-2/reviewer-official-02/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/final-revision.log",
+    "sha256": "ade330517ea5e1404001ea8f044289e23317f0c090b9d9d4980fda3e56d76e93",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-official-02/final-stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/final-stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-2/reviewer-official-02/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/status-after.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-2/reviewer-official-02/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/reviewer-run.json",
+    "sha256": "963d5c9806b82e112bbd06f7f1d62d30457ef34427dba5ed5bef874c847ad4e9",
+    "bytes": 3283
+  },
+  {
+    "path": "stage-2/reviewer-official-02/harness/report.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/harness/report.json",
+    "sha256": "fd97bab0b625326e87bbac2b10629cb6db0104f4579ea5b3d7151fdd1c0cfccd",
+    "bytes": 2142
+  },
+  {
+    "path": "stage-2/reviewer-official-02/harness/stage-1.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/harness/stage-1.counts.json",
+    "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "bytes": 499
+  },
+  {
+    "path": "stage-2/reviewer-official-02/harness/stage-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/harness/stage-1.log",
+    "sha256": "d1053ffadaee14b949c05aab04cc09b5f720901a17cc384685deb9bf4ef593e2",
+    "bytes": 1463
+  },
+  {
+    "path": "stage-2/reviewer-official-02/harness/stage-2.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/harness/stage-2.counts.json",
+    "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+    "bytes": 218
+  },
+  {
+    "path": "stage-2/reviewer-official-02/harness/stage-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/harness/stage-2.log",
+    "sha256": "cc660b2935a104742a560707af265c649fe549d382205ef3bf3fe2b1e443aeaf",
+    "bytes": 1514
+  },
+  {
+    "path": "stage-2/reviewer-official-02/harness/stage-3.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/harness/stage-3.counts.json",
+    "sha256": "f56ea2e5cb8470ee753699847b35d3d606beef63541fb0489cee4324a9d2505e",
+    "bytes": 165
+  },
+  {
+    "path": "stage-2/reviewer-official-02/harness/stage-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2/reviewer-official-02/harness/stage-3.log",
+    "sha256": "ded904d38183e15a69e4b2ce4d09930f106c7df8deb558429a04187bcbaed61b",
+    "bytes": 3992
+  },
+  {
+    "path": "stage-3/reviewer-final-report.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-3/reviewer-final-report.md",
+    "sha256": "61771036c396dabbf9adb0c95be01243d9209bd6f26d663e804452063727c4b5",
+    "bytes": 9491
+  },
+  {
+    "path": "stage-3/reviewer-acceptance-design.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-3/reviewer-acceptance-design.md",
+    "sha256": "edcff5dacf5c95907ee853f1dfffebe152b4a9baa9dc470711af0b8b4b1ee541",
+    "bytes": 4292
+  },
+  {
+    "path": "stage-4/reviewer-final-report.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-final-report.md",
+    "sha256": "800f09bcff339217f062db1996dbd64ed9e29abeceb41a20286e5ae595360370",
+    "bytes": 9514
+  },
+  {
+    "path": "stage-4/reviewer-review-01.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-review-01.md",
+    "sha256": "d12aa7f2115601ad8d5a1ed5a1061f2ed2e06bab4623d1621e680dbf73dc1a9e",
+    "bytes": 5988
+  },
+  {
+    "path": "stage-4/reviewer-acceptance-design.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-acceptance-design.md",
+    "sha256": "c7260886287169ae67c2b5d90b7f07b77330b2a4065298478678fef874f5ac72",
+    "bytes": 4832
+  },
+  {
+    "path": "stage-4/reviewer-repair-source-and-visual-notes.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-repair-source-and-visual-notes.md",
+    "sha256": "8817ab2c0f831e145d42da5f2d0768d2bd6a7cefd4731d7f7b2a2781c7439748",
+    "bytes": 1857
+  },
+  {
+    "path": "stage-4/reviewer-confirmation-repair-design.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-confirmation-repair-design.md",
+    "sha256": "4778a43ec3dd8b75950c66f5cf5725c0962cf6ff0084fe1c9ebdbdc5526347d7",
+    "bytes": 1533
+  },
+  {
+    "path": "stage-4/reviewer-repair-audit-01.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-repair-audit-01.json",
+    "sha256": "6a7acd4572a5a6ca6d331f3b5776f5d0b9e658bf32895a961f42f3705b802217",
+    "bytes": 941
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/revision.log",
+    "sha256": "fbe01577b5db2a61320be9b7a43ccbc8cdd138fef4b2545280a288badb1b85ca",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/status-before.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/stage4-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/stage4-tree.log",
+    "sha256": "0eba940d4eaf096d78088439523b96e32d246227436912c00ef7636bb2e56cec",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_inherited.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_inherited.py",
+    "sha256": "bdc68f5c8566e6e422eb1f833e7cc5e6100cabab9ce3dc0c524447a67735ecaa",
+    "bytes": 42224
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_pair_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_pair_checks.py",
+    "sha256": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "bytes": 10940
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_browser_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_browser_checks.py",
+    "sha256": "b69ff5a8c2afb2ebff385ca28da14af383269e33765cc58fabcb086a4734addd",
+    "bytes": 32127
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_policy_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_policy_checks.py",
+    "sha256": "2736d676d59f80a80df94a47f0871e3864ebf393f77b0a2936c1a24a74d01cfe",
+    "bytes": 16512
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_upgrade_checks.py",
+    "sha256": "7abe337c5b9492291bbbad5fea1768ff8c9cf543ebf9497bb76560cdd27ce241",
+    "bytes": 14568
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_run.py",
+    "sha256": "15e2491c7bcb873ff9e44398e122b2ee168d66956eed80f6a1b432248d944205",
+    "bytes": 10836
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_closure_oracle.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_closure_oracle.py",
+    "sha256": "d557b13213ca6f9f808ebeccd0a7ace67e9bddd3d7e6d3f396564e1dcdb7b535",
+    "bytes": 4759
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_replan_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_replan_checks.py",
+    "sha256": "49c89f769c4892bfc70d2263e7c100e8b627809069f6c9e1a5c9eb7731ae509e",
+    "bytes": 13446
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_series_amend_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_series_amend_checks.py",
+    "sha256": "40f5e02f72053aede01a10bbe24d56efb53caf4f7bf2b30c344ddbd2c1e6e6a4",
+    "bytes": 9618
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer_final_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer_final_upgrade_checks.py",
+    "sha256": "708f8a4f925865011d47f9dd1a3d2ab65f369c4302168eb9f4b5b9595ad6d1cf",
+    "bytes": 7947
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/build-stage4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/build-stage4.log",
+    "sha256": "9fa55018ff854f7c6d5e3559f96c29bd348f18f4ffe753f46ab188f2731ce8f5",
+    "bytes": 2074
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/build-stage1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/build-stage1.log",
+    "sha256": "1ad9da93df3c09350df89f4adc0b856e2169cbf81cd940928684922a7f15ac89",
+    "bytes": 1617
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/build-stage2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/build-stage2.log",
+    "sha256": "d6fa3c6d96636b6cc50164843353efd11f9a4ac660dfd6922c75eb25832c0f75",
+    "bytes": 2025
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/build-stage3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/build-stage3.log",
+    "sha256": "777efd5685b79b4dbe621de03e8056017f260252854c6989106bb83fd96d7562",
+    "bytes": 2151
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/network-create.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/network-create.log",
+    "sha256": "4c7bab4b4e1278ad14036d38ee7281f290404c77a02b8533c04d67c67445ac25",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/start-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/start-0.log",
+    "sha256": "d33ae570a66e9adb6bd362ddbad915422e218287299df76e54edba45af64f11d",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/health-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/health-0.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/constraints-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/constraints-0.log",
+    "sha256": "bce7346174d49df17e82e68a7ee59ece8de9b217cef445af1e80e0970f88c384",
+    "bytes": 60
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/start-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/start-1.log",
+    "sha256": "465c97f9c19c338844d7084842925f3deeca1ff4ba48432fc725b1e850798841",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/health-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/health-1.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/constraints-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/constraints-1.log",
+    "sha256": "bce7346174d49df17e82e68a7ee59ece8de9b217cef445af1e80e0970f88c384",
+    "bytes": 60
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/start-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/start-2.log",
+    "sha256": "dc8b18f08aa2e1b4503cc5ffe33eaf6d7501fcf9be9e11bc4b83c4afd10eb1ee",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/health-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/health-2.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/constraints-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/constraints-2.log",
+    "sha256": "bce7346174d49df17e82e68a7ee59ece8de9b217cef445af1e80e0970f88c384",
+    "bytes": 60
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/start-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/start-3.log",
+    "sha256": "68c9a8524b4fba26d3baef8c2e798591b10abc11cc8f3642d4c350a81d20aaef",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/health-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/health-3.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/constraints-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/constraints-3.log",
+    "sha256": "bce7346174d49df17e82e68a7ee59ece8de9b217cef445af1e80e0970f88c384",
+    "bytes": 60
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/start-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/start-4.log",
+    "sha256": "5cfac72848c4982cd2ec1948ee9e2339f9493e8a63cd0a1ea6fcd9f49597a04d",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/health-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/health-4.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/constraints-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/constraints-4.log",
+    "sha256": "bce7346174d49df17e82e68a7ee59ece8de9b217cef445af1e80e0970f88c384",
+    "bytes": 60
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/network-internal.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/network-internal.log",
+    "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+    "bytes": 5
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/outbound-probe.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/outbound-probe.log",
+    "sha256": "c390ec587a46e563e52e696bf3904490c6c050954c03690925971ae988242497",
+    "bytes": 33
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/checks.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/checks.log",
+    "sha256": "951b0bcd1c84d4366e564b70857547ace64e0e698592d20be57bda535c7e3848",
+    "bytes": 11173
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/cleanup-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/cleanup-0.log",
+    "sha256": "da69aa97126f209498eee48539ea3f497e25291388b4bb097bcdaef272f7f939",
+    "bytes": 42
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/cleanup-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/cleanup-1.log",
+    "sha256": "df19512e4388d7a1b45145f6a6bfb421d09a2117afca05527f6bdd6e893b8b1b",
+    "bytes": 47
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/cleanup-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/cleanup-2.log",
+    "sha256": "5f93c6c4d95983c3db9bc7a704dfc3f65a1e69a0d0a0b471e98019dc613563c6",
+    "bytes": 39
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/cleanup-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/cleanup-3.log",
+    "sha256": "bce941c70d4476ce4eaa8257869e858343b45f8066b0572fce53f584f2e23579",
+    "bytes": 40
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/cleanup-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/cleanup-4.log",
+    "sha256": "36b43d6d20c7ffa6cfc13c972c75ceb82e78603094905bc5c5bd5c995d34e05d",
+    "bytes": 40
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/network-remove.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/network-remove.log",
+    "sha256": "26315ca9172d99a07fa70a16834f0390395c34e180feb15481743ebd9d7373c6",
+    "bytes": 35
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/runmd-start.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/runmd-start.log",
+    "sha256": "6433f33c0cf092e42666db44a0cf8fb68c236680784132265ffdc2bc67604ca6",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/runmd-cleanup.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/runmd-cleanup.log",
+    "sha256": "3479fe7d78a35b2e1428ff077f8ab4e5bc97433e17df2bc6baf2ba0f5cadef81",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/final-revision.log",
+    "sha256": "fbe01577b5db2a61320be9b7a43ccbc8cdd138fef4b2545280a288badb1b85ca",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/final-stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/final-stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/final-stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/final-stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/final-stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/final-stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/status-after.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-api-repair-02/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-api-repair-02/reviewer-run.json",
+    "sha256": "a49b8dc42fd62084cc6eb7f9794d3cce21fe5794fcad9f38eb44edc9ba7894e0",
+    "bytes": 19651
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/revision.log",
+    "sha256": "fbe01577b5db2a61320be9b7a43ccbc8cdd138fef4b2545280a288badb1b85ca",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/status-before.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/stage4-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/stage4-tree.log",
+    "sha256": "0eba940d4eaf096d78088439523b96e32d246227436912c00ef7636bb2e56cec",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_inherited.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_inherited.py",
+    "sha256": "bdc68f5c8566e6e422eb1f833e7cc5e6100cabab9ce3dc0c524447a67735ecaa",
+    "bytes": 42224
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_pair_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_pair_checks.py",
+    "sha256": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "bytes": 10940
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_browser_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_browser_checks.py",
+    "sha256": "b69ff5a8c2afb2ebff385ca28da14af383269e33765cc58fabcb086a4734addd",
+    "bytes": 32127
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_policy_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_policy_checks.py",
+    "sha256": "2736d676d59f80a80df94a47f0871e3864ebf393f77b0a2936c1a24a74d01cfe",
+    "bytes": 16512
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_upgrade_checks.py",
+    "sha256": "7abe337c5b9492291bbbad5fea1768ff8c9cf543ebf9497bb76560cdd27ce241",
+    "bytes": 14568
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_run.py",
+    "sha256": "15e2491c7bcb873ff9e44398e122b2ee168d66956eed80f6a1b432248d944205",
+    "bytes": 10836
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_closure_oracle.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_closure_oracle.py",
+    "sha256": "d557b13213ca6f9f808ebeccd0a7ace67e9bddd3d7e6d3f396564e1dcdb7b535",
+    "bytes": 4759
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_replan_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_replan_checks.py",
+    "sha256": "49c89f769c4892bfc70d2263e7c100e8b627809069f6c9e1a5c9eb7731ae509e",
+    "bytes": 13446
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_series_amend_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_series_amend_checks.py",
+    "sha256": "40f5e02f72053aede01a10bbe24d56efb53caf4f7bf2b30c344ddbd2c1e6e6a4",
+    "bytes": 9618
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer_final_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer_final_upgrade_checks.py",
+    "sha256": "708f8a4f925865011d47f9dd1a3d2ab65f369c4302168eb9f4b5b9595ad6d1cf",
+    "bytes": 7947
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/build-stage4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/build-stage4.log",
+    "sha256": "e83773427da5865c6b63344c094944a53ab9b3d5a5df3a69a072788f75f87117",
+    "bytes": 2186
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/build-stage1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/build-stage1.log",
+    "sha256": "18e17d14124b9e8a87ff898b9480478dc21fef4be9a97e2a2b62e762fb2a4f30",
+    "bytes": 1511
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/build-stage2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/build-stage2.log",
+    "sha256": "ecc5ee147844313dc399055b9bfdb9a51f751b255bae025a0f9331ba1615bae1",
+    "bytes": 2030
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/build-stage3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/build-stage3.log",
+    "sha256": "3eef393ab01e80ce4db4483817e5b3ec012b998bbe9d66b214808d272a9915d0",
+    "bytes": 2041
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/network-create.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/network-create.log",
+    "sha256": "d640a495a66cb940d8e96b14c8a2183299fdd8c22ce9465c9a8001e04c3da46a",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/start-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/start-0.log",
+    "sha256": "4d7060eb183a5df47c2ad76d96c217a75daa226f2b55d3171cfd2156194f8d06",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/health-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/health-0.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/constraints-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/constraints-0.log",
+    "sha256": "9ba225216329e32c258cddd7a50292e94f8ae0882738203307514c654fc6a8f8",
+    "bytes": 64
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/start-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/start-1.log",
+    "sha256": "af02cbc7c4dedff65bd8a3bb9a407d6d7bfb82b1683e51716279dc1466b1c5ef",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/health-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/health-1.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/constraints-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/constraints-1.log",
+    "sha256": "9ba225216329e32c258cddd7a50292e94f8ae0882738203307514c654fc6a8f8",
+    "bytes": 64
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/start-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/start-2.log",
+    "sha256": "2609b99ded386c23c96691e22d602fb83979e34f97bf4684467f3b2062bf078c",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/health-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/health-2.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/constraints-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/constraints-2.log",
+    "sha256": "9ba225216329e32c258cddd7a50292e94f8ae0882738203307514c654fc6a8f8",
+    "bytes": 64
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/start-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/start-3.log",
+    "sha256": "592f73993f88a319f498932f1abc25cc966a1246782013abaefe4402581efb18",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/health-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/health-3.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/constraints-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/constraints-3.log",
+    "sha256": "9ba225216329e32c258cddd7a50292e94f8ae0882738203307514c654fc6a8f8",
+    "bytes": 64
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/start-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/start-4.log",
+    "sha256": "cc3540dd3ac6ef0522d3b37523c1622014bc559bc78d0d3f2414844336feda11",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/health-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/health-4.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/constraints-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/constraints-4.log",
+    "sha256": "9ba225216329e32c258cddd7a50292e94f8ae0882738203307514c654fc6a8f8",
+    "bytes": 64
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/network-internal.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/network-internal.log",
+    "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+    "bytes": 5
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/outbound-probe.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/outbound-probe.log",
+    "sha256": "c390ec587a46e563e52e696bf3904490c6c050954c03690925971ae988242497",
+    "bytes": 33
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/desktop-grid.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/desktop-grid.png",
+    "sha256": "d526ba7fb2624f75dac0fe7412fa3cde9a442482f23203e7f0dcca318424f97e",
+    "bytes": 340165
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-grid-focus.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-grid-focus.png",
+    "sha256": "294870353cb52674d4be17dfc7391eb1fd689526d64fd51cfefcd5718f07b772",
+    "bytes": 334220
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-grid-focus-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-grid-focus-viewport.png",
+    "sha256": "28c58258d58461b5d354a7cd1d80581fb849790f406c455850205b2fa262dcd8",
+    "bytes": 40673
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-empty.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-empty.png",
+    "sha256": "1d8e4cbe6bd6a22dd97b8372c829ec9e16cf30675c40411e415f93ac7845e63d",
+    "bytes": 49220
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-empty-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-empty-viewport.png",
+    "sha256": "3b6173300beedc007c08d53b91d21cb37913bb86762cd1eb1642523db9c2f3ad",
+    "bytes": 38804
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/single-confirmed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/single-confirmed.png",
+    "sha256": "ee8c92c89d5f062027eed279edb6626077789cc24a050e6afb1f48e2202cadec",
+    "bytes": 323970
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/single-cancelled.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/single-cancelled.png",
+    "sha256": "7081b5036e1825fd0db0e97ad2e474ae8273cb1cf605cda0f968a8979d16ae77",
+    "bytes": 52515
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/pair-confirmed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/pair-confirmed.png",
+    "sha256": "d9d1419e746cb67312a2fc09cb3fc0f0d9f1a07120456d4aa00e746f6b2be899",
+    "bytes": 326871
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/pair-cancelled.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/pair-cancelled.png",
+    "sha256": "94150f23e6d993e2befe0525418a78aa41c211ed786799ca94137e730d1f58b2",
+    "bytes": 52396
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/single-refused.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/single-refused.png",
+    "sha256": "c3006d195be9450a47236cc856d58f8c1ab29112abe91a5bbf22e8fc48662819",
+    "bytes": 309316
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/pair-refused.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/pair-refused.png",
+    "sha256": "cdbe9909f4f6f4ce7f78085bb8efc3b1bb66ba9373d2caa7aeb71a6d20766737",
+    "bytes": 298067
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/single-uncertain-uncommitted.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/single-uncertain-uncommitted.png",
+    "sha256": "f22542a521c37bd66e9e05cb0e3554e4265270c220651a010e255d2949939b18",
+    "bytes": 318955
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/single-uncertain-uncommitted-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/single-uncertain-uncommitted-viewport.png",
+    "sha256": "20a8f627638a23af98cecd6acbab663b5b8855b99c3cc96b103340c32da4fb96",
+    "bytes": 106405
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/single-uncertain-committed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/single-uncertain-committed.png",
+    "sha256": "f22542a521c37bd66e9e05cb0e3554e4265270c220651a010e255d2949939b18",
+    "bytes": 318955
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/single-uncertain-committed-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/single-uncertain-committed-viewport.png",
+    "sha256": "20a8f627638a23af98cecd6acbab663b5b8855b99c3cc96b103340c32da4fb96",
+    "bytes": 106405
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/pair-uncertain.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/pair-uncertain.png",
+    "sha256": "f48bd96b07ac0abe736639a8d01666988a35693fc5980f800303c660dbcab4fd",
+    "bytes": 321282
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/pair-uncertain-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/pair-uncertain-viewport.png",
+    "sha256": "7089f95989c1c9ba56effcfe4e4f489ac5b0600a905d47242a52f47b2d91dd30",
+    "bytes": 107469
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/desktop-loading.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/desktop-loading.png",
+    "sha256": "35139b4140831afcfcfa1b2ce0860f7ecb88fa824ceefc24205a4d6267641510",
+    "bytes": 55355
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-pair-selected.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-pair-selected.png",
+    "sha256": "4e702fe059269eae9a4a61d3b2c5947359cffca7847d0288ac367d9c730ba40d",
+    "bytes": 357430
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-pair-selected-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-pair-selected-viewport.png",
+    "sha256": "211fbea8f900de34c88911c8518333d8412eee0115e5da44044961a176aea14b",
+    "bytes": 45826
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-pair-confirmed.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-pair-confirmed.png",
+    "sha256": "e766e9b6bcbfa904d8d96c66ed79f3ac7a6b227f18534537afd5b90b4b32c902",
+    "bytes": 372937
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-pair-confirmed-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-pair-confirmed-viewport.png",
+    "sha256": "93dbef7fce65074db52a72619d0df7cfe0d419f3915be4a19e2c7470c1f5d58e",
+    "bytes": 41223
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-long-name-grid.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-long-name-grid.png",
+    "sha256": "9267bd385788ac9b4f19e709fd4065a952cbf22499e5851c6b1f648b8568f884",
+    "bytes": 341590
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-long-name-grid-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-long-name-grid-viewport.png",
+    "sha256": "73d15afa72678d00d6fb2b31e3e32c1035a34d3a72bd357735dc12e6571ca933",
+    "bytes": 45669
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-long-name-lookup.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-long-name-lookup.png",
+    "sha256": "b0fbfc8c7d5cd3241831e51aa50998d9019f28836316fe6feaf10759661a9fa7",
+    "bytes": 53313
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-long-name-lookup-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-long-name-lookup-viewport.png",
+    "sha256": "5d7e86419726de38d8977f14986aaf83a44faf73e6dd349c5a3d3d128c566320",
+    "bytes": 39010
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-long-name-empty.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-long-name-empty.png",
+    "sha256": "d84b38904709d3ea8eca7e954cd390d8cff1fcb09dd61aedd4268ff10da7b1f8",
+    "bytes": 52155
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-long-name-empty-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-long-name-empty-viewport.png",
+    "sha256": "23dd9f41329591fbd9c43f79c32ef8da1a72a58b9f658c86687a0a68926b545d",
+    "bytes": 40265
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/lookup-cutoff-refused.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/lookup-cutoff-refused.png",
+    "sha256": "8fc3adb4a62946a80338a3b7b24234ec5ab4080b8a3162346d5394c8ca1994aa",
+    "bytes": 55504
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-policy-confirmation.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-policy-confirmation.png",
+    "sha256": "0520eb98e535822d576240f0b043831f657aefc3784f0f2c628c6aaa7d8af869",
+    "bytes": 318417
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-policy-confirmation-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-policy-confirmation-viewport.png",
+    "sha256": "9e82e4bcf0b5b788cd9742d0b18f4c4fb218ab1791402dfd92ebebb1d5ceca94",
+    "bytes": 34544
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-reassigned-lookup.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-reassigned-lookup.png",
+    "sha256": "fd293d55b01395eba6e2acb504bfe0f0aadeb7caae5a4bd1b7eae34ab9772c07",
+    "bytes": 44941
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-reassigned-lookup-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-reassigned-lookup-viewport.png",
+    "sha256": "fed8f396350f607619744f157af8e29b7169b3f9a0bda86e4a22120689982035",
+    "bytes": 35083
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-closure-grid.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-closure-grid.png",
+    "sha256": "7adae7a222881a8d1c602bd0ee275618ff7d3d3bde2a351b82985df043a95098",
+    "bytes": 277160
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-closure-grid-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-closure-grid-viewport.png",
+    "sha256": "d1a660de820ca24a7e8714ba6a708e8570880fbeebb2c01bbb776e54b06b437c",
+    "bytes": 40731
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-replan-retry-single.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-replan-retry-single.png",
+    "sha256": "cdb7b390ffcccc65ba59be9f2dec75254ebff5c39dd24ab3e13379b1ea6dd98e",
+    "bytes": 367297
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-replan-retry-single-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-replan-retry-single-viewport.png",
+    "sha256": "5a2acff4a738ad12839952297f6d0ae58031166400311969ff278fe9907d828d",
+    "bytes": 34662
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-replan-retry-pair.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-replan-retry-pair.png",
+    "sha256": "efa214ef2617f8ef7107930b443ae9dac4dfd9b30196ea6ca40794891dbe9b22",
+    "bytes": 371635
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/mobile-replan-retry-pair-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/mobile-replan-retry-pair-viewport.png",
+    "sha256": "4556797f055ca4742e16ae728035d4965a42e2c12846706f7270dbc3b13e234b",
+    "bytes": 34705
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/detail-refresh-unavailable-known-confirmation.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/detail-refresh-unavailable-known-confirmation.png",
+    "sha256": "1cc5eaf5ff3afcae258177fb745bd9a87f1294c3e1b06812d119b8ad64bbdd9c",
+    "bytes": 326307
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/checks.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/checks.log",
+    "sha256": "af0fcfadfada7772230fcb9d04d8bc884fbd454ab9ad34633d5b1c656d87ca8c",
+    "bytes": 14928
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/cleanup-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/cleanup-0.log",
+    "sha256": "de8a562e312fd219d01abe6d3e2f92dfc6608f7d36f967a5fa948ea7ea4be519",
+    "bytes": 46
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/cleanup-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/cleanup-1.log",
+    "sha256": "fa72ad4719c6e9d9a35108241fff56ec5fa73c0d0fa1d7ef02ce6d3160502cec",
+    "bytes": 51
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/cleanup-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/cleanup-2.log",
+    "sha256": "212e73f31565f264a541de35fe1e5c62a491ef25cd97948ed05daa1a35730dfd",
+    "bytes": 43
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/cleanup-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/cleanup-3.log",
+    "sha256": "265c83217af51a12628c1763e0c977b482a34b1db79b26f8f7e4fdd96ecc33cf",
+    "bytes": 44
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/cleanup-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/cleanup-4.log",
+    "sha256": "412cf2b8930a53cffeb19e038c3fa47bb790231ceca87872b8e3d15d74a3bf27",
+    "bytes": 44
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/network-remove.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/network-remove.log",
+    "sha256": "c7ccd7beeae0226cbb56721a2ab6e5100c659e342e8dcbefc4b63d5206486337",
+    "bytes": 39
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/runmd-start.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/runmd-start.log",
+    "sha256": "f4f7d73ebe809c756b0e7d4e76f8bc5e89dc8ec04b6693d72aebb566b2f9b868",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/runmd-cleanup.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/runmd-cleanup.log",
+    "sha256": "65ce25d97600bcca360fe68ddcac9b0627d7536d6e5149cd2951ef36268f4362",
+    "bytes": 45
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/final-revision.log",
+    "sha256": "fbe01577b5db2a61320be9b7a43ccbc8cdd138fef4b2545280a288badb1b85ca",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/final-stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/final-stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/final-stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/final-stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/final-stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/final-stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/status-after.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-repair-03/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-repair-03/reviewer-run.json",
+    "sha256": "d034eb9dad6e53f6f94b5c5d9e36744cf4b59ea80ce4137f9608a2c99f4d4fc3",
+    "bytes": 19789
+  },
+  {
+    "path": "stage-4/reviewer-package-01/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/revision.log",
+    "sha256": "fbe01577b5db2a61320be9b7a43ccbc8cdd138fef4b2545280a288badb1b85ca",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/status-before.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-package-01/stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/stage4-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/stage4-tree.log",
+    "sha256": "0eba940d4eaf096d78088439523b96e32d246227436912c00ef7636bb2e56cec",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_inherited.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_inherited.py",
+    "sha256": "bdc68f5c8566e6e422eb1f833e7cc5e6100cabab9ce3dc0c524447a67735ecaa",
+    "bytes": 42224
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_pair_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_pair_checks.py",
+    "sha256": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "bytes": 10940
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_browser_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_browser_checks.py",
+    "sha256": "b69ff5a8c2afb2ebff385ca28da14af383269e33765cc58fabcb086a4734addd",
+    "bytes": 32127
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_policy_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_policy_checks.py",
+    "sha256": "2736d676d59f80a80df94a47f0871e3864ebf393f77b0a2936c1a24a74d01cfe",
+    "bytes": 16512
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_upgrade_checks.py",
+    "sha256": "7abe337c5b9492291bbbad5fea1768ff8c9cf543ebf9497bb76560cdd27ce241",
+    "bytes": 14568
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_run.py",
+    "sha256": "15e2491c7bcb873ff9e44398e122b2ee168d66956eed80f6a1b432248d944205",
+    "bytes": 10836
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_closure_oracle.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_closure_oracle.py",
+    "sha256": "d557b13213ca6f9f808ebeccd0a7ace67e9bddd3d7e6d3f396564e1dcdb7b535",
+    "bytes": 4759
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_replan_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_replan_checks.py",
+    "sha256": "49c89f769c4892bfc70d2263e7c100e8b627809069f6c9e1a5c9eb7731ae509e",
+    "bytes": 13446
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_series_amend_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_series_amend_checks.py",
+    "sha256": "40f5e02f72053aede01a10bbe24d56efb53caf4f7bf2b30c344ddbd2c1e6e6a4",
+    "bytes": 9618
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer_final_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer_final_upgrade_checks.py",
+    "sha256": "708f8a4f925865011d47f9dd1a3d2ab65f369c4302168eb9f4b5b9595ad6d1cf",
+    "bytes": 7947
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer-docker-adapter.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer-docker-adapter.py",
+    "sha256": "db517e1e10039f5725044151cfbf6e13dc1ee3b944f31ec3f735800bd9ab7d02",
+    "bytes": 1495
+  },
+  {
+    "path": "stage-4/reviewer-package-01/official.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/official.log",
+    "sha256": "f5c9ab98452c59f61696b9c408722bff6249ae2765a0606e8fb1d7dde15d2a0e",
+    "bytes": 4351
+  },
+  {
+    "path": "stage-4/reviewer-package-01/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/final-revision.log",
+    "sha256": "fbe01577b5db2a61320be9b7a43ccbc8cdd138fef4b2545280a288badb1b85ca",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/final-stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/final-stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/final-stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/final-stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/final-stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/final-stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-package-01/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/status-after.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-package-01/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/reviewer-run.json",
+    "sha256": "697f152058d4167329131b39b26d76ebe9246eb0bdbf1f5abe595062c939435d",
+    "bytes": 5017
+  },
+  {
+    "path": "stage-4/reviewer-package-01/verified-summary.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/verified-summary.json",
+    "sha256": "c42899ab65488147781ed4c0def8cac767902069a392b15066759efa20e7a746",
+    "bytes": 4174
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/summary.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/summary.json",
+    "sha256": "735076fc3e52f1b4ab7bc42f4fb37ab10685d70f09d0baa56351efdfb850f2dc",
+    "bytes": 732
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-1/report.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-1/report.json",
+    "sha256": "ea84490f919f057e2368d873a086c12f9f74157a18314cc411db8026e7d2b791",
+    "bytes": 1587
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-1/stage-1.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-1/stage-1.counts.json",
+    "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "bytes": 499
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-1/stage-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-1/stage-1.log",
+    "sha256": "5611c759bf19f04c45979cd1edb78ade41f1233cba22d89949d0d1ea5e69a936",
+    "bytes": 1470
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-1/stage-2.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-1/stage-2.counts.json",
+    "sha256": "eda65c567c034428ce279c5889411791eb2abcdb677b963767db110ae8095fbd",
+    "bytes": 216
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-1/stage-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-1/stage-2.log",
+    "sha256": "8f97359c72a3b677fb727213bb8e9abdccc628f7b6727d385ae4579d8b29328c",
+    "bytes": 5554
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-2/report.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-2/report.json",
+    "sha256": "5291b3c4786852867fb5bf705fb1953a38570090b1c11e741a2aa10f112ebac7",
+    "bytes": 2142
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-2/stage-1.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-2/stage-1.counts.json",
+    "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "bytes": 499
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-2/stage-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-2/stage-1.log",
+    "sha256": "a2b23c25687f4e4c42815d9563cb281d10b52c9d3fb2869a236e29c1f6d15df0",
+    "bytes": 1470
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-2/stage-2.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-2/stage-2.counts.json",
+    "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+    "bytes": 218
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-2/stage-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-2/stage-2.log",
+    "sha256": "56334bb07ddb4e9352f5d4f49e1ac5234867bdd7dad8e613128414e8ff2f9f5f",
+    "bytes": 1521
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-2/stage-3.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-2/stage-3.counts.json",
+    "sha256": "f56ea2e5cb8470ee753699847b35d3d606beef63541fb0489cee4324a9d2505e",
+    "bytes": 165
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-2/stage-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-2/stage-3.log",
+    "sha256": "3fd3dee680b14802a953ac687b28cdbde8328df84be4492b32bdf9b78d17c1d0",
+    "bytes": 3999
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/report.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/report.json",
+    "sha256": "2f750255ce551296625544442b8be340ff6e83a38da98471d69a5fd4c89fbf4c",
+    "bytes": 2606
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-1.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-1.counts.json",
+    "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "bytes": 499
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-1.log",
+    "sha256": "a9d8268375061a19344978b7eeb9f9b0977447351f3430160a4e5c4e511f905b",
+    "bytes": 1470
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-2.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-2.counts.json",
+    "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+    "bytes": 218
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-2.log",
+    "sha256": "8ae1d66e75baf09b12e5b0890689d5ccf936048f467e41e092a4a690b6236363",
+    "bytes": 1521
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-3.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-3.counts.json",
+    "sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+    "bytes": 165
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-3.log",
+    "sha256": "c641fb5d177f5d131b79437da07cbf42a863334cc4108ffd554915577e21a3b0",
+    "bytes": 1519
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-4.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-4.counts.json",
+    "sha256": "83c208cdfc9473aef80d8f0f43c9a17b72cdf2e44f9fffd4984e299d64c0f1b5",
+    "bytes": 165
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-3/stage-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-3/stage-4.log",
+    "sha256": "91fd6453c06cf207bb15f6b7da55aca1dff0485e6ae88b198bbd9262f547013f",
+    "bytes": 3658
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/report.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/report.json",
+    "sha256": "143e0043fe49832f3f273b139f15c107d2d2dda57d5dbe5d8bef71cd4761c28c",
+    "bytes": 2898
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-1.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-1.counts.json",
+    "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "bytes": 499
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-1.log",
+    "sha256": "bdc2bc86e6402cb66843ba21abd488d490a28111da48c254c71273884580bbfe",
+    "bytes": 1470
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-2.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-2.counts.json",
+    "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+    "bytes": 218
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-2.log",
+    "sha256": "749a32d0c3c68f4d15a90bc8e0a5d3d5b594e15b0508f81a41465c802cb1b9c0",
+    "bytes": 1521
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-3.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-3.counts.json",
+    "sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+    "bytes": 165
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-3.log",
+    "sha256": "4a6c5d3471d93af57a89be91d3748b7c3081fd596cad1f5ea749c538c1519927",
+    "bytes": 1519
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-4.counts.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-4.counts.json",
+    "sha256": "9634baaeda23ab472e0fe8359c728ccd2fc1c62cf467b7ffdc8c4685446b4089",
+    "bytes": 165
+  },
+  {
+    "path": "stage-4/reviewer-package-01/harness/stage-4/stage-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness/stage-4/stage-4.log",
+    "sha256": "f9dbf6a29fcdadc366f04541b0094766499f9a9c98a5a063ca7aba7fd640540c",
+    "bytes": 1519
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/revision.log",
+    "sha256": "fbf7c6562e6389eb549e4663c9de1736b36d9a018399d4148549c2489afd6972",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/status-before.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/status-before.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/stage4-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/stage4-tree.log",
+    "sha256": "c4a1ab6cdfb177d9e0217122620133d3c316e9dabe217709d81e067dafff3856",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_inherited.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_inherited.py",
+    "sha256": "bdc68f5c8566e6e422eb1f833e7cc5e6100cabab9ce3dc0c524447a67735ecaa",
+    "bytes": 42224
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_pair_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_pair_checks.py",
+    "sha256": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "bytes": 10940
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_browser_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_browser_checks.py",
+    "sha256": "4c7260f23e866301de5bf5aedbe9d1fb0af323717c93f631c8005e5bee9c435f",
+    "bytes": 28838
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_policy_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_policy_checks.py",
+    "sha256": "2736d676d59f80a80df94a47f0871e3864ebf393f77b0a2936c1a24a74d01cfe",
+    "bytes": 16512
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_upgrade_checks.py",
+    "sha256": "7abe337c5b9492291bbbad5fea1768ff8c9cf543ebf9497bb76560cdd27ce241",
+    "bytes": 14568
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_run.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_run.py",
+    "sha256": "15e2491c7bcb873ff9e44398e122b2ee168d66956eed80f6a1b432248d944205",
+    "bytes": 10836
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_closure_oracle.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_closure_oracle.py",
+    "sha256": "d557b13213ca6f9f808ebeccd0a7ace67e9bddd3d7e6d3f396564e1dcdb7b535",
+    "bytes": 4759
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_replan_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_replan_checks.py",
+    "sha256": "49c89f769c4892bfc70d2263e7c100e8b627809069f6c9e1a5c9eb7731ae509e",
+    "bytes": 13446
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_series_amend_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_series_amend_checks.py",
+    "sha256": "40f5e02f72053aede01a10bbe24d56efb53caf4f7bf2b30c344ddbd2c1e6e6a4",
+    "bytes": 9618
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer_final_upgrade_checks.py",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer_final_upgrade_checks.py",
+    "sha256": "708f8a4f925865011d47f9dd1a3d2ab65f369c4302168eb9f4b5b9595ad6d1cf",
+    "bytes": 7947
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/build-stage4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/build-stage4.log",
+    "sha256": "f1c414a126031ff7065d90c78c3a4e6d4791700bbf27114f8efedc2e61e5a831",
+    "bytes": 2074
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/build-stage1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/build-stage1.log",
+    "sha256": "f12ad15b0e71eb304ad4abec9e2d6808f4ad9a4d41e817e629ad65bf8f63b3c4",
+    "bytes": 1589
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/build-stage2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/build-stage2.log",
+    "sha256": "b26250f528a9af5dc9842f02c10cbe8722ed35c684239d88737c2d3f4c8c50ff",
+    "bytes": 2030
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/build-stage3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/build-stage3.log",
+    "sha256": "1e04835929897772f6c3c7e5533b5b8dd5faf3798d1fb451ba0fef7f03361ff0",
+    "bytes": 2046
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/network-create.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/network-create.log",
+    "sha256": "03df62553218668233e3b3ce926e6e8bc427253ce2aa362df2e7bd2dda8d03bd",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/start-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/start-0.log",
+    "sha256": "d70b54b3932b0e8c7925c67bb898e96177326b2708aba6826b15a07cb68c3da7",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/health-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/health-0.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/constraints-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/constraints-0.log",
+    "sha256": "32857fd34b9ccc21c916d6214bb856ee5214bffe1a2f6a7c642b1404142a6aed",
+    "bytes": 67
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/start-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/start-1.log",
+    "sha256": "038722b9d3e2898c31c47a37c04bb6a80d8fbf499e948bfb3cb0c107824e9396",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/health-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/health-1.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/constraints-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/constraints-1.log",
+    "sha256": "32857fd34b9ccc21c916d6214bb856ee5214bffe1a2f6a7c642b1404142a6aed",
+    "bytes": 67
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/start-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/start-2.log",
+    "sha256": "5de0454ede60720c8d4465f04b9c9cb1ad595807dbfd1ab1f949cc46501543df",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/health-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/health-2.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/constraints-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/constraints-2.log",
+    "sha256": "32857fd34b9ccc21c916d6214bb856ee5214bffe1a2f6a7c642b1404142a6aed",
+    "bytes": 67
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/start-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/start-3.log",
+    "sha256": "b32f4467ca92358da2d6a6021fb067259ed43154ca3771c2c38b48e7a1446f98",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/health-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/health-3.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/constraints-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/constraints-3.log",
+    "sha256": "32857fd34b9ccc21c916d6214bb856ee5214bffe1a2f6a7c642b1404142a6aed",
+    "bytes": 67
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/start-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/start-4.log",
+    "sha256": "a49e4a5c610e6fbef700c4134746613ddb1a5b6afb0b31d6d99f10e5e51b0bec",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/health-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/health-4.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/constraints-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/constraints-4.log",
+    "sha256": "32857fd34b9ccc21c916d6214bb856ee5214bffe1a2f6a7c642b1404142a6aed",
+    "bytes": 67
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/network-internal.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/network-internal.log",
+    "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+    "bytes": 5
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/outbound-probe.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/outbound-probe.log",
+    "sha256": "c390ec587a46e563e52e696bf3904490c6c050954c03690925971ae988242497",
+    "bytes": 33
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/mobile-replan-retry-single.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/mobile-replan-retry-single.png",
+    "sha256": "3b2e9f87a05c4f3992f6076fe6d7d51f185e538ceace93ef1dba35690b9bcb6e",
+    "bytes": 367229
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/mobile-replan-retry-single-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/mobile-replan-retry-single-viewport.png",
+    "sha256": "ab89ded832aacce32981e5132102ea8c02c8b1c6cbd4aa39cb7312f2eb55d720",
+    "bytes": 34721
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/mobile-replan-retry-pair.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/mobile-replan-retry-pair.png",
+    "sha256": "bd9155a6fe0bb5d6d5d7419777d78f5101820fc1c89569bcc9c455a1b703205c",
+    "bytes": 373272
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/mobile-replan-retry-pair-viewport.png",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/mobile-replan-retry-pair-viewport.png",
+    "sha256": "4556797f055ca4742e16ae728035d4965a42e2c12846706f7270dbc3b13e234b",
+    "bytes": 34705
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/checks.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/checks.log",
+    "sha256": "d2452a581843b606c3be333dcdc5f1bd815f1f4476539d0de06108ae5ca1d4a6",
+    "bytes": 5726
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/cleanup-0.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/cleanup-0.log",
+    "sha256": "373d2e85f70d9becce80c958f71cdd6e83d9ad8ccd0bbe89e59972b0fb1a34a5",
+    "bytes": 49
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/cleanup-1.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/cleanup-1.log",
+    "sha256": "f6becfdb0aa1621880f95b183ed4f2d0ebdddfa3d40ce924a1925e7f80d3bf0f",
+    "bytes": 54
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/cleanup-2.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/cleanup-2.log",
+    "sha256": "ac4cc62f4f361c0acdaf83f9a6f0c3462e0d6f3f4d38c4bfcc775719b5e8106b",
+    "bytes": 46
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/cleanup-3.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/cleanup-3.log",
+    "sha256": "d12c78e196e590823dd510d7d84412c2595262de5229e7fc6a528e56cfa09eb9",
+    "bytes": 47
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/cleanup-4.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/cleanup-4.log",
+    "sha256": "a533808678ccb0a90db2005a766e00e0aebe815182db5cd5b9ad8f2e6a9824c0",
+    "bytes": 47
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/network-remove.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/network-remove.log",
+    "sha256": "390d796dc4a3fd99e5be437953a2f59df2f8f662a5fb618f51a66eb9be2639c1",
+    "bytes": 42
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/runmd-start.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/runmd-start.log",
+    "sha256": "34c07ab474f6b7c08ecbb4dcdd70615d6f1c10a444173b91e59ba796449eb8b8",
+    "bytes": 65
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/runmd-cleanup.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/runmd-cleanup.log",
+    "sha256": "40ca932724a0dd8d04ec3b855f993a0cf73a3bf6e15c518224f3cd611b2afca7",
+    "bytes": 48
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/final-revision.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/final-revision.log",
+    "sha256": "fbf7c6562e6389eb549e4663c9de1736b36d9a018399d4148549c2489afd6972",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/final-stage1-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/final-stage1-tree.log",
+    "sha256": "7c863dc8904fbb93dfe3c84022635118e981b51e588c5b7abf54763b9112cb4d",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/final-stage2-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/final-stage2-tree.log",
+    "sha256": "cadcbb5d9dd276d40fcd86fe76500c2dc0a744bafe3bd7c06d20ac40a647b48b",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/final-stage3-tree.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/final-stage3-tree.log",
+    "sha256": "68923dce44ab6daf4b5b5d4ae7057c23572be0682b43daed435042db158e83f7",
+    "bytes": 41
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/status-after.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/status-after.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "stage-4/reviewer-browser-candidate-01/reviewer-run.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-browser-candidate-01/reviewer-run.json",
+    "sha256": "774372b01c7009d75af194e5069c85302c44c4e21135d52ff2dad2e8f7b74a56",
+    "bytes": 19897
+  },
+  {
+    "path": "stage-4/reviewer-delivery-audit-03/report.md",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/report.md",
+    "bytes": 11064,
+    "sha256": "aaf61ac2f0411c244b988adee33949632af926347b40829219af1972db65dbc6"
+  },
+  {
+    "path": "stage-4/reviewer-delivery-audit-03/audit.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/audit.json",
+    "bytes": 102605,
+    "sha256": "597b9e36050e2d1701c8ef03c6e2e6271df0d319ee2ddf41e929d3d25453311f"
+  },
+  {
+    "path": "stage-4/reviewer-delivery-audit-03/committed-inventory.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/committed-inventory.json",
+    "bytes": 14992,
+    "sha256": "d735d0df31f203dc70be1736a23276c0e439bad20d9cc365413465053c25cb66"
+  },
+  {
+    "path": "stage-4/reviewer-delivery-audit-03/history.txt",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/history.txt",
+    "bytes": 2515,
+    "sha256": "1f87b5427cf2e87eeb157657db9811e9c4cdc366afa16c1a339848ced2b710a1"
+  },
+  {
+    "path": "stage-4/reviewer-delivery-audit-03/linux-transport-provenance.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/linux-transport-provenance.json",
+    "bytes": 19116,
+    "sha256": "3e22ba9289c4addcf95cb717ffc85b4b399fbd4a921153401eee08630bafc643"
+  },
+  {
+    "path": "stage-4/reviewer-delivery-audit-03/harness-check-linux.log",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/harness-check-linux.log",
+    "bytes": 229,
+    "sha256": "864f10de64f78577d092922e70387cab757be503c225309389131e815dba4f09"
+  },
+  {
+    "path": "stage-4/reviewer-delivery-audit-03/final-observation.json",
+    "source": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-delivery-audit-03/final-observation.json",
+    "bytes": 878,
+    "sha256": "56900c39d73f65ffbc4917b73f319ca6f332c1092fdf3bbb29b168e9b3c5faf8"
+  }
+]

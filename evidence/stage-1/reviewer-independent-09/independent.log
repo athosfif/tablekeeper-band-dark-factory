@@ -1,0 +1,33 @@
+test_01_public_configuration_and_seed (__main__.SpecChecks.test_01_public_configuration_and_seed) ... ok
+test_02_authentication_and_sessions (__main__.SpecChecks.test_02_authentication_and_sessions) ... ok
+test_03_type_format_and_missing_errors (__main__.SpecChecks.test_03_type_format_and_missing_errors) ... ok
+test_04_past_dates_seed_ids_and_reset (__main__.SpecChecks.test_04_past_dates_seed_ids_and_reset) ... ok
+test_05_create_errors_and_half_open (__main__.SpecChecks.test_05_create_errors_and_half_open) ... ok
+test_06_parsed_json_idempotency_and_receipts (__main__.SpecChecks.test_06_parsed_json_idempotency_and_receipts) ... ok
+test_07_50_concurrent_unique_create_contention (__main__.SpecChecks.test_07_50_concurrent_unique_create_contention) ... ok
+test_08_50_concurrent_identical_create (__main__.SpecChecks.test_08_50_concurrent_identical_create) ... ok
+test_09_list_privacy_patch_cancel (__main__.SpecChecks.test_09_list_privacy_patch_cancel) ... ok
+test_10_cutoff_uses_old_start (__main__.SpecChecks.test_10_cutoff_uses_old_start) ... ok
+test_11_dst_gaps_folds_absolute_duration (__main__.SpecChecks.test_11_dst_gaps_folds_absolute_duration) ... ok
+test_12_moves_shapes_privacy_and_cross_restaurant (__main__.SpecChecks.test_12_moves_shapes_privacy_and_cross_restaurant) ... ok
+test_13_eight_cycle_noop_and_rollback (__main__.SpecChecks.test_13_eight_cycle_noop_and_rollback) ... ok
+test_14_moves_input_order_nonoccupancy_precedence (__main__.SpecChecks.test_14_moves_input_order_nonoccupancy_precedence) ... ok
+test_15_50_identical_moves_and_original_replay (__main__.SpecChecks.test_15_50_identical_moves_and_original_replay) ... ok
+test_16_50_amendments_single_destination (__main__.SpecChecks.test_16_50_amendments_single_destination) ... ok
+test_17_independent_process_snapshot_restore (__main__.SpecChecks.test_17_independent_process_snapshot_restore) ... ok
+test_18_50_logins_preserve_every_session (__main__.SpecChecks.test_18_50_logins_preserve_every_session) ... ok
+test_19_fixture_numeric_types_and_invalid_ranges (__main__.SpecChecks.test_19_fixture_numeric_types_and_invalid_ranges) ... ok
+test_20_dst_closing_and_grid_from_offset_open (__main__.SpecChecks.test_20_dst_closing_and_grid_from_offset_open) ... ok
+test_21_deep_ignored_body_is_atomic_and_replayable (__main__.SpecChecks.test_21_deep_ignored_body_is_atomic_and_replayable) ... ok
+test_22_same_body_cross_path_and_numeric_equality (__main__.SpecChecks.test_22_same_body_cross_path_and_numeric_equality) ... ok
+test_23_concurrent_atomic_export_and_moves (__main__.SpecChecks.test_23_concurrent_atomic_export_and_moves) ... ok
+test_24_deep_moves_commit_and_receipt_together (__main__.SpecChecks.test_24_deep_moves_commit_and_receipt_together) ... ok
+test_25_table_ids_are_scoped_by_restaurant (__main__.SpecChecks.test_25_table_ids_are_scoped_by_restaurant) ... ok
+test_26_opaque_restaurant_ids_remain_publicly_addressable (__main__.SpecChecks.test_26_opaque_restaurant_ids_remain_publicly_addressable) ... ok
+test_27_deep_decoder_syntax_retry_and_portable_receipts (__main__.SpecChecks.test_27_deep_decoder_syntax_retry_and_portable_receipts) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 13.082s
+
+OK
+{"http_requests": 955, "normal_max_seconds": 3.351784877, "observed_5xx": 0, "test_control_max_seconds": 0.1211203340000111}

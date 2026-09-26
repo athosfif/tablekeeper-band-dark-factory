@@ -78,3 +78,8 @@ python -m harness run --track tablekeeper \
 Use each folder's RUN.md for standalone build/run and each evidence runner's recorded argv to reproduce supplementary checks. All required dependencies may be fetched during image build; none require runtime outbound access. The recorded metadata-only adapter is specific to this host volume, not a change to the official test contract.
 
 The real official full-room `room.json` has not been manufactured or exported by these agents. Full submission-gate validation therefore remains an operator activity after room export/privacy review. Presentation/video, public publication and event submission are also outside this run. Existing configured runtimes were used without new paid services.
+
+
+## Operator publication addendum
+
+After the autonomous final delivery was accepted at `40bb319`, the operator added unchanged public evidence copies, the official full-session export, the English presentation and an optional synthetic demo helper. Accepted stage trees, generic mandates and the full commit history remain unchanged. See [evidence/PACKAGING.json](evidence/PACKAGING.json) and [PROVENANCE.json](evidence/PROVENANCE.json). Earlier pending-publication statements describe their original checkpoint; this addendum records packaging only, not organizer acceptance.

@@ -1,0 +1,66 @@
+test_browser_15_explicit_retry_after_plan_shows_current_seating (reviewer_browser_checks.BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating) ... Executing <Task pending name='Task-1' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.135 seconds
+Executing <Task pending name='Task-5' coro=<BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating() running at reviewer_browser_checks:390> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.140 seconds
+{"case": "single", "original_tables": ["c"], "current_tables": ["d"], "visible_tables": "Garden alcove"}
+screenshot: mobile-replan-retry-single.png
+screenshot: mobile-replan-retry-single-viewport.png
+
+  test_browser_15_explicit_retry_after_plan_shows_current_seating (reviewer_browser_checks.BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating) (pair=False) ... FAIL
+Executing <Task pending name='Task-5' coro=<BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating() running at reviewer_browser_checks:390> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.255 seconds
+{"case": "pair", "original_tables": ["b", "a"], "current_tables": ["c"], "visible_tables": "Courtyard + Window nook"}
+screenshot: mobile-replan-retry-pair.png
+screenshot: mobile-replan-retry-pair-viewport.png
+  test_browser_15_explicit_retry_after_plan_shows_current_seating (reviewer_browser_checks.BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating) (pair=True) ... FAIL
+
+======================================================================
+FAIL: test_browser_15_explicit_retry_after_plan_shows_current_seating (reviewer_browser_checks.BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating) (pair=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "reviewer_browser_checks", line 412, in test_browser_15_explicit_retry_after_plan_shows_current_seating
+  File "/usr/local/lib/python3.12/site-packages/playwright/async_api/_generated.py", line 22119, in to_contain_text
+    await self._impl_obj.to_contain_text(
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 303, in to_contain_text
+    await self._expect_impl(
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 128, in _expect_impl
+    _record_soft_or_raise(
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 60, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to contain text 'Chef counter'
+Actual value: Garden alcove 
+Call log:
+  - Expect "to_contain_text" get_by_test_id("confirmation-tables") with timeout 5000ms
+  - waiting for get_by_test_id("confirmation-tables")
+    14 × locator resolved to <p data-testid="confirmation-tables">Garden alcove</p>
+       - unexpected value "Garden alcove"
+
+Aria snapshot:
+- paragraph: Garden alcove
+
+======================================================================
+FAIL: test_browser_15_explicit_retry_after_plan_shows_current_seating (reviewer_browser_checks.BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating) (pair=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "reviewer_browser_checks", line 412, in test_browser_15_explicit_retry_after_plan_shows_current_seating
+  File "/usr/local/lib/python3.12/site-packages/playwright/async_api/_generated.py", line 22119, in to_contain_text
+    await self._impl_obj.to_contain_text(
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 303, in to_contain_text
+    await self._expect_impl(
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 128, in _expect_impl
+    _record_soft_or_raise(
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 60, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to contain text 'Garden alcove'
+Actual value: Courtyard + Window nook 
+Call log:
+  - Expect "to_contain_text" get_by_test_id("confirmation-tables") with timeout 5000ms
+  - waiting for get_by_test_id("confirmation-tables")
+    14 × locator resolved to <p data-testid="confirmation-tables">Courtyard + Window nook</p>
+       - unexpected value "Courtyard + Window nook"
+
+Aria snapshot:
+- paragraph: Courtyard + Window nook
+
+----------------------------------------------------------------------
+Ran 1 test in 14.195s
+
+FAILED (failures=2)
+{"errors": 0, "failures": 2, "groups_run": 1, "http_requests": 12, "normal_max_seconds": 0.07820804100003897, "observed_5xx": 0, "test_control_max_seconds": 0.16580774999999903}

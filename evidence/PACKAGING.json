@@ -1,0 +1,17 @@
+{
+  "operator_packaging_after_autonomous_acceptance": true,
+  "accepted_delivery_revision": "40bb319c25fed8ee3c57b3364e997e71b1c87e6c",
+  "source_revision": "8c6df7f369f0041798abf8de0e10c0babf501df5",
+  "official_revision": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "room_export": {
+    "method": "BAND console: Download full session",
+    "exportedAt": "2026-09-26T20:06:15.002Z",
+    "scope": "full",
+    "messages": 2896,
+    "sha256": "6a1d1e1c41aab3ac7c52ae430cc33892f5fe3307c4b58a0afb78303761b45767",
+    "bytes": 5702741,
+    "edited": false
+  },
+  "operator_changes": "Public copies of evidence, unchanged full room export, PDF/cover, synthetic demo helper and presentation navigation. Accepted stage code and generic mandates unchanged.",
+  "local_results_not_official_judging": true
+}

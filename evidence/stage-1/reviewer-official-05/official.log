@@ -1,0 +1,7 @@
+building /Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper/stage-1 ...
+  stage 1: pass  (log: /Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/stage-1.log)
+  stage 2: fail  (log: /Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/stage-2.log)
+highest contiguous stage: 1
+claimed stage: 1 on the shipped checks
+report: /Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/reviewer-official-05/harness/report.json
+NOTE: this run only includes a portion of the full tests that are applied before judging; this is meant to provide directional feedback, and ultimately you may not pass the stage with the full set of tests.

@@ -1,0 +1,37 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 335B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 102B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 122B done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.12-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e
+#5 resolve docker.io/library/python:3.12-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e 0.0s done
+#5 DONE 0.0s
+
+#6 [2/3] WORKDIR /app
+#6 CACHED
+
+#7 [3/3] COPY --chmod=644 json_values.py model.py engine.py server.py ./
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:e675a758111379e01f8f616a24939d099eb6ce6c43def178619dba10637b0184 done
+#8 exporting config sha256:764fa94501e5b2fdded6d03c0ee2b21cc7ded6ed2c7d10c7391e8c05313b1548 done
+#8 exporting attestation manifest sha256:46fedd6985f942761c407926cc2438d0e12cd258c3a6f07b089368a7a507d45a done
+#8 exporting manifest list sha256:b571b0bff3094d72d5bbce5f2c3f8a9e55de352386fbbcd21b4bc3f4346452a3 0.0s done
+#8 naming to docker.io/library/reviewer-tablekeeper-s1:0f96bf0cd889
+#8 naming to docker.io/library/reviewer-tablekeeper-s1:0f96bf0cd889 done
+#8 unpacking to docker.io/library/reviewer-tablekeeper-s1:0f96bf0cd889 done
+#8 DONE 0.0s

@@ -1,0 +1,614 @@
+{
+  "stage": 4,
+  "mode": "browser",
+  "revision": "d6b3c0fee8af35dbb15bf98e26f62b8c938e86ce",
+  "started_utc": "2026-09-26T19:09:20Z",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.175922124999488,
+      "log": "revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.2879714160008007,
+      "log": "status-before.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.020508625002548797,
+      "log": "stage1-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.02168287499807775,
+      "log": "stage2-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03611295800146763,
+      "log": "stage3-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-4"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.017156624999188352,
+      "log": "stage4-tree.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "build",
+        "-t",
+        "reviewer-tablekeeper-s4:d6b3c0fee8af",
+        "."
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper/stage-4",
+      "exit": 0,
+      "seconds": 1.6766415830024926,
+      "log": "build-stage4.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "build",
+        "-t",
+        "reviewer-tablekeeper-s1:0f96bf0cd889",
+        "."
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper/stage-1",
+      "exit": 0,
+      "seconds": 0.3882125829986762,
+      "log": "build-stage1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "build",
+        "-t",
+        "reviewer-tablekeeper-s2:2e026c006569",
+        "."
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper/stage-2",
+      "exit": 0,
+      "seconds": 0.4310906669998076,
+      "log": "build-stage2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "build",
+        "-t",
+        "reviewer-tablekeeper-s3:6f4bee6bec0d",
+        "."
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper/stage-3",
+      "exit": 0,
+      "seconds": 0.3909236660001625,
+      "log": "build-stage3.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "network",
+        "create",
+        "--internal",
+        "reviewer-s4-reviewer-browser-candidate-01"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.048051665999082616,
+      "log": "network-create.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s4-reviewer-browser-candidate-01-source",
+        "--network",
+        "reviewer-s4-reviewer-browser-candidate-01",
+        "--cpus=2",
+        "--memory=2g",
+        "reviewer-tablekeeper-s4:d6b3c0fee8af"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.2136365409969585,
+      "log": "start-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s4-reviewer-browser-candidate-01-source",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.3610468749975553,
+      "log": "health-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s4-reviewer-browser-candidate-01-source"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03015354200033471,
+      "log": "constraints-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s4-reviewer-browser-candidate-01-destination",
+        "--network",
+        "reviewer-s4-reviewer-browser-candidate-01",
+        "--cpus=2",
+        "--memory=2g",
+        "-e",
+        "PORT=8097",
+        "reviewer-tablekeeper-s4:d6b3c0fee8af"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.11780883299798006,
+      "log": "start-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s4-reviewer-browser-candidate-01-destination",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8097/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.24278899999990244,
+      "log": "health-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s4-reviewer-browser-candidate-01-destination"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.029424290998576907,
+      "log": "constraints-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s4-reviewer-browser-candidate-01-old",
+        "--network",
+        "reviewer-s4-reviewer-browser-candidate-01",
+        "--cpus=2",
+        "--memory=2g",
+        "reviewer-tablekeeper-s1:0f96bf0cd889"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.12205166700005066,
+      "log": "start-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s4-reviewer-browser-candidate-01-old",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.2613195000012638,
+      "log": "health-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s4-reviewer-browser-candidate-01-old"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.04120258299735724,
+      "log": "constraints-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s4-reviewer-browser-candidate-01-old2",
+        "--network",
+        "reviewer-s4-reviewer-browser-candidate-01",
+        "--cpus=2",
+        "--memory=2g",
+        "reviewer-tablekeeper-s2:2e026c006569"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.2675116669997806,
+      "log": "start-3.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s4-reviewer-browser-candidate-01-old2",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.31956587500098976,
+      "log": "health-3.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s4-reviewer-browser-candidate-01-old2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03405454200037639,
+      "log": "constraints-3.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s4-reviewer-browser-candidate-01-old3",
+        "--network",
+        "reviewer-s4-reviewer-browser-candidate-01",
+        "--cpus=2",
+        "--memory=2g",
+        "reviewer-tablekeeper-s3:6f4bee6bec0d"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.57715937499961,
+      "log": "start-4.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s4-reviewer-browser-candidate-01-old3",
+        "python",
+        "-c",
+        "import urllib.request,json,time\nd=time.monotonic()+55\nwhile True:\n try:\n  r=urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=2);assert r.status==200 and json.load(r)=={'status':'ok'};break\n except Exception:\n  if time.monotonic()>d:raise\n  time.sleep(.1)"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.33261666700127535,
+      "log": "health-4.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "inspect",
+        "--format",
+        "{{.HostConfig.NanoCpus}} {{.HostConfig.Memory}} {{.HostConfig.NetworkMode}} {{json .Mounts}}",
+        "reviewer-s4-reviewer-browser-candidate-01-old3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03134208300252794,
+      "log": "constraints-4.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "network",
+        "inspect",
+        "--format",
+        "{{.Internal}}",
+        "reviewer-s4-reviewer-browser-candidate-01"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.025167874999169726,
+      "log": "network-internal.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "exec",
+        "reviewer-s4-reviewer-browser-candidate-01-source",
+        "python",
+        "-c",
+        "import socket\ns=socket.socket();s.settimeout(1)\ntry:\n s.connect(('1.1.1.1',443));raise SystemExit('OUTBOUND_CONNECTED')\nexcept OSError: print('outbound unavailable as required')"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.11458308300279896,
+      "log": "outbound-probe.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "--rm",
+        "-i",
+        "--network",
+        "reviewer-s4-reviewer-browser-candidate-01",
+        "--cpus=2",
+        "--memory=2g",
+        "-e",
+        "REVIEW_BASE=http://reviewer-s4-reviewer-browser-candidate-01-source:8080",
+        "-e",
+        "REVIEW_DEST=http://reviewer-s4-reviewer-browser-candidate-01-destination:8097",
+        "-e",
+        "REVIEW_OLD=http://reviewer-s4-reviewer-browser-candidate-01-old:8080",
+        "-e",
+        "REVIEW_OLD2=http://reviewer-s4-reviewer-browser-candidate-01-old2:8080",
+        "-e",
+        "REVIEW_OLD3=http://reviewer-s4-reviewer-browser-candidate-01-old3:8080",
+        "--entrypoint",
+        "python",
+        "df-harness-runner",
+        "-B",
+        "-"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 1,
+      "seconds": 14.993243207998603,
+      "log": "checks.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s4-reviewer-browser-candidate-01-source"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.19211204100065515,
+      "log": "cleanup-0.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s4-reviewer-browser-candidate-01-destination"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.11916645800010883,
+      "log": "cleanup-1.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s4-reviewer-browser-candidate-01-old"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.12753216700002667,
+      "log": "cleanup-2.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s4-reviewer-browser-candidate-01-old2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.11660795799980406,
+      "log": "cleanup-3.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s4-reviewer-browser-candidate-01-old3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.11999595899760607,
+      "log": "cleanup-4.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "network",
+        "rm",
+        "reviewer-s4-reviewer-browser-candidate-01"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.08244824999928824,
+      "log": "network-remove.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "reviewer-s4-reviewer-browser-candidate-01-runmd",
+        "--cpus=2",
+        "--memory=2g",
+        "-e",
+        "PORT=8080",
+        "-p",
+        "127.0.0.1:18095:8080",
+        "reviewer-tablekeeper-s4:d6b3c0fee8af"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.15710112499800744,
+      "log": "runmd-start.log"
+    },
+    {
+      "argv": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "rm",
+        "-f",
+        "reviewer-s4-reviewer-browser-candidate-01-runmd"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.1472526249999646,
+      "log": "runmd-cleanup.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.07770700000037323,
+      "log": "final-revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.032406582999101374,
+      "log": "final-stage1-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.05166637500224169,
+      "log": "final-stage2-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.024754250000114553,
+      "log": "final-stage3-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.05946224999934202,
+      "log": "status-after.log"
+    }
+  ],
+  "stage3_tree": "6f4bee6bec0d5908de7ebe9345290f786b012b63",
+  "stage4_tree": "692eee75727f6df379e0e5c6f9574793dfaf24dd",
+  "test_hashes": {
+    "reviewer_inherited.py": "bdc68f5c8566e6e422eb1f833e7cc5e6100cabab9ce3dc0c524447a67735ecaa",
+    "reviewer_pair_checks.py": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "reviewer_browser_checks.py": "4c7260f23e866301de5bf5aedbe9d1fb0af323717c93f631c8005e5bee9c435f",
+    "reviewer_policy_checks.py": "2736d676d59f80a80df94a47f0871e3864ebf393f77b0a2936c1a24a74d01cfe",
+    "reviewer_upgrade_checks.py": "7abe337c5b9492291bbbad5fea1768ff8c9cf543ebf9497bb76560cdd27ce241",
+    "reviewer_run.py": "15e2491c7bcb873ff9e44398e122b2ee168d66956eed80f6a1b432248d944205",
+    "reviewer_closure_oracle.py": "d557b13213ca6f9f808ebeccd0a7ace67e9bddd3d7e6d3f396564e1dcdb7b535",
+    "reviewer_replan_checks.py": "49c89f769c4892bfc70d2263e7c100e8b627809069f6c9e1a5c9eb7731ae509e",
+    "reviewer_series_amend_checks.py": "40f5e02f72053aede01a10bbe24d56efb53caf4f7bf2b30c344ddbd2c1e6e6a4",
+    "reviewer_final_upgrade_checks.py": "708f8a4f925865011d47f9dd1a3d2ab65f369c4302168eb9f4b5b9595ad6d1cf"
+  },
+  "health_seconds": [
+    0.5748262909983168,
+    0.3607442499996978,
+    0.3834912910024286,
+    0.5872576250003476,
+    0.9100453749997541
+  ],
+  "exit": 1,
+  "runmd_health_seconds": 0.4092555419993005,
+  "elapsed_seconds": 23.448859707998054
+}

@@ -1,0 +1,167 @@
+{
+  "stage": 4,
+  "mode": "package",
+  "revision": "8c6df7f369f0041798abf8de0e10c0babf501df5",
+  "started_utc": "2026-09-26T19:33:07Z",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.12412866700105951,
+      "log": "revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.11823245800042059,
+      "log": "status-before.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.04521441600081744,
+      "log": "stage1-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.021660541999153793,
+      "log": "stage2-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.0179718330000469,
+      "log": "stage3-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-4"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.04638341700047022,
+      "log": "stage4-tree.log"
+    },
+    {
+      "argv": [
+        "/Users/athvs/.cache/figueira-band-harness/bin/python",
+        "-m",
+        "harness",
+        "run",
+        "--track",
+        "tablekeeper",
+        "--repo",
+        "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+        "--all",
+        "--mode",
+        "isolated",
+        "--out",
+        "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-4/reviewer-package-01/harness"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+      "exit": 0,
+      "seconds": 202.4423847500002,
+      "log": "official.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.04739270799836959,
+      "log": "final-revision.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-1"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.05794008299926645,
+      "log": "final-stage1-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-2"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.03155908299959265,
+      "log": "final-stage2-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD:stage-3"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.021165582998946775,
+      "log": "final-stage3-tree.log"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper",
+      "exit": 0,
+      "seconds": 0.14139316599903395,
+      "log": "status-after.log"
+    }
+  ],
+  "stage3_tree": "6f4bee6bec0d5908de7ebe9345290f786b012b63",
+  "stage4_tree": "e4bae830ae426197911968153c97c4ef06f9e40d",
+  "test_hashes": {
+    "reviewer_inherited.py": "bdc68f5c8566e6e422eb1f833e7cc5e6100cabab9ce3dc0c524447a67735ecaa",
+    "reviewer_pair_checks.py": "b66c205a3b665821daae214f77c03d913f2b746942c870eaa4fb87d988e42c8c",
+    "reviewer_browser_checks.py": "b69ff5a8c2afb2ebff385ca28da14af383269e33765cc58fabcb086a4734addd",
+    "reviewer_policy_checks.py": "2736d676d59f80a80df94a47f0871e3864ebf393f77b0a2936c1a24a74d01cfe",
+    "reviewer_upgrade_checks.py": "7abe337c5b9492291bbbad5fea1768ff8c9cf543ebf9497bb76560cdd27ce241",
+    "reviewer_run.py": "15e2491c7bcb873ff9e44398e122b2ee168d66956eed80f6a1b432248d944205",
+    "reviewer_closure_oracle.py": "d557b13213ca6f9f808ebeccd0a7ace67e9bddd3d7e6d3f396564e1dcdb7b535",
+    "reviewer_replan_checks.py": "49c89f769c4892bfc70d2263e7c100e8b627809069f6c9e1a5c9eb7731ae509e",
+    "reviewer_series_amend_checks.py": "40f5e02f72053aede01a10bbe24d56efb53caf4f7bf2b30c344ddbd2c1e6e6a4",
+    "reviewer_final_upgrade_checks.py": "708f8a4f925865011d47f9dd1a3d2ab65f369c4302168eb9f4b5b9595ad6d1cf"
+  },
+  "adapter_sha256": "db517e1e10039f5725044151cfbf6e13dc1ee3b944f31ec3f735800bd9ab7d02",
+  "exit": 0,
+  "elapsed_seconds": 203.38514720799867
+}

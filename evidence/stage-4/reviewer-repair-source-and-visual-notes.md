@@ -1,0 +1,9 @@
+# Repair source and rendered review
+
+Reviewed repair `8c6df7f369f0041798abf8de0e10c0babf501df5` after independent failure and repair-regression designs were already recorded. The three-file diff changes Stage 4 browser confirmation, its focused builder test and RUN.md. Backend, API receipts, solver, snapshots and all earlier folders have identical bytes to the reviewed parent. `reviewer-repair-audit-01.json` records exact trees, clean state, ancestor checks and absence of symlinks/submodules/nested Git repositories.
+
+The confirmation retains the acknowledged original reference, then reads the current owner-visible reservation. Separate error handling keeps known POST success distinct from a failed details read. Request epoch, booking version, user and attempt identity checks prevent late details from overwriting a new form. A details-only retry performs GET without resubmitting the booking. Cancelled current state has truthful copy. No polling or API-receipt mutation was introduced.
+
+Independent browser run reviewer-browser-repair-03 passed 17 groups, including original single/pair reassign-and-replay failures and the two predesigned detail failure/race cases. Manually inspected its rendered `detail-refresh-unavailable-known-confirmation.png`: visible successful reference, explicit latest-details failure and separate refresh action, no manufactured booking refusal. Inspected `mobile-replan-retry-single-viewport.png`: original form choice remains visible as requested selection, while confirmation shows current Chef counter seating and the same reference. The inherited desktop/mobile/focus/long-name/recovery screenshots and assertions are preserved in that run. Earlier failures remain untouched.
+
+This note is source/visual corroboration. Use the final report and per-run metadata for exact acceptance and complete suite results.

@@ -1,0 +1,172 @@
+{
+  "revision": "8c6df7f369f0041798abf8de0e10c0babf501df5",
+  "stage4_tree": "e4bae830ae426197911968153c97c4ef06f9e40d",
+  "elapsed_seconds": 203.38514720799867,
+  "command_seconds": 202.4423847500002,
+  "exit": 0,
+  "folders": {
+    "1": {
+      "claimed_stage": "1",
+      "suite_counts": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "120 passed, 1 warning in 20.69s"
+        },
+        "2": {
+          "collected": 25,
+          "passed": 0,
+          "failed": 1,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 24,
+          "summary": "1 failed, 2 warnings in 11.51s"
+        }
+      }
+    },
+    "2": {
+      "claimed_stage": "2",
+      "suite_counts": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "120 passed, 1 warning in 16.95s"
+        },
+        "2": {
+          "collected": 25,
+          "passed": 25,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "25 passed, 1 warning in 16.62s"
+        },
+        "3": {
+          "collected": 7,
+          "passed": 0,
+          "failed": 1,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 6,
+          "summary": "1 failed, 2 warnings in 0.22s"
+        }
+      }
+    },
+    "3": {
+      "claimed_stage": "3",
+      "suite_counts": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "120 passed, 1 warning in 21.75s"
+        },
+        "2": {
+          "collected": 25,
+          "passed": 25,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "25 passed, 1 warning in 21.19s"
+        },
+        "3": {
+          "collected": 7,
+          "passed": 7,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "7 passed, 1 warning in 1.06s"
+        },
+        "4": {
+          "collected": 6,
+          "passed": 4,
+          "failed": 1,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 1,
+          "summary": "1 failed, 4 passed, 2 warnings in 0.82s"
+        }
+      }
+    },
+    "4": {
+      "claimed_stage": "4",
+      "suite_counts": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "120 passed, 1 warning in 21.91s"
+        },
+        "2": {
+          "collected": 25,
+          "passed": 25,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "25 passed, 1 warning in 27.54s"
+        },
+        "3": {
+          "collected": 7,
+          "passed": 7,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "7 passed, 1 warning in 1.28s"
+        },
+        "4": {
+          "collected": 6,
+          "passed": 6,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "unexecuted": 0,
+          "summary": "6 passed, 1 warning in 1.14s"
+        }
+      }
+    }
+  }
+}

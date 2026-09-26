@@ -1,0 +1,90 @@
+test_browser_01_routes_auth_and_logout (reviewer_browser_checks.BrowserChecks.test_browser_01_routes_auth_and_logout) ... Executing <Task pending name='Task-1' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.135 seconds
+ok
+test_browser_02_grid_mobile_labels_and_empty (reviewer_browser_checks.BrowserChecks.test_browser_02_grid_mobile_labels_and_empty) ... Executing <Task pending name='Task-220' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.108 seconds
+screenshot: desktop-grid.png
+screenshot: mobile-grid-focus.png
+screenshot: mobile-grid-focus-viewport.png
+screenshot: mobile-empty.png
+screenshot: mobile-empty-viewport.png
+ok
+test_browser_03_single_pair_success_replay_lookup (reviewer_browser_checks.BrowserChecks.test_browser_03_single_pair_success_replay_lookup) ... Executing <Task pending name='Task-283' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.107 seconds
+screenshot: single-confirmed.png
+screenshot: single-cancelled.png
+screenshot: pair-confirmed.png
+screenshot: pair-cancelled.png
+ok
+test_browser_04_stale_selection_preserves_form (reviewer_browser_checks.BrowserChecks.test_browser_04_stale_selection_preserves_form) ... Executing <Task pending name='Task-490' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.102 seconds
+screenshot: single-refused.png
+screenshot: pair-refused.png
+ok
+test_browser_05_lost_response_before_and_after_commit (reviewer_browser_checks.BrowserChecks.test_browser_05_lost_response_before_and_after_commit) ... Executing <Task pending name='Task-613' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.112 seconds
+screenshot: single-uncertain-uncommitted.png
+screenshot: single-uncertain-uncommitted-viewport.png
+screenshot: single-uncertain-committed.png
+screenshot: single-uncertain-committed-viewport.png
+screenshot: pair-uncertain.png
+screenshot: pair-uncertain-viewport.png
+ok
+test_browser_06_search_out_of_order (reviewer_browser_checks.BrowserChecks.test_browser_06_search_out_of_order) ... 
+screenshot: desktop-loading.png
+ok
+test_browser_07_open_page_upgrade_recovers_old_receipt (reviewer_browser_checks.BrowserChecks.test_browser_07_open_page_upgrade_recovers_old_receipt) ... Executing <Task pending name='Task-870' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.105 seconds
+Executing <Task pending name='Task-874' coro=<BrowserChecks.test_browser_07_open_page_upgrade_recovers_old_receipt() running at reviewer_browser_checks:248> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.160 seconds
+ok
+test_browser_08_mobile_pair_form_and_confirmation (reviewer_browser_checks.BrowserChecks.test_browser_08_mobile_pair_form_and_confirmation) ... Executing <Task pending name='Task-957' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.109 seconds
+screenshot: mobile-pair-selected.png
+screenshot: mobile-pair-selected-viewport.png
+screenshot: mobile-pair-confirmed.png
+screenshot: mobile-pair-confirmed-viewport.png
+ok
+test_browser_09_long_restaurant_name_mobile (reviewer_browser_checks.BrowserChecks.test_browser_09_long_restaurant_name_mobile) ... Executing <Task pending name='Task-1020' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.115 seconds
+screenshot: mobile-long-name-grid.png
+screenshot: mobile-long-name-grid-viewport.png
+LONG_NAME_DIMENSIONS {"scrollWidth": 375, "innerWidth": 375}
+screenshot: mobile-long-name-lookup.png
+screenshot: mobile-long-name-lookup-viewport.png
+screenshot: mobile-long-name-empty.png
+screenshot: mobile-long-name-empty-viewport.png
+ok
+test_browser_10_signup_errors_and_lookup_refusal (reviewer_browser_checks.BrowserChecks.test_browser_10_signup_errors_and_lookup_refusal) ... Executing <Task pending name='Task-1128' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.105 seconds
+screenshot: lookup-cutoff-refused.png
+ok
+test_browser_11_open_page_stage2_upgrade (reviewer_browser_checks.BrowserChecks.test_browser_11_open_page_stage2_upgrade) ... Executing <Task pending name='Task-1266' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.129 seconds
+Executing <Task pending name='Task-1270' coro=<BrowserChecks.test_browser_11_open_page_stage2_upgrade() running at reviewer_browser_checks:318> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.243 seconds
+ok
+test_browser_12_open_page_stage3_upgrade (reviewer_browser_checks.BrowserChecks.test_browser_12_open_page_stage3_upgrade) ... Executing <Task pending name='Task-1353' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.171 seconds
+Executing <Task pending name='Task-1357' coro=<BrowserChecks.test_browser_12_open_page_stage3_upgrade() running at reviewer_browser_checks:324> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.176 seconds
+ok
+test_browser_13_policy_selected_capacity_and_original_confirmation (reviewer_browser_checks.BrowserChecks.test_browser_13_policy_selected_capacity_and_original_confirmation) ... Executing <Task pending name='Task-1440' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.153 seconds
+Executing <Task pending name='Task-1444' coro=<BrowserChecks.test_browser_13_policy_selected_capacity_and_original_confirmation() running at reviewer_browser_checks:331> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.227 seconds
+screenshot: mobile-policy-confirmation.png
+screenshot: mobile-policy-confirmation-viewport.png
+ok
+test_browser_14_applied_closure_updates_lookup_and_availability (reviewer_browser_checks.BrowserChecks.test_browser_14_applied_closure_updates_lookup_and_availability) ... Executing <Task pending name='Task-1516' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.135 seconds
+Executing <Task pending name='Task-1520' coro=<BrowserChecks.test_browser_14_applied_closure_updates_lookup_and_availability() running at reviewer_browser_checks:364> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.156 seconds
+screenshot: mobile-reassigned-lookup.png
+screenshot: mobile-reassigned-lookup-viewport.png
+screenshot: mobile-closure-grid.png
+screenshot: mobile-closure-grid-viewport.png
+ok
+test_browser_15_explicit_retry_after_plan_shows_current_seating (reviewer_browser_checks.BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating) ... Executing <Task pending name='Task-1624' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.121 seconds
+Executing <Task pending name='Task-1628' coro=<BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating() running at reviewer_browser_checks:390> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.117 seconds
+{"case": "single", "original_tables": ["c"], "current_tables": ["d"], "visible_tables": "Chef counter"}
+screenshot: mobile-replan-retry-single.png
+screenshot: mobile-replan-retry-single-viewport.png
+Executing <Task pending name='Task-1628' coro=<BrowserChecks.test_browser_15_explicit_retry_after_plan_shows_current_seating() running at reviewer_browser_checks:390> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181, ProtocolCallback.__init__.<locals>.cb() at /usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py:264] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.119 seconds
+{"case": "pair", "original_tables": ["b", "a"], "current_tables": ["c"], "visible_tables": "Garden alcove"}
+screenshot: mobile-replan-retry-pair.png
+screenshot: mobile-replan-retry-pair-viewport.png
+ok
+test_browser_16_detail_read_failure_keeps_known_booking_receipt (reviewer_browser_checks.BrowserChecks.test_browser_16_detail_read_failure_keeps_known_booking_receipt) ... Executing <Task pending name='Task-1755' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.117 seconds
+screenshot: detail-refresh-unavailable-known-confirmation.png
+ok
+test_browser_17_late_detail_does_not_overwrite_new_selection (reviewer_browser_checks.BrowserChecks.test_browser_17_late_detail_does_not_overwrite_new_selection) ... Executing <Task pending name='Task-1826' coro=<BrowserChecks.asyncSetUp() running at reviewer_browser_checks:21> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.12/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at /usr/local/lib/python3.12/asyncio/base_events.py:181] created at /usr/local/lib/python3.12/asyncio/runners.py:100> took 0.123 seconds
+ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 36.542s
+
+OK
+{"errors": 0, "failures": 0, "groups_run": 17, "http_requests": 91, "normal_max_seconds": 0.05994233399997029, "observed_5xx": 0, "test_control_max_seconds": 0.1470514590000107}
