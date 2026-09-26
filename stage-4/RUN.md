@@ -45,6 +45,8 @@ The interface uses locally served typography and assets, visible labels and keyb
 
 Booking forms retain their full request and idempotency key for unchanged retries. Every retry reaches the server. A lost response shows uncertainty; a confirmed conflict shows refusal and refreshes availability while retaining the form. A changed field creates a new request identity. Successful confirmation keeps the form available. Browser sessions use local storage, allowing existing sessions and open pending forms to continue through an import between requests. Lookup displays the current owner-visible reservation and supports cancellation.
 
+After each acknowledged booking POST, confirmation fetches the current reservation by its original reference. Thus an immutable replay receipt can still display seating reassigned by a manager. A failed details read retains the known successful reference and offers a read-only refresh, without claiming a refused or uncertain booking. Late reads cannot overwrite a newer selection. No background polling is used.
+
 ## Focused checks
 
 With Python 3.12+, run inherited API checks using:
@@ -70,5 +72,7 @@ Stage 3 adds eight groups in `test_stage3.py`, for 37 cumulative builder groups.
 Tests use synthetic identities and retain tokens and snapshots only in memory. Their output supplements the independent review and cumulative isolated harness; it does not establish official event acceptance.
 
 Stage 4 adds twelve groups in `test_stage4.py`, for 49 cumulative builder groups. A separate exhaustive product-enumeration oracle checks 18 seating scenarios; other cases cover accepted capacities under later policies, single-to-pair repair/import, fixed bookings and earlier closures over full intervals, maximum supported planning dimensions, half-open closure boundaries, 50 identical plan applications and 50 competing series changes, stale/no-op/other-restaurant revisions, past-cutoff repairs, exceptions/cancelled occurrences, rollback, portable previews/applied histories/receipts and actual populated Stage 3 upgrades. Include all four test modules and set `TABLEKEEPER_STAGE3_URL` to an accepted Stage 3 service, with main source/destination URLs pointing to Stage 4. The inherited upgrade tests still use separate Stage 1 and Stage 2 URLs.
+
+Four browser regression groups in `test_confirmation.Confirmation` additionally cover current single/pair seating after original-receipt replay, network/HTTP detail-read failures and read-only recovery, delayed success/failure after a new selection, and a lost booking response followed by reassignment and retry. They verify unchanged body/key/receipt, a single booking, and rendered desktop/375px layouts. Run `python -B -m unittest -v test_confirmation.Confirmation` with the same main URL and evidence variables.
 
 Test controls are intentionally unauthenticated. Exports contain hashes and live sessions and must stay private. Logging excludes request bodies and authorization headers. State is lost when the process exits. This folder is the complete cumulative Stage 4 service. Management operations are API-only; existing booking and lookup screens always read current server state.

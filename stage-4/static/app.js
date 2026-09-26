@@ -69,10 +69,32 @@ async function search(keepBooking=false, saved=null) {
 }
 function renderBooking() {
   const selection = state.selected;
+  let confirmationEpoch = 0;
+  // A POST receipt is immutable retry evidence. Current seating comes from GET.
+  async function refreshConfirmation(receipt, attempt, user, version) {
+    const epoch = ++confirmationEpoch;
+    const current = () => epoch === confirmationEpoch && version === state.bookingVersion && user === session?.user_id && attempt === state.attempt;
+    const shell = (reservation = null) => `<section class="confirmation" data-testid="confirmation" aria-live="polite"><div class="eyebrow">${reservation?.status === 'cancelled' ? 'Reservation cancelled' : 'Reservation received'}</div><div class="reference" data-testid="confirmation-reference">${esc(receipt.reference)}</div>${reservation ? `<p data-testid="confirmation-details">${esc(selection.restaurant.name)} · ${esc(labels(selection.restaurant,idsOf(reservation)))} · ${esc(reservation.starts_at_local.replace('T',' '))}</p><p data-testid="confirmation-tables">${esc(labels(selection.restaurant,idsOf(reservation)))}</p><p class="${reservation.status === 'cancelled' ? 'fine' : 'success status'}">${reservation.status === 'cancelled' ? 'This reservation is now cancelled.' : 'Your place is saved. These are your current reservation details.'}</p>` : ''}<div id="confirmation-refresh"></div><a href="/lookup?reference=${encodeURIComponent(receipt.reference)}">View your reservation</a></section>`;
+    if (!current()) return;
+    $('confirmation-area').innerHTML = shell();
+    $('confirmation-refresh').innerHTML = '<p class="loading" role="status">Booking received. Checking current seating…</p>';
+    try {
+      const reservation = await api('/reservations/'+encodeURIComponent(receipt.reference));
+      if (current()) $('confirmation-area').innerHTML = shell(reservation);
+    } catch {
+      if (!current()) return;
+      status('confirmation-refresh','confirmation-refresh-error','Your booking response was successful. We could not load the latest seating details. Keep this reference and refresh the details.','uncertain','Latest details unavailable');
+      const retry = document.createElement('button');
+      retry.className = 'secondary'; retry.dataset.testid = 'confirmation-refresh-button'; retry.textContent = 'Refresh reservation details';
+      retry.onclick = () => refreshConfirmation(receipt, attempt, user, version);
+      $('confirmation-refresh').append(retry);
+    }
+  }
   $('booking').innerHTML = `<section class="card booking-card" data-testid="booking-form"><div class="eyebrow">Your selection</div><h2>A table for you.</h2><div class="booking-summary" data-testid="booking-summary">${esc(selection.restaurant.name)}<br><strong>${esc(labels(selection.restaurant,selection.ids))}</strong><br>${esc(selection.starts_at_local.replace('T',' · '))}</div><form id="book"><label for="booking-party">Number of guests</label><input id="booking-party" data-testid="booking-party-size" type="number" min="1" step="1" required value="${selection.party_size}"><button class="primary" data-testid="booking-submit">Confirm reservation</button></form><p class="fine">Your table is reserved only when a confirmation appears below.</p><div id="booking-feedback"></div><div id="confirmation-area"></div></section>`;
   $('booking-party').oninput = () => { state.attempt = null; $('confirmation-area').innerHTML = ''; $('booking-feedback').innerHTML = ''; };
   $('book').onsubmit = async event => {
     event.preventDefault(); const version = state.bookingVersion, user = session?.user_id;
+    confirmationEpoch++;
     const body = {restaurant_id:selection.restaurant.id,starts_at_local:selection.starts_at_local,party_size:Number($('booking-party').value),...(selection.ids.length === 1 ? {table_id:selection.ids[0]} : {table_ids:selection.ids})};
     const encoded = JSON.stringify(body);
     if (!state.attempt || state.attempt.body !== encoded || state.attempt.user !== user) state.attempt = {key:key(),body:encoded,user};
@@ -82,7 +104,7 @@ function renderBooking() {
       const reservation = await api('/reservations',{method:'POST',body:attempt.body,headers:{'Idempotency-Key':attempt.key}});
       if (version !== state.bookingVersion || user !== session?.user_id) return;
       $('booking-feedback').innerHTML = '';
-      $('confirmation-area').innerHTML = `<section class="confirmation" data-testid="confirmation" aria-live="polite"><div class="eyebrow">Reservation confirmed</div><div class="reference" data-testid="confirmation-reference">${esc(reservation.reference)}</div><p data-testid="confirmation-details">${esc(selection.restaurant.name)} · ${esc(labels(selection.restaurant,idsOf(reservation)))} · ${esc(reservation.starts_at_local.replace('T',' '))}</p><p data-testid="confirmation-tables">${esc(labels(selection.restaurant,idsOf(reservation)))}</p><p class="success status">Your place is saved. Keep this reference for your visit.</p><a href="/lookup?reference=${encodeURIComponent(reservation.reference)}">View your reservation</a></section>`;
+      await refreshConfirmation(reservation, attempt, user, version);
     } catch(error) {
       if (version !== state.bookingVersion || user !== session?.user_id) return;
       if (error.uncertain) status('booking-feedback','booking-uncertain','The response did not arrive, so your table may already be reserved. Keep these details and try again to recover the same reservation.','uncertain','Confirmation not received');
