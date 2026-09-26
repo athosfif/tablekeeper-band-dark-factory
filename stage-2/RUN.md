@@ -37,7 +37,7 @@ python -B -m unittest -v test_contract
 
 This starts two temporary independent service processes and runs 21 groups covering contention, moves, DST, idempotency, privacy, replacement imports, deep ignored JSON and transaction rollback. For existing containers set `TABLEKEEPER_URL` and `TABLEKEEPER_SECOND_URL` instead. The injection test checks the local transaction boundary directly.
 
-The seven additional groups in `test_stage2.py` exercise pair validation/occupancy/moves/import, 50-way pair/single contention, browser races, post-commit response loss, stale selection, real Stage 1 migration with the same open browser form, lookup and a 375px layout. They require Playwright Chromium, two running Stage 2 services, a running Stage 1 service and an evidence directory:
+The eight additional groups in `test_stage2.py` exercise pair validation/occupancy/moves/import, 50-way pair/single contention, browser races, post-commit response loss, stale selection, real Stage 1 migration with the same open browser form, lookup and a 375px layout including unrestricted long restaurant and table labels. They require Playwright Chromium, two running Stage 2 services, a running Stage 1 service and an evidence directory:
 
 ```sh
 TABLEKEEPER_URL=http://localhost:8080 \

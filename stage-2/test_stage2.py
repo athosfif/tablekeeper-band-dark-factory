@@ -159,6 +159,36 @@ class Stage2(unittest.TestCase):
         expect(page.get_by_test_id('booking-party-size')).to_have_value('2')
         expect(page.get_by_test_id('confirmation')).to_have_count(0)
 
+    def test_browser_long_names_wrap_in_all_booking_states(self):
+        seed = fixture()
+        name = 'Restaurantwithanexceptionallylongsinglewordname'
+        label = 'Windowtablewithanexceptionallylongsinglewordlabel'
+        seed['restaurants'][0]['name'] = name
+        seed['restaurants'][0]['tables'][0]['label'] = label
+        # Tuesday is closed, allowing the same valid text through the empty state.
+        seed['restaurants'][0]['opening_hours'] = [h for h in seed['restaurants'][0]['opening_hours'] if h['weekday'] != 'tue']
+        self.assertEqual(self.request('POST', '/_test/reset', seed)[0], 204)
+        page = self.browser(); page.set_viewport_size({'width':375,'height':812})
+        self.sign_in(page); self.search(page)
+        def contained():
+            self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'),375)
+        expect(page.locator('#results h2')).to_have_text(name); contained()
+        page.get_by_test_id('slot-t1-19:00').click(); contained()
+        expect(page.get_by_test_id('booking-summary')).to_contain_text(label)
+        page.get_by_test_id('booking-submit').click()
+        expect(page.get_by_test_id('confirmation')).to_be_visible(); contained()
+        reference = page.get_by_test_id('confirmation-reference').inner_text()
+        page.screenshot(path=str(Path(os.environ['BUILDER_EVIDENCE'])/'mobile-long-name-confirmation.png'),full_page=True)
+        page.goto(self.urls[0]+'/lookup?reference='+reference)
+        expect(page.get_by_test_id('reservation-status')).to_have_text('confirmed'); contained()
+        expect(page.get_by_test_id('reservation-tables')).to_have_text(label)
+        page.screenshot(path=str(Path(os.environ['BUILDER_EVIDENCE'])/'mobile-long-name-lookup.png'),full_page=True)
+        page.goto(self.urls[0]+'/')
+        expect(page.get_by_test_id('restaurant-select')).to_have_value('r')
+        page.get_by_test_id('date-input').fill('2032-10-26')
+        page.get_by_test_id('search-button').click()
+        expect(page.get_by_test_id('no-slots')).to_contain_text(name); contained()
+
     def test_browser_late_search_cannot_restore_old_restaurant_or_form(self):
         seed=fixture(); other=copy.deepcopy(seed['restaurants'][0]); other['id']='b'; other['name']='The Courtyard'; other['tables'][0]['label']='Courtyard bench'; seed['restaurants'].append(other)
         self.request('POST','/_test/reset',seed)
