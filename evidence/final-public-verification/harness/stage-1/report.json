@@ -1,0 +1,63 @@
+{
+  "revision": "d191febc6e06337f75f570fdce2ad0dd3679307e",
+  "track": "tablekeeper",
+  "stages": {
+    "1": "pass"
+  },
+  "highest_contiguous": 1,
+  "started_at": "2026-09-26T20:13:33.653684+00:00",
+  "finished_at": "2026-09-26T20:16:14.042711+00:00",
+  "schema_version": 2,
+  "run_id": "33f54a29de3f4e33a636c83d6bc1bb34",
+  "mode": "isolated",
+  "provenance": "working-tree",
+  "state": "completed",
+  "pytest_args": [],
+  "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+  "checks": {
+    "1": {
+      "collected": 120,
+      "passed": 120,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0,
+      "files": {
+        "stage_1/test_health_reset_auth.py": {
+          "passed": 12,
+          "total": 12
+        },
+        "stage_1/test_reservations.py": {
+          "passed": 37,
+          "total": 37
+        },
+        "stage_1/test_restaurants_availability.py": {
+          "passed": 18,
+          "total": 18
+        },
+        "stage_1/test_retries_time_input.py": {
+          "passed": 20,
+          "total": 20
+        },
+        "stage_1/test_sample.py": {
+          "passed": 20,
+          "total": 20
+        },
+        "stage_1/test_seeded_state.py": {
+          "passed": 13,
+          "total": 13
+        }
+      }
+    }
+  },
+  "overshoot": null,
+  "claimed_stage": "1",
+  "share": 1.0,
+  "upgrade_sources": {
+    "2": {
+      "folder": "/Users/athvs/.cache/figueira-band-final-verification/public-clone-20260926/stage-1",
+      "revision": "d191febc6e06337f75f570fdce2ad0dd3679307e"
+    }
+  }
+}

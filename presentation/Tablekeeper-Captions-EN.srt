@@ -1,0 +1,102 @@
+1
+00:00:02,000 --> 00:00:05,420
+I'm Athos Figueiredo, a designer
+and developer from Brazil.
+
+2
+00:00:06,480 --> 00:00:10,500
+For Tablekeeper, I started with a
+simple question: how do we make a
+
+3
+00:00:10,520 --> 00:00:11,900
+reservation feel reliable?
+
+4
+00:00:12,940 --> 00:00:15,160
+A guest needs to know their table is confirmed.
+
+5
+00:00:15,800 --> 00:00:18,340
+A restaurant needs to avoid overlapping bookings.
+
+6
+00:00:18,820 --> 00:00:22,020
+And if a connection drops, trying
+again should recover the reservation
+
+7
+00:00:22,040 --> 00:00:23,560
+instead of creating a second one.
+
+8
+00:00:24,320 --> 00:00:28,840
+I built the workflow around three agents
+in BAND: a planner, a builder, and
+
+9
+00:00:28,860 --> 00:00:33,080
+an independent reviewer. The
+planner turns the specification into
+
+10
+00:00:33,100 --> 00:00:37,300
+clear work. The builder implements it
+and hands over a committed version.
+
+11
+00:00:37,900 --> 00:00:41,220
+The reviewer checks that exact version
+against the requirements, then sends
+
+12
+00:00:41,240 --> 00:00:42,640
+any issues back for correction.
+
+13
+00:00:47,080 --> 00:00:48,960
+From there, they coordinate in the room.
+
+14
+00:00:49,460 --> 00:00:52,600
+Their messages, commits, and test
+evidence make the process traceable.
+
+15
+00:00:53,330 --> 00:00:57,130
+The project grows through four
+stages, from the reservation API to the
+
+16
+00:00:57,150 --> 00:01:00,110
+booking interface, policy
+history, and amendments.
+
+17
+00:01:00,710 --> 00:01:04,690
+Each completed stage stays separately
+buildable, so later changes can be
+
+18
+00:01:04,710 --> 00:01:06,230
+checked against what came before.
+
+19
+00:01:07,230 --> 00:01:10,890
+My role is to define the experience
+and the quality standard.
+
+20
+00:01:11,430 --> 00:01:15,890
+Clear language, readable screens, and
+honest feedback matter as much as the
+
+21
+00:01:15,910 --> 00:01:20,430
+mechanics underneath. The goal
+is a useful reservation tool, built
+
+22
+00:01:20,450 --> 00:01:24,610
+through a process another team
+can understand, verify, and reuse.

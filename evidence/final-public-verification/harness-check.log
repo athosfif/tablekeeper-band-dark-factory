@@ -1,0 +1,1 @@
+ok — gates 1, 2 and the mandate part of gate 4 pass. Not checked here: gate 3 (stage-1/ builds and serves /health). Run: python -m harness run --track tablekeeper --repo /Users/athvs/.cache/figueira-band-final-verification/public-clone-20260926 --stage 1 --mode isolated

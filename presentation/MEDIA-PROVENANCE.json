@@ -1,0 +1,36 @@
+{
+  "status": "final-media-QC-passed",
+  "files": [
+    {
+      "file": "Tablekeeper-Video-EN.mp4",
+      "bytes": 4762195,
+      "sha256": "7ecca91046c80fa526a75e76251a773589544830421a93bfe015594a9ced724e"
+    },
+    {
+      "file": "Tablekeeper-Presentation-EN.pdf",
+      "bytes": 1112277,
+      "sha256": "692a1d1f64243bb5ade1a5019f21c1a1e470f4b79d554a519490e42239ddf423"
+    },
+    {
+      "file": "Tablekeeper-Cover-EN.png",
+      "bytes": 68856,
+      "sha256": "75b23c8fe8e5a04370cdca219d9065fa178f67ed4be9c4c8ec3c60348d6064d3"
+    },
+    {
+      "file": "Tablekeeper-Captions-EN.srt",
+      "bytes": 2032,
+      "sha256": "f90a84dce8edb263a8a5d7edb795987ef84b387eaf8ad8e777ae94677f4ed700"
+    }
+  ],
+  "video_duration_seconds": 90,
+  "presentation_pages": 9,
+  "language": "English",
+  "evidence_editing": {
+    "originals_preserved": true,
+    "BAND_timelapse_speed": 25,
+    "important_messages_speed": 1,
+    "test_scene": "Actual terminal inspection of original completed public-clone reports, labeled as reports; not a recording of the test execution.",
+    "voiceover": "User-supplied Envato narration. One inaccurate sentence about per-stage prompting was removed from an editing copy; the real two initial dispatches are labeled on screen.",
+    "original_white_figueira_symbol": true
+  }
+}

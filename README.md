@@ -1,5 +1,7 @@
 # Figueira Dark Factory — Tablekeeper
 
+![Tablekeeper — Reservations that hold up. Figueira, Brazil.](presentation/cover.png)
+
 Owner: Athos Figueiredo, Figueira, Brazil. Track: Tablekeeper.
 
 This repository contains four cumulative, standalone service folders produced by the three-seat Figueira Band factory. Each folder preserves the solution to its own stage. The original history and generic mandates remain intact.
@@ -33,6 +35,8 @@ Local verification is not official judging or submission. This publication prese
 
 ## See it and try it
 
+- [Watch the 90-second demonstration (English MP4)](presentation/Tablekeeper-Video-EN.mp4)
+- [English captions (SRT)](presentation/Tablekeeper-Captions-EN.srt)
 - [Presentation (English PDF)](presentation/Tablekeeper-Presentation-EN.pdf)
 - [Run the real service with a synthetic fixture](docs/DEMO.md): `bash docs/run-demo.sh`
 - [Final independent delivery audit](evidence/stage-4/reviewer-delivery-audit-03/report.md)
@@ -40,3 +44,8 @@ Local verification is not official judging or submission. This publication prese
 - [Full exported factory record](room.json)
 
 The narrated demonstration uses actual BAND and application recordings, with timelapse labeled. Narration is AI-generated using Envato; visual direction and presentation are by Athos Figueiredo. No performance or model-spend figure is invented.
+
+
+## Verification of the public clone
+
+After publication, a fresh unauthenticated clone at `d191febc6e06337f75f570fdce2ad0dd3679307e` passed the unchanged official `harness check` and `harness run --all --mode isolated` (exit 0, 304.647 seconds total). Every folder claims its own stage. Original [receipt](evidence/final-public-verification/verification-receipt.json), [summary](evidence/final-public-verification/harness/summary.json) and per-suite counts are preserved. This is an operator verification after autonomous acceptance. Later presentation/evidence additions do not change any accepted stage tree or mandate.
