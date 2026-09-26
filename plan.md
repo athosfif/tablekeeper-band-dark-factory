@@ -1,6 +1,6 @@
 # Tablekeeper stage 1 — implementation and acceptance plan
 
-Status: requirements baselined; implementation and independent verification pending.
+Status: Stage 1 implemented and all final application checks passed on `0f96bf0cd889959d134ca6f8a5ee3066bbe459f8`. Official isolated Stage 1: 120/120. Independent specification groups: 27/27, 955 requests, zero observed 5xx. See `STAGE-1-REPORT.md` for evidence, repairs and limits. Final documentation packaging is checked separately without changing the tested stage tree.
 
 The only dispatched stage is stage 1, the HTTP JSON API. No browser UI or later-stage capability is authorized. The source of truth is the complete participant guide and complete stage-1 specification at upstream revision `803560d2a678ace1414465c098eb0ab5380ffade`. Passing the shipped checks is partial evidence, not official acceptance.
 
@@ -76,6 +76,19 @@ Every row is an acceptance obligation. Test counts alone do not replace this map
 - Cancellation cutoff includes equality; already-cancelled repeat remains successful. Amendments/moves use the old start, preventing escape by moving a too-late booking to the future.
 - The next-stage suite is only the official overshoot probe, not permission to add stage-2 capabilities. A failed probe is expected for stage 1.
 - Final stage readiness concerns this local independently verified API. Room download, event submission, presentation/video and official acceptance are not claimed or performed by this run.
+- Table IDs belong to each restaurant's catalogue; identical table IDs in different restaurants are valid. Occupancy is scoped to the restaurant/table pair. The initial extra global-uniqueness restriction was rejected and repaired.
+- Accepted opaque fixture IDs remain addressable through percent-encoded path segments. Select the route before decoding its resource ID once, preserving public detail 200/404 and protected-route authentication. The initial full-path decoding defect was rejected and repaired.
+
+## Recorded completion evidence
+
+Builder produced the API and focused checks; Reviewer independently authored and ran checks and issued two concrete rejections before the final passing revision. Planner supplied reproducible atomicity and opaque-ID candidates and assessed the returned evidence. The complete repair history and original failures remain preserved.
+
+- Final API commit: `0f96bf0cd889959d134ca6f8a5ee3066bbe459f8`; stage tree `0050accbdc6d0457ffdc73de6365158e65c1808b`.
+- Official isolated evidence: `reviewer-official-05/harness/report.json`, 120/120, zero failures/errors/skips/deselections.
+- Independent evidence: `reviewer-independent-09/independent.log`, 27/27, 955 requests, no 5xx, normal/control maxima 3.351785 s / 0.121121 s.
+- Review coverage: `reviewer-coverage-notes.md`; rejection history: `reviewer-rejection-01.md` and `reviewer-rejection-02.md`.
+- All evidence paths are relative to `/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1`.
+- Source specifications/tests and generic mandates are unchanged. Stage 2 remains outside this run.
 
 ## Reproducible official check
 
