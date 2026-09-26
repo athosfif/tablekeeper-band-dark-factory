@@ -1,6 +1,6 @@
-# Tablekeeper — sequential stages 2–4 plan
+# Tablekeeper — completed sequential delivery and acceptance map
 
-Status: Stage 3 independently accepted at 4b7b0620f3dd645fac18d840a6d612e8f4c6bed6. Stage 4 is the current authorized phase, starting from its complete copied folder; final four-folder packaging remains pending.
+Status: All four service stages independently accepted; the complete isolated four-folder package is verified at8c6df7f369f0041798abf8de0e10c0babf501df5. Service implementation has stopped. Root documentation has a separate exact-revision packaging audit, whose verdict is recorded in the final coordinator report.
 
 ## Accepted baseline and immutable inputs
 
@@ -42,6 +42,17 @@ No new seats/rooms, human clarification or approval. Existing authorization cove
 - Independent: 55/55 API groups and 12 unique browser groups (11 full plus one targeted), including actual populated Stage 1 and Stage 2 upgrades. No application defect found or source repair requested.
 - Planner additionally verified selected-policy capacity displayed truthfully while original restaurant detail stays unchanged.
 - Stage-specific evidence and limits: [STAGE-3-REPORT.md](STAGE-3-REPORT.md).
+
+
+## Recorded Stage 4 and package outcome
+
+- Accepted source:8c6df7f369f0041798abf8de0e10c0babf501df5; folder tree e4bae830ae426197911968153c97c4ef06f9e40d. Parent implementation d6b3c0fee8af35dbb15bf98e26f62b8c938e86ce was independently rejected for stale current seating in confirmation after applied closure and explicit receipt replay.
+- The new browser-only repair preserves original API receipts while reading current authoritative details, retaining known success on detail-read failure and rejecting late results after changed selection.
+- Final independent75/75API groups (2,585 instrumentedHTTP,zero5xx) and17/17browser groups passed. Planner's original UI defect regression passed on the accepted clean revision.
+- Complete isolated package:stage1=120/120;stage2=120/120+25/25;stage3=120/120+25/25+7/7;stage4=120/120+25/25+7/7+6/6. Every folder claims its own stage;575 cumulative conformance executions, not575distinctcases.
+- Lower-folder next-stage probes:stage1=0pass/1fail/24unexecuted of25;stage2=0pass/1fail/6unexecuted of7;stage3=4pass/1fail/1unexecuted of6. Stage4 has no next suite.
+- Earlier accepted folders and generic mandates remain unchanged. All actual commits and failed evidence retained. Full outcome and evidence:[STAGE-4-REPORT.md](STAGE-4-REPORT.md).
+- Final root documentation/audit may not alter accepted trees. Remaining operator work:official full-room export/privacy review,presentation/video,public publication,clean-clone submission checks and event submission. These are not claimed complete. No later service stage is started.
 
 ## Product direction
 
