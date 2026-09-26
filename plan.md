@@ -1,101 +1,91 @@
-# Tablekeeper stage 1 — implementation and acceptance plan
+# Tablekeeper — sequential stages 2–4 plan
 
-Status: Stage 1 implemented and all final application checks passed on `0f96bf0cd889959d134ca6f8a5ee3066bbe459f8`. Official isolated Stage 1: 120/120. Independent specification groups: 27/27, 955 requests, zero observed 5xx. See `STAGE-1-REPORT.md` for evidence, repairs and limits. Final documentation packaging is checked separately without changing the tested stage tree.
+Status: authorized continuation dispatched 2026-09-26; Stage 2 active next. Stages 3 and 4 are gated on the preceding stage's independent acceptance. This replaces the Stage-1-only scope of the previous active plan; all earlier history and evidence remain intact.
 
-The only dispatched stage is stage 1, the HTTP JSON API. No browser UI or later-stage capability is authorized. The source of truth is the complete participant guide and complete stage-1 specification at upstream revision `803560d2a678ace1414465c098eb0ab5380ffade`. Passing the shipped checks is partial evidence, not official acceptance.
+## Accepted baseline and immutable inputs
 
-## Boundaries and provenance
+- Output: /Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper
+- Baseline delivery: e5c256641653de82a97222d1126308fbde6188f6 (clean at continuation).
+- Accepted Stage 1 source: 0f96bf0cd889959d134ca6f8a5ee3066bbe459f8.
+- Immutable stage-1 tree: 0050accbdc6d0457ffdc73de6365158e65c1808b.
+- Read-only upstream: /Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs at 803560d2a678ace1414465c098eb0ab5380ffade.
+- Complete participant guide (877 lines) and all four specifications (472/240/240/109 lines) read. They define acceptance; shipped tests provide partial evidence.
+- Existing generic mandates remain unchanged. All seats use Codex / gpt-6-astra: Figueira Planner, Figueira Builder, Figueira Reviewer.
+- Prior Stage 1 report and evidence remain read-only. No implementation belongs in the preparation project.
 
-- Read-only inputs: `/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs/docs/participant-guide.md` and `tablekeeper/spec/stage-1.md` in that checkout. Both were read completely before decomposition. The upstream revision was verified. Existing AppleDouble metadata files are left untouched.
-- Output repository: `/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper`; initial HEAD `9e02c181e3bcefdf3abbe272ba777eed614b8256`, initially clean, containing generic mandates and documentation only.
-- Service and its independently runnable image: output repository `stage-1/` only.
-- Evidence: `/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1`; every harness run gets a new directory. Keep original failures, logs and timings.
-- No changes to official inputs/tests, global configuration, credentials or unrelated projects; no purchases, publication or submission. Synthetic test accounts only. Never commit state exports or bearer tokens. Preserve mandates and append commits; no amend, squash or rebase.
+## Ownership and sequence
 
-## Ordered delivery and ownership
+1. Planner records this plan, acceptance map, baseline and interpretations, then delivers full task, guide and inherited/current specification text in room.
+2. Builder takes shared task #4. Copy accepted stage-1 into stage-2; implement complete browser/combined-table service and focused checks. Commit, provide full requirements and exact revision to Reviewer, then freeze source.
+3. Reviewer takes #5. Before implementation inspection, derive independent cases. Verify exact frozen revision, cumulative isolated official checks, additional API and browser checks, populated upgrade and earlier-folder hashes. Report genuine ACCEPT/REJECT with reproducible evidence.
+4. Builder repairs actual defects in new commits; Reviewer independently rechecks. Preserve all failures and test-oracle mistakes separately.
+5. After explicit Stage 2 acceptance and recorded stage outcome, Builder copies its full folder into stage-3 and extends policies/history/series. Repeat the independent loop, including imports from stages 1 and 2.
+6. After explicit Stage 3 acceptance, copy into stage-4 and extend deterministic closure planning/application and series amendments. Repeat independent loop, importing stages 1–3 and preserving each earlier tree.
+7. Planner completes root documentation and reports. Reviewer audits the final commit, four folder trees, evidence/claims and complete isolated package checks. Stop after one consolidated final outcome.
 
-1. Planner owns this requirements baseline, acceptance map, interpretation decisions and final evidence assessment.
-2. Builder owns `stage-1/`, a self-contained Dockerfile, RUN.md, focused tests and implementation commits. Use a maintainable design with explicit atomic state transitions; language and storage are implementation choices. Take shared task 1.
-3. Builder hands the full committed revision, commands, limitations and complete stage-1 specification including runtime limits to the existing reviewer in this room. Reviewer takes shared task 2 and derives independent checks before inspecting implementation, then runs the isolated official harness and supplementary cases against that revision. No concurrent source writes during review. Reviewer owns only its evidence/tests and review report.
-4. Genuine review defects return with expected/actual behavior and reproduction. Builder repairs in new commits. Reviewer rechecks relevant failures and the final isolated suite. Correct work may pass first review; do not manufacture disagreement.
-5. Planner reports actual revision, results, evidence, remaining limits and independent readiness. Stop at stage 1. No human clarification or approval is requested during the run.
+No new seats/rooms, human clarification or approval. Existing authorization covers all steps. A genuine blocker is reported with evidence if no authorized path remains. A message timeout is not acceptance; never resend the same request automatically.
 
-All room assignments and replies use literal participant mentions. Every delegated handoff includes the complete task and applicable specification text, not only a path or message reference. Use exact absolute paths; establish shared local access before relying on filesystem evidence, or supply inspectable safe artifacts.
+## Product direction
+
+English hospitality product: warm off-white, near-black, restrained dark green, sparing lime, considered type and spacing. Real restaurant and seating labels lead. Search, available/unavailable seating, selection, loading, confirmation, refusal and uncertainty differ in words and appearance. All routes have consistent navigation, visible labels and keyboard focus. Test desktop and 375 CSS px with no page overflow. Fonts and assets work offline. No mock booking, invented metrics/reviews or unrelated landing page. The server is authoritative. Later API features need no extra screens unless necessary to keep surfaced product behavior truthful.
 
 ## Acceptance map
 
-Every row is an acceptance obligation. Test counts alone do not replace this map. Builder demonstrates focused behavior; reviewer independently chooses cases and records outcome per group with evidence paths.
+The complete specs accompany every handoff. This map groups obligations; it does not replace any requirement.
 
-| ID | Source | Required behavior and acceptance evidence |
+| ID | Obligation | Independent evidence |
 |---|---|---|
-| S01 | §§1–2 | HTTP API only; no later-stage features. Clean single-container build from stage-1 alone and RUN.md reproduction, with no parent files, submodules or symlinks. |
-| S02 | §§2–3 | Image serves on 0.0.0.0, configurable PORT, default 8080. Ready health is 200 with status ok within 60 s. No runtime outbound dependency; all assets and time-zone data included. |
-| S03 | §2 | Within 2 vCPU/2 GiB; up to 50 in-flight requests; normal requests within 5 s, test control within 10 s; no 5xx. Ephemeral state is permitted. Record observed timings and container constraints. |
-| S04 | §§3–4 | Unauthenticated reset replaces every state element, returns empty 204, supports repeated resets, seeds users/restaurants/tables and confirmed reservations. After return, old credentials, sessions, receipts and occupancy are gone. |
-| S05 | §§3–5 | JSON UTF-8 contract, explicit-offset RFC3339 responses, opaque IDs at most 64 characters including fixture IDs; unknown body fields/query parameters ignored. |
-| S06 | §4 | Arbitrary calendar dates including past booking starts; no blanket future-only restriction. Fixture opening hours are local, weekday-specific, same-day; missing day closed. Seeded logins work immediately. |
-| E01 | §5 | All 4xx/5xx carry error.code and human-readable message. Malformed JSON/wrong ordinary body type 400 malformed_request; missing required or invalid-format/range fields 422 validation_failed. |
-| E02 | §5 | Endpoint exceptions: invalid party_size, including string/bool, gives 422; malformed local date-time strings give 422. Decimal query syntax rejects exponent, decimal point and plus sign. |
-| A01 | §6 | Signup 201; login 200; correct user_id/display_name/token shape. Duplicate email 409 email_taken; short password and invalid email 422; wrong/unknown login 401. |
-| A02 | §6 | Passwords use a proper password hash, never plaintext. Multiple tokens/sessions coexist without expiry. Missing/malformed/unknown bearer token 401 on protected endpoints. |
-| A03 | §§6,8,10 | Health, reset, auth, restaurant list/detail, availability, export/import are public. Reservation reads/mutations and moves require auth; another owner's booking is 404, without existence leakage. |
-| I01 | §7 | Create and moves require nonempty key: absent/empty 400 missing_idempotency_key; more than 255 chars 422. Scope by authenticated user, method and path. Same key across users/paths is independent. |
-| I02 | §7 | Same parsed JSON value ignores whitespace/key ordering. Replay returns 200 and exactly original response; one first success 201. Different body for used key 409 idempotency_key_reuse. |
-| I03 | §7 | After object parsing and authentication, resolve used keys before field validation/resource checks. Failed 4xx consumes no key. Unknown ignored fields still participate in full-body equality. |
-| I04 | §§1,7 | Concurrent identical creates/moves produce exactly one 201, other 200s with identical receipt; never duplicate operations. Replay after amendment/cancellation remains original, with no new state change. |
-| R01 | §8 | Public restaurant list has required fields; detail matches fixture configuration/order and unknown restaurant is 404. No creation endpoints. |
-| V01 | §8 | Availability requires restaurant_id/date/party_size, validates inputs, local date, returns timezone. Slots advance by grid from opening; end fits closing. Closed day empty. |
-| V02 | §§1,8 | Capacity filter and confirmed half-open occupancy determine available IDs in fixture order; full slots remain with empty arrays; cancelled reservations do not occupy. Adjacent bookings may coexist. |
-| B01 | §8 | Create returns all specified fields, confirmed status, unique 6–12 A–Z0–9 reference, stable IDs, local time, offset times, correct end and creation time. |
-| B02 | §8 | Conflict 409 table_unavailable; off-grid 422 not_on_slot_grid; outside/open-close overflow 422 outside_opening_hours; capacity 422 party_exceeds_capacity; invalid party 422 validation_failed; unknown/wrong-restaurant table 404. |
-| B03 | §§1,8 | Concurrent conflicting create/amend/move operations never double-book or partially commit. Rejected operations preserve data/occupancy/receipts. Include 50 in-flight contention. |
-| B04 | §8 | Caller list includes confirmed and cancelled, sorted by start instant descending; empty list shape correct. Reference lookup returns same reservation shape and only own records. |
-| C01 | §8 | Cancellation frees table immediately and returns current state; repeated cancellation succeeds even after cutoff. At/after cutoff 409 cutoff_passed for an active reservation. |
-| P01 | §8 | PATCH accepts any subset, retains omitted fields, same create validation, no key needed, cutoff measured against current start. Cancelled gives 409 reservation_cancelled. Failed amendment preserves old booking/occupancy. |
-| P02 | §8 | Successful amendment releases old and acquires new occupancy atomically; reference/reservation_id/owner/creation time remain stable. No-op retains values. |
-| T01 | §9 | IANA offsets and DST for Berlin 2026-03-29/10-25 and New York 2026-03-08/11-01. Spring gap omitted in availability and booking rejected with 422 invalid_local_time. |
-| T02 | §9 | Fall repeated local time appears once, selects first occurrence; second cannot be selected. Duration measured in absolute elapsed minutes, using UTC arithmetic across transitions. |
-| X01 | §10 | Public export 200 object: track tablekeeper, format_version 1, opaque state object; atomic read-only snapshot unaffected by later source writes. |
-| X02 | §10 | Import unchanged export into independent process/container with no source connection; replaces destination atomically, 204; repeated import does not duplicate. Invalid envelope/state 422 and malformed JSON per §5, preserving destination. |
-| X03 | §10 | Preserve accounts/hashes/logins, every existing token, fixture order/configuration, reservations/status/identity/reference/timestamps, successful request bodies and original receipts; failed keys stay reusable. Remove prior destination data and credentials. |
-| X04 | §10 | Reset clears imported state; snapshots from before subsequent source changes remain stable; receipt replays after import of changed/cancelled bookings remain original. Do not commit exports. |
-| M01 | §11 | Moves needs bearer and key; 1–8 objects with distinct string references. Invalid shape/duplicates 422, unknown/other owner 404, mixed restaurants 422. |
-| M02 | §11 | Each move accepts PATCH fields, omitted retained, unknown ignored; stable identity/owner/creation time; cancelled 409; each old cutoff applies. |
-| M03 | §11 | Non-occupancy errors in input order; cutoff before other changes for that booking. Check all non-occupancy errors before resulting occupancy conflicts. |
-| M04 | §11 | Swaps/cycles evaluate all resulting bookings together; resulting overlaps with listed or unlisted booking 409. Unchanged listed booking still occupies its table. All-or-nothing reservation/occupancy/key commit. |
-| M05 | §§7,11 | Successful moves 201 reservations in input order including unchanged; exact 200 receipt replay after later modifications; full no-op preserves all values. Export/import preserves batch receipts. |
-| F01 | Guide | Three generic mandates retained, real builder/reviewer room exchange and commit history, full-spec handoffs, actual evidence and timings; no false spend estimate or manufactured review disagreement. |
-| F02 | Guide | Final official harness isolated run against exact committed revision, fresh evidence directory, stage-1 results and stage-2 overshoot probe distinguished. No skipped/empty/startup-error suite counted as pass. |
+| C01 | Every inherited Stage 1 API/error/auth/privacy/idempotency/time/atomicity/snapshot rule, including earlier four repaired defects | Cumulative official suite plus inherited supplementary regressions and source-informed risk review |
+| C02 | One self-contained folder/container, no sibling links, 0.0.0.0, default/override PORT, 2CPU/2GiB, healthy <=60s, 50 requests, 5s/10s bounds, offline assets | Standalone Docker context/RUN.md, constrained internal network, blocked egress, observed timings |
+| C03 | Immutable earlier folders, full history and generic mandates | Exact accepted commit and Git trees before/after every review; no symlinks/submodules/nested repositories |
+| C04 | Atomic export/import/reset, no lost sessions/receipts, independent earlier-service upgrades | Populated source/destination containers; snapshots in memory; source mutations after export; repeat import/replacement and retry |
+| U01 | HTML /, /signup, /login, /lookup; all required test IDs; auth errors/current-user/logout on every screen | Browser route/auth navigation and ownership checks |
+| U02 | Search exact API singles, per-table per-slot cells, available flag, unavailable inert, labels, closed day/no-slots | Browser and API correspondence across capacities, occupancy and dates |
+| U03 | Out-of-order search A/B cannot overwrite B's grid, labels or form | Controlled delayed independent responses for different restaurant/date/party inputs |
+| U04 | Signed-in booking, summary, prefilled party, persistent form, exact reference/details; unchanged success replay/new body fresh key | Browser interception and reservation count/receipt comparison |
+| U05 | Stale occupied selection: explicit booking-error, refresh, retain inputs, no new confirmation | Competing independent client commits after form opens |
+| U06 | Lost response including after commit: nonempty uncertainty only; unchanged retry same body/key; original reference on recovery | Browser abort/proxy race, no cached success, single and pair, same open page during upgrade |
+| U07 | Lookup own reference, status exactly confirmed/cancelled, cancel button removed, failure visible | Retained pre-upgrade session/reference, ownership and cutoff |
+| U08 | Presentation quality and all visual states; labels/focus/contrast/touch; 375px without overflow | Rendered desktop/mobile screenshots plus keyboard/overflow/browser assertions |
+| T21 | Declared unordered pairs only, not transitive; summed capacity; available_options order singles then pairs | API capacity, reversed-pair normalization and pair overlap across members |
+| T22 | table_id or table_ids, not both; duplicate validation, >2/undeclared pair errors; response shape, cancelled seeding | Create/PATCH/moves/reset invalid and valid matrices |
+| T23 | Combination UI test IDs in declared order, all labels; single compatibility; serializable concurrent occupancy | Browser combinations/recovery and 50-in-flight conflict/retry/move checks |
+| P31 | explain=true only; no extra explanation without it; both independent rules every table/order/version | Full capacity x overlap truth table, closed/no-option/DST/policy slots |
+| P32 | Owner-only history/decision 404 even without token; monotonic seq/time, created/changed/cancelled fields | No-op, replay, failed amendment and privacy checks; immutable old entries |
+| P33 | Manager-only immutable complete policy publication, exact validation/version allocation and effective-date/tie selection | Out-of-order and backdated publication, same-date ties, invalid types/ranges, concurrent/replay writes |
+| P34 | Accepted terms snapshot, revision1 creation/seed; old cutoff first, all resulting fields under selected policy; true no-op retains terms/end/history | Policy changes around create/amend/cancel/no-op, expected_revision races and old receipt replay |
+| P35 | Pair histories use table_ids and declared order; reversed pair no-op | Single/pair transition matrix with policy-selected capacity |
+| R31 | Adopt own editable confirmed non-adopted anchor, count2..12, interval1..4; anchor unchanged | Auth/error matrix, idempotency precedence, anchor exact identity/history/timestamps |
+| R32 | Generated local calendar weeks, per-date policy/DST, first failure index, full rollback | DST gaps/folds, policy boundaries, occupancy failures, no counters/history/receipt changes |
+| R33 | Series current states, fixed references/indices, exceptions permanent only for real diner edits; cancel independent | Individual amend/cancel/repeat/no-op + series revision aggregation and list/history |
+| R34 | Collective moves use per-item expected revision/old cutoff/new policy; aggregate series/restaurant increments once | Mixed real/no-op, multiple same-series moves, error precedence, simultaneous swaps |
+| R35 | Upgrade stages1/2 into3 retains sessions/references/old original receipts; adopted imported bookings work | Actual populated exports from each earlier accepted service and rejected-import rollback |
+| O41 | Manager preview closure interval/limits, no mutation except stored plan; considered vs fixed bookings | Authorization, offset/half-open bounds, size limits, no-plan rollback, snapshot comparison |
+| O42 | Deterministic objective: minimum moved, then unused seats under each booking's accepted terms, then rank vector by reference | Independent bounded exhaustive oracle, fixed bookings/earlier closures/pairs/capacity changes |
+| O43 | Apply stale revision/already-applied/replay precedence, atomic closures and assignments; identities/terms/times preserved | Concurrent applies/other writes, cross-restaurant non-invalidation, no partial reads |
+| O44 | Restaurant revision baseline0 and exact once-per-real-operation accounting; preview/replay/no-op/failure none | Whole-operation revision matrix including adoption/moves/series/plan |
+| O45 | Moved-only reassigned history/table_ids/plan_id; series once-per-plan, preserve exceptions/scheduled dates | Mixed series/ordinary considered bookings, unchanged members and post-closure availability/explain |
+| O46 | Owner series amend required revision/from_index/time; skip cancelled/exceptions; original scheduled dates; policy/cutoff | Validation/stale precedence, eligible/no-op/empty sets, original dates after individual edits |
+| O47 | All-or-nothing series amendment, no exceptions, aggregate revisions once; same-revision concurrent real edits | Error order, unlisted/conflicting/closed occupancy, retries after later writes and independent upgrade |
+| O48 | Stage4 imports stages1–3, including moved/cancelled series and all original receipts/history | Actual populated migrations, browser regression and state replacement |
+| F01 | Full-spec handoffs, explicit frozen revisions, independent outcomes, failures/history preserved, accurate claims | Room exchanges, per-run metadata, stage reports and final audit |
+| F02 | Complete cumulative final isolated checks and expected overshoot distinguished; full four-folder package | Unique directories and actual counts/statuses; no skipped/empty/startup-error passes |
 
-## Specification interpretations
+## Interpretations from the written requirements
 
-- Section 10 explicitly exempts export/import from auth despite the earlier general auth list, and grants test control calls a 10-second timeout.
-- Endpoint-specific error rules override general type rules, particularly party_size and the moves array shape. Used-key comparison happens before fresh endpoint validation.
-- Idempotency scope includes method/path as explicitly required; comparison uses the entire parsed JSON body, although unknown fields have no endpoint effect. JSON booleans are not numbers.
-- Grid enumeration is local wall-clock from opening; existence/first-occurrence resolution uses IANA rules. Duration and overlap comparisons use real instants, including the closing instant. Test both transitions and the half-open interval boundary.
-- Cancellation cutoff includes equality; already-cancelled repeat remains successful. Amendments/moves use the old start, preventing escape by moving a too-late booking to the future.
-- The next-stage suite is only the official overshoot probe, not permission to add stage-2 capabilities. A failed probe is expected for stage 1.
-- Final stage readiness concerns this local independently verified API. Room download, event submission, presentation/video and official acceptance are not claimed or performed by this run.
-- Table IDs belong to each restaurant's catalogue; identical table IDs in different restaurants are valid. Occupancy is scoped to the restaurant/table pair. The initial extra global-uniqueness restriction was rejected and repaired.
-- Accepted opaque fixture IDs remain addressable through percent-encoded path segments. Select the route before decoding its resource ID once, preserving public detail 200/404 and protected-route authentication. The initial full-path decoding defect was rejected and repaired.
+- Stage 3's “without explain keeps stage 1 shape” means no explanation fields; inherited stage-2 available_options remains required.
+- Stage 3 names restaurant revision before Stage 4 defines its exposure/accounting. Track aggregate changes consistently; no premature Stage 4 endpoints in stage-3.
+- Reversed approved pairs denote the same set and canonicalize to declared order. Unknown fields still belong to receipt JSON equality.
+- Old receipts imported from earlier stages retain their original JSON responses, even when current resource responses gain newer fields.
+- Original scheduled series dates are immutable schedule metadata, distinct from individually amended current starts.
+- Closure feasibility checks the full occupied booking interval against fixed bookings and closures, and uses each booking's accepted capacities. Considered bookings are all confirmed bookings overlapping the proposed interval, even those not currently on the closing table.
+- Optional extra UI is not required for policy/series/operator endpoints; any behavior surfaced must remain understandable and real.
+- Shipped stage claim is partial local evidence, not event acceptance. No final submission, publishing or private room-export action is authorized.
 
-## Recorded completion evidence
+## Evidence and reporting
 
-Builder produced the API and focused checks; Reviewer independently authored and ran checks and issued two concrete rejections before the final passing revision. Planner supplied reproducible atomicity and opaque-ID candidates and assessed the returned evidence. The complete repair history and original failures remain preserved.
+Evidence roots: /Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-2, official-stage-3 and official-stage-4. Each run gets a unique role/name and records source commit, tree hashes, exact commands, timings, results and screenshots. Never store tokens/private exports. Stage 1 evidence is read-only.
 
-- Final API commit: `0f96bf0cd889959d134ca6f8a5ee3066bbe459f8`; stage tree `0050accbdc6d0457ffdc73de6365158e65c1808b`.
-- Official isolated evidence: `reviewer-official-05/harness/report.json`, 120/120, zero failures/errors/skips/deselections.
-- Independent evidence: `reviewer-independent-09/independent.log`, 27/27, 955 requests, no 5xx, normal/control maxima 3.351785 s / 0.121121 s.
-- Review coverage: `reviewer-coverage-notes.md`; rejection history: `reviewer-rejection-01.md` and `reviewer-rejection-02.md`.
-- All evidence paths are relative to `/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1`.
-- Source specifications/tests and generic mandates are unchanged. Stage 2 remains outside this run.
+Use prepared Python /Users/athvs/.cache/figueira-band-harness/bin/python and Docker /Applications/Docker.app/Contents/Resources/bin/docker, both binary directories in process PATH. From readonly upstream: python -m harness run --track tablekeeper --repo '/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper' --stage N --mode isolated --out '<new evidence directory>'. Final package uses --all. Record any metadata-only transport adapter without changing official ordinary content.
 
-## Reproducible official check
-
-Run from the authoritative checkout with a new output directory on each attempt:
-
-```sh
-PATH="/Applications/Docker.app/Contents/Resources/bin:/Users/athvs/.cache/figueira-band-harness/bin:$PATH" PYTHONDONTWRITEBYTECODE=1 /Users/athvs/.cache/figueira-band-harness/bin/python -m harness run --track tablekeeper --repo '/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/submission-tablekeeper' --stage 1 --mode isolated --out '/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/official-stage-1/UNIQUE-RUN'
-```
-
-The reviewer records full tested commit, image/build evidence, command, observed suite counts/exit statuses, timings, supplementary cases, remaining gaps and explicit acceptance/rejection. The final report must not equate a shipped-check claim with official acceptance.
+Final report includes exact baseline/accepted commits and folder hashes, actual official and independent counts, measured timings, repairs, remaining limits, readiness of all four folders and operator tasks (official room export, presentation/video, public repository and submission). Per-seat model spend is unavailable unless measured evidence becomes available; do not invent an estimate.
