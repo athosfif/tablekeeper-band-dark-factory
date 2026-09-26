@@ -1,7 +1,7 @@
 FROM python:3.12-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PORT=8080
 WORKDIR /app
-COPY --chmod=644 model.py engine.py server.py ./
+COPY --chmod=644 json_values.py model.py engine.py server.py ./
 USER 65534:65534
 EXPOSE 8080
 CMD ["python", "server.py"]

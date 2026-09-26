@@ -1,12 +1,11 @@
 """Dependency-free threaded JSON HTTP adapter. Never log request bodies or tokens."""
 
-import json
-import math
 import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from engine import Engine
+from json_values import dumps, loads
 from model import APIError, obj
 
 
@@ -29,7 +28,7 @@ class Handler(BaseHTTPRequestHandler):
         self.respond(status, {'error': {'code': error, 'message': 'Invalid HTTP request'}})
 
     def respond(self, status, value):
-        payload = b'' if status == 204 else json.dumps(value, ensure_ascii=True, allow_nan=False).encode('utf-8')
+        payload = b'' if status == 204 else (value if isinstance(value, bytes) else dumps(value).encode('utf-8'))
         self.send_response(status)
         self.send_header('Content-Type', 'application/json; charset=utf-8')
         self.send_header('Content-Length', str(len(payload)))
@@ -50,14 +49,7 @@ class Handler(BaseHTTPRequestHandler):
                     if not raw and self.path.endswith('/cancel'):
                         body = {}
                     else:
-                        def invalid_constant(_value):
-                            raise ValueError()
-                        def finite_float(value):
-                            result = float(value)
-                            if not math.isfinite(result):
-                                raise ValueError()
-                            return result
-                        body = json.loads(raw, parse_constant=invalid_constant, parse_float=finite_float)
+                        body = loads(raw)
                         obj(body)
                 except (ValueError, UnicodeError, RecursionError):
                     raise APIError(400, 'malformed_request') from None

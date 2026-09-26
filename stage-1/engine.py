@@ -1,12 +1,13 @@
 """One lock is the transaction boundary for reads, writes, snapshots and receipts."""
 
-import copy
 import re
 import secrets
 import threading
 import uuid
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
+
+from json_values import clone, dumps
 
 from model import (APIError, DAYS, UTC, booking_fields, check_cutoff, clock_minutes, email,
                    empty_state, field, fixture_state, identifier, imported_state, instant,
@@ -21,9 +22,18 @@ class Engine:
 
     def handle(self, method, path, query, headers, body):
         with self.lock:
-            status, value = self.dispatch(method, path, query, headers, body)
-            # Never expose mutable state after releasing the transaction lock.
-            return status, copy.deepcopy(value)
+            committed = self.state
+            try:
+                if method != 'GET':
+                    # Work on a detached candidate, including receipts. No mutation
+                    # becomes visible unless dispatch AND response encoding succeed.
+                    self.state = clone(committed)
+                status, value = self.dispatch(method, path, query, headers, body)
+                payload = b'' if status == 204 else dumps(value).encode('utf-8')
+            except Exception:
+                self.state = committed
+                raise
+            return status, payload
 
     def authenticate(self, headers):
         auth = headers.get('Authorization', '')
@@ -181,7 +191,7 @@ class Engine:
                 self.replace(replacements)
                 response = {'reservations': [public(r) for r in replacements]}
             state['receipts'].append({'user_id': uid, 'method': method, 'path': path, 'key': key,
-                                      'body': copy.deepcopy(body), 'response': copy.deepcopy(response)})
+                                      'body': clone(body), 'response': clone(response)})
             return 201, response
         match = re.fullmatch(r'/reservations/([^/]+)(/cancel)?', path)
         if match:

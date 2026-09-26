@@ -318,6 +318,98 @@ class Contract(unittest.TestCase):
         self.request('POST', '/reservations/SEED01/cancel', {}, self.ada)
         self.create('new')
 
+    def test_fixture_numeric_type_codes_without_mutation(self):
+        baseline = self.snapshot()
+        for name in ['slot_minutes', 'reservation_duration_minutes', 'cancellation_cutoff_minutes', 'capacity']:
+            for value in ['30', True, [], {}, None, -1, 0.5]:
+                seed = fixture()
+                target = seed['restaurants'][0]
+                if name == 'capacity':
+                    target = target['tables'][0]
+                target[name] = value
+                wrong_type = type(value) not in (int, float)
+                self.error(self.request('POST', '/_test/reset', seed), 400 if wrong_type else 422,
+                           'malformed_request' if wrong_type else 'validation_failed')
+                self.assertTrue(baseline == self.snapshot(), 'rejected fixture changed state')
+
+    def test_table_ids_scoped_by_restaurant_and_import(self):
+        seed = fixture()
+        other = copy.deepcopy(seed['restaurants'][0])
+        other['id'] = 'other'
+        seed['restaurants'].append(other)
+        seed['reservations'] = [{**self.booking(), 'id': 'seed-id', 'reference': 'SEED01', 'user_id': 'ada'}]
+        self.assertEqual(self.request('POST', '/_test/reset', seed)[0], 204)
+        self.ada = self.login('ada')
+        available = self.request('GET', '/availability?restaurant_id=other&date=2032-10-25&party_size=2')[1]
+        self.assertIn('t1', next(s for s in available['slots'] if s['starts_at_local'].endswith('19:00'))['available_table_ids'])
+        other_record = self.create('other', restaurant_id='other')
+        self.error(self.request('POST', '/reservations', self.booking(restaurant_id='other'), self.ada, 'conflict'), 409, 'table_unavailable')
+        self.error(self.request('POST', '/reservations', self.booking(), self.ada, 'conflict'), 409, 'table_unavailable')
+        self.error(self.request('POST', '/reservation-moves', {'moves': [{'reference': 'SEED01'}, {'reference': other_record['reference']}]}, self.ada, 'mixed'), 422, 'validation_failed')
+        snapshot = self.snapshot()
+        self.assertEqual(self.request('POST', '/_test/import', snapshot, server=1)[0], 204)
+        self.assertTrue(snapshot == self.snapshot(server=1), 'cross-restaurant import changed state')
+        self.assertEqual(self.request('POST', '/reservations', self.booking(restaurant_id='other'), self.ada, 'other', server=1), (200, other_record))
+        duplicate = copy.deepcopy(seed)
+        duplicate['restaurants'][0]['tables'].append(duplicate['restaurants'][0]['tables'][0])
+        self.error(self.request('POST', '/_test/reset', duplicate), 422, 'validation_failed')
+
+    def test_deep_bodies_create_moves_replay_and_portable_snapshots(self):
+        # Use raw JSON so the client's own call stack is not the tested limit.
+        for depth in [600, 1200]:
+            self.request('POST', '/_test/reset', fixture())
+            self.ada = self.login('ada')
+            nested = '{"a":[' * depth + '1' + ']}' * depth
+            def encoded(body, value=nested):
+                return (json.dumps(body)[:-1] + ',"ignored":' + value + '}').encode()
+            for malformed in ['[1,]', '{"x":1,}', '{"x":}', '01', 'true false', 'NaN', 'Infinity']:
+                invalid = encoded(self.booking(), '{"a":[' * depth + malformed + ']}' * depth)
+                self.error(self.request('POST', '/reservations', token=self.ada, key='deep', raw=invalid), 400, 'malformed_request')
+            raw = encoded(self.booking())
+            created = self.request('POST', '/reservations', token=self.ada, key='deep', raw=raw)
+            self.assertEqual(created[0], 201)
+            self.assertEqual(self.request('POST', '/reservations', token=self.ada, key='deep', raw=raw), (200, created[1]))
+            different = encoded(self.booking(), '{"a":[' * depth + 'true' + ']}' * depth)
+            self.error(self.request('POST', '/reservations', token=self.ada, key='deep', raw=different), 409, 'idempotency_key_reuse')
+            move = {'moves': [{'reference': created[1]['reference'], 'table_id': 't2'}]}
+            moved = self.request('POST', '/reservation-moves', token=self.ada, key='deep', raw=encoded(move))
+            self.assertEqual(moved[0], 201)
+            with urlopen(self.urls[0] + '/_test/export', timeout=10) as response:
+                self.assertEqual(response.status, 200)
+                exported = response.read()
+            # Keep exported credentials only in memory; do not put them in assertions.
+            self.assertEqual(self.request('POST', '/_test/import', server=1, raw=exported)[0], 204)
+            self.assertEqual(self.request('POST', '/reservations', token=self.ada, key='deep', raw=raw, server=1), (200, created[1]))
+            self.assertEqual(self.request('POST', '/reservation-moves', token=self.ada, key='deep', raw=encoded(move), server=1), (200, moved[1]))
+            bad = {'moves': [{'reference': created[1]['reference'], 'party_size': False}]}
+            self.error(self.request('POST', '/reservation-moves', token=self.ada, key='failed', raw=encoded(bad)), 422, 'validation_failed')
+            current = self.request('GET', '/reservations/' + created[1]['reference'], token=self.ada)[1]
+            self.assertEqual(current['table_id'], 't2')
+            self.assertEqual(self.request('POST', '/reservation-moves', token=self.ada, key='failed', raw=encoded(move))[0], 201)
+
+
+class TransactionFailure(unittest.TestCase):
+    def test_mutation_rolls_back_on_dispatch_and_encoding_failure(self):
+        from engine import Engine
+        engine = Engine()
+        original = engine.state
+        def failed_dispatch(*_args):
+            engine.state['reservations'].append({'marker': 'must not commit'})
+            raise ValueError('Injected failure after mutation')
+        engine.dispatch = failed_dispatch
+        with self.assertRaises(ValueError):
+            engine.handle('POST', '/reservations', {}, {}, {})
+        self.assertIs(engine.state, original)
+        self.assertEqual(engine.state['reservations'], [])
+        def failed_encoding(*_args):
+            engine.state['receipts'].append({'marker': 'must not commit'})
+            return 201, {'invalid': object()}
+        engine.dispatch = failed_encoding
+        with self.assertRaises(TypeError):
+            engine.handle('POST', '/reservation-moves', {}, {}, {})
+        self.assertIs(engine.state, original)
+        self.assertEqual(engine.state['receipts'], [])
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

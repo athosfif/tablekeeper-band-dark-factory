@@ -1,6 +1,5 @@
 """Validation, password hashes and local/absolute time rules for Stage 1."""
 
-import copy
 import hashlib
 import hmac
 import math
@@ -8,6 +7,8 @@ import re
 import secrets
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
+
+from json_values import clone, equal as json_equal
 
 UTC = timezone.utc
 DAYS = ('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun')
@@ -43,24 +44,13 @@ def identifier(value):
     return value
 
 
-def integer(value, minimum=1):
+def integer(value, minimum=1, ordinary_field=False):
     # JSON numbers may be written 4 or 4.0, but true is never an integer.
+    if ordinary_field:
+        require(type(value) in (int, float), 400, 'malformed_request')
     require(type(value) in (int, float) and (not isinstance(value, float) or math.isfinite(value))
             and value == int(value) and value >= minimum)
     return int(value)
-
-
-def json_equal(left, right):
-    """JSON value equality, without Python's true == 1 conflation."""
-    if type(left) in (int, float) and type(right) in (int, float):
-        return left == right
-    if type(left) is not type(right):
-        return False
-    if isinstance(left, dict):
-        return left.keys() == right.keys() and all(json_equal(left[k], right[k]) for k in left)
-    if isinstance(left, list):
-        return len(left) == len(right) and all(json_equal(a, b) for a, b in zip(left, right))
-    return left == right
 
 
 def email(value):
@@ -132,7 +122,7 @@ def clock_minutes(value):
 
 def restaurants_from_fixture(items):
     require(isinstance(items, list), 400, 'malformed_request')
-    restaurants, ids, table_ids = [], set(), set()
+    restaurants, ids = [], set()
     for item in items:
         obj(item)
         rid = identifier(field(item, 'id'))
@@ -146,7 +136,7 @@ def restaurants_from_fixture(items):
         r = {key: field(item, key) for key in ('id', 'name', 'timezone')}
         for key in ('slot_minutes', 'reservation_duration_minutes', 'cancellation_cutoff_minutes'):
             require(key in item)
-            r[key] = integer(item[key], 0 if key == 'cancellation_cutoff_minutes' else 1)
+            r[key] = integer(item[key], 0 if key == 'cancellation_cutoff_minutes' else 1, ordinary_field=True)
         r['opening_hours'] = []
         for hours in field(item, 'opening_hours', list):
             obj(hours)
@@ -156,6 +146,7 @@ def restaurants_from_fixture(items):
             require(clock_minutes(start) < clock_minutes(end))
             r['opening_hours'].append({'weekday': day, 'opens': start, 'closes': end})
         r['tables'] = []
+        table_ids = set()
         for table in field(item, 'tables', list):
             obj(table)
             tid = identifier(field(table, 'id'))
@@ -163,7 +154,7 @@ def restaurants_from_fixture(items):
             table_ids.add(tid)
             require('capacity' in table)
             r['tables'].append({'id': tid, 'label': field(table, 'label'),
-                                'capacity': integer(table['capacity'])})
+                                'capacity': integer(table['capacity'], ordinary_field=True)})
         restaurants.append(r)
     return restaurants
 
@@ -209,13 +200,14 @@ def booking_fields(state, body):
 
 
 def overlap(a, b):
-    return (a['status'] == b['status'] == 'confirmed' and a['table_id'] == b['table_id']
+    return (a['status'] == b['status'] == 'confirmed'
+            and (a['restaurant_id'], a['table_id']) == (b['restaurant_id'], b['table_id'])
             and instant(a['starts_at']) < instant(b['ends_at'])
             and instant(b['starts_at']) < instant(a['ends_at']))
 
 
 def public(reservation):
-    return {k: copy.deepcopy(v) for k, v in reservation.items() if k != 'user_id'}
+    return {k: clone(v) for k, v in reservation.items() if k != 'user_id'}
 
 
 def check_cutoff(state, reservation):
@@ -258,7 +250,7 @@ def imported_state(envelope):
     try:
         require(envelope['track'] == 'tablekeeper' and type(envelope['format_version']) is int
                 and envelope['format_version'] == 1)
-        state = copy.deepcopy(envelope['state'])
+        state = clone(envelope['state'])
         require(isinstance(state, dict) and set(state) == set(empty_state()))
         for key in ('users', 'restaurants', 'reservations', 'receipts'):
             require(isinstance(state[key], list))
