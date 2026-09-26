@@ -1,6 +1,6 @@
 # Tablekeeper — sequential stages 2–4 plan
 
-Status: authorized continuation dispatched 2026-09-26; Stage 2 active next. Stages 3 and 4 are gated on the preceding stage's independent acceptance. This replaces the Stage-1-only scope of the previous active plan; all earlier history and evidence remain intact.
+Status: Stage 2 independently accepted at 2e026c006569b2e749de79b7526f03ae9b6e44e3; Stage 3 is in progress from its complete copied folder. Stage 4 remains gated on Stage 3 independent acceptance. This replaces the Stage-1-only scope of the previous active plan; all earlier history and evidence remain intact.
 
 ## Accepted baseline and immutable inputs
 
@@ -24,6 +24,15 @@ Status: authorized continuation dispatched 2026-09-26; Stage 2 active next. Stag
 7. Planner completes root documentation and reports. Reviewer audits the final commit, four folder trees, evidence/claims and complete isolated package checks. Stop after one consolidated final outcome.
 
 No new seats/rooms, human clarification or approval. Existing authorization covers all steps. A genuine blocker is reported with evidence if no authorized path remains. A message timeout is not acceptance; never resend the same request automatically.
+
+## Recorded Stage 2 outcome
+
+- Accepted source: 2e026c006569b2e749de79b7526f03ae9b6e44e3; folder tree 2ebbd48a3ba2b6de7eba2a5fcd851a36efc4e2c8.
+- Stage 1 remains tree 0050accbdc6d0457ffdc73de6365158e65c1808b.
+- Isolated official: 120/120 Stage 1 and 25/25 Stage 2; expected Stage 3 probe 1 failed, 6 unexecuted.
+- Independent: 36/36 API groups and 10/10 browser groups, including populated Stage 1 upgrade in the same open browser.
+- Initial 61949b2 was rejected for valid long restaurant names overflowing at 375px despite passing shipped checks. New CSS commit fixed wrapping; independent browser full-flow recheck and Planner's original regression both passed.
+- Stage-specific evidence and limits: [STAGE-2-REPORT.md](STAGE-2-REPORT.md).
 
 ## Product direction
 
