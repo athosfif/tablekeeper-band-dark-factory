@@ -4,7 +4,7 @@ This run is authorized by the single dispatch in room `769c0fe4-0d50-4507-9c8a-1
 
 ## Ownership and sequence
 
-Current gate: stage 1 accepted at `ec96785a3aaa611e8519d09869cade8ffddb9224`, frozen tree `dfff49710165dc7d568496f1d230b4fc69eb7b2c`. Stage 2 accepted at `e44838741cc906fbcae88e4248b5dc850af90e7c`, frozen tree `b33e79f9bb65ff730b626f9c774afa4653b11e59`. Stage 3 accepted at `6b75841c243ea4722be08834526545ea847bad27`, frozen tree `3c21f70a1e2d2f2a615c1e1b4a3ab50d2bb699fb`. All original failures remain evidence. The stage-4 copy and implementation are authorized; Reviewer has a sealed source-blind map and prepares executable checks independently.
+Current gate: stage 1 accepted at `ec96785a3aaa611e8519d09869cade8ffddb9224`, frozen tree `dfff49710165dc7d568496f1d230b4fc69eb7b2c`. Stage 2 accepted at `e44838741cc906fbcae88e4248b5dc850af90e7c`, frozen tree `b33e79f9bb65ff730b626f9c774afa4653b11e59`. Stage 3 accepted at `6b75841c243ea4722be08834526545ea847bad27`, frozen tree `3c21f70a1e2d2f2a615c1e1b4a3ab50d2bb699fb`. Stage 4 accepted at `bb417f29a586fe0771fcc728ab308584f00d5b9a`, frozen tree `2473ec5b52d8ab4ea53e6ce5f75eeb358f2bd719`. All source gates are complete and original failures remain evidence. The final package gate uses the committed documentation and a fresh exact clone; its observed outcome is recorded outside the repository at the authorized evidence root in `agent-evidence/coordinator/final-report.md`, `final-manifest.json` and `final-package-01/official/summary.json`.
 
 Planner owns decomposition, requirement decisions, evidence reconciliation and the final report. Builder owns all product implementation and implementation commits. Reviewer derives acceptance cases before implementation inspection and independently accepts or rejects exact commits. Only one seat writes a given file; review artifacts live under the assigned agent-evidence root.
 
@@ -29,3 +29,5 @@ Planner owns decomposition, requirement decisions, evidence reconciliation and t
 | Final package | All four independent stage trees, exact mandate-byte hashes, preserved history, official isolated reports and honest missing-room-export result |
 
 Passing shipped checks is directional evidence, never proof of hidden-check correctness. Counts distinguish distinct test cases from cumulative executions. Expected next-stage probe failures are separate from required checks. No source, mandates or tests are imported from earlier runs. No publication, submission, paid service, external inference or fabricated room export is authorized.
+
+The coordinator stops after the final local package report. Authentic whole-room export, media, public verification and submission remain operator work after completion. Missing `room.json` must remain an explicit offline-check limitation, never a fabricated pass.

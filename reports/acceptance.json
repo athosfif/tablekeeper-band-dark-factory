@@ -73,14 +73,30 @@
       }
     },
     "4": {
-      "status": "independent_review_pending",
-      "candidate_commit": "bb417f29a586fe0771fcc728ab308584f00d5b9a",
-      "candidate_tree": "2473ec5b52d8ab4ea53e6ce5f75eeb358f2bd719",
+      "status": "accepted",
+      "accepted_commit": "bb417f29a586fe0771fcc728ab308584f00d5b9a",
+      "accepted_tree": "2473ec5b52d8ab4ea53e6ce5f75eeb358f2bd719",
       "builder_report": "builder/stage-4-implementation.md",
-      "independent_acceptance": null
+      "review_report": "reviewer/review-bb417f2/review-report.md",
+      "required_official_passes_at_accepted_revision": 158,
+      "required_official_command_seconds": 116.397575167,
+      "independent_distinct_cases_at_accepted_revision": 511,
+      "independent_final_coverage_passing_executions": 513,
+      "independent_chronological_executions": 689,
+      "independent_chronological_passing_executions": 687,
+      "independent_chronological_checker_nonpasses": 2,
+      "unresolved_product_failures": 0,
+      "expected_next_stage_probe": null
     }
   },
-  "final_all_folder_check": null,
+  "final_all_folder_check": {
+    "outcome_recorded_externally_after_this_documentation_commit": true,
+    "summary": "coordinator/final-package-01/official/summary.json",
+    "command": "coordinator/final-package-01/all-folder-isolated.command.json",
+    "manifest": "coordinator/final-manifest.json",
+    "report": "coordinator/final-report.md",
+    "note": "Read the actual external records for the tested complete package commit and observed result; this pointer is not a predicted pass."
+  },
   "operator_room_export": "pending authentic export after factory completion; no fabricated room.json",
   "published": false,
   "submitted": false
