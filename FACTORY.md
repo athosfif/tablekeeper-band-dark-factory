@@ -36,6 +36,8 @@ The first recorded stage-1 isolated attempt failed before tests because Docker B
 
 The final report must distinguish distinct cases from repeated/cumulative executions, required suites from expected next-stage probes, and preparation from product acceptance. Known specification defects prevent independent acceptance even if sample checks pass. No conflict is manufactured for presentation.
 
+Stage 1 demonstrates this distinction: the original review passed all 120 shipped cases but rejected four independently reproduced numeric/receipt/export failures. Builder had already produced exact-number and integer-range repairs in parallel when that rejection arrived. Reviewer then rechecked the original reproductions without weakening them and accepted the later exact revision with 86 independent cases passing. This is an independent rejection and verified repair, not a claim that a later review message caused an earlier implementation commit.
+
 ## Local boundaries
 
 Official checkout and tests are read-only; previous submissions, old reports and historical rooms are excluded. Writable paths are the fresh result repository and the assigned fresh evidence root only. Installed runtime caches are tools, not product-source inputs. Synthetic fixtures are used for API/browser checks; the user's browser profile is never used. No global configuration change, external inference, publication or platform submission is part of this run.
