@@ -1,6 +1,6 @@
 # Stage 3 acceptance ledger
 
-Status: independent preparation complete; implementation and acceptance pending stage-2 acceptance. No stage-3 product checks have run.
+Status: independent preparation complete; stage 2 is accepted and stage-3 implementation is authorized by copying its frozen tree `b33e79f9bb65ff730b626f9c774afa4653b11e59`. No stage-3 product checks or acceptance are claimed yet.
 
 Reviewer derived 103 additional scenario families (96 requirements, 2 generic-mandate checks, 5 observations), inheriting 110 stage-1 and 88 stage-2 planned families. These are plans, not executed cases. The source-blind map was written by `2026-09-27T06:24:51.780Z`; final preparation was sealed at `06:52:23.721084Z`, with no stage-3 folder present or inspected. The seal resumed after priority stage-2 review. The initial fixture-oracle script failed to parse; its source and error are preserved. A corrected local arithmetic-only run succeeded with zero product requests.
 

@@ -1,6 +1,16 @@
 # Stage 2 acceptance ledger
 
-Status: functional repair committed at `e44838741cc906fbcae88e4248b5dc850af90e7c` and under independent review. Prior candidates were explicitly rejected. No stage-2 acceptance or stage-3 implementation is authorized yet.
+Status: **ACCEPTED** at `e44838741cc906fbcae88e4248b5dc850af90e7c`, frozen stage-2 tree `b33e79f9bb65ff730b626f9c774afa4653b11e59`. Reviewer explicitly accepted this exact revision in `agent-evidence/reviewer/review-e448387/review-report.md`. Prior rejections remain valid for their original commits. The accepted folder may now be copied forward to stage 3.
+
+## Final independent acceptance
+
+Reviewer reran 111 independent API cases and 65 distinct browser/hybrid cases: **176 distinct named cases, 178 executions, all passing**. Two browser cases were repeated; the 1007 API HTTP events and 328 mixed browser evidence events are not additional cases. All three original raw-wire failure reproductions pass on this exact image with the original reproduction script byte-identical. The 24 added numeric journeys cover adjacent numbers, 40-digit integers, exact pair capacities, validation, opaque labels/IDs, unchanged and changed intent, and actual retained single/pair and stage-1-to-stage-2 import recovery. Broader async, auth, route, stale-response, keyboard and long-content journeys were actually rerun rather than carried as new passes.
+
+Fresh official isolated results: stage 1 **120/120** (21.09s), stage 2 **25/25** (33.53s); full command **129.845875s**. The expected next-stage probe collected 7, executed one missing-policy failure and left 6 unexecuted (0.30s). Independent API command times were 13.757152s, 4.045234s, 4.512484s and 6.640370s. Browser lanes took 52.803369s, 16.517289s, 6.413977s, 13.601914s, 4.441842s and 43.475372s. All exact commands/stdout/stderr remain under the revision-specific review directory.
+
+The new 20-family numeric supplement was fixed at 07:32:25.420595 UTC before source inspection at 07:32:34.196712 UTC. The reviewer recorded no product/setup test failures in this accepted revision. One duplicate boundary checker was changed before execution to compare raw JSON instead of a lossy JavaScript diagnostic; all three original reproductions remained unchanged. A later metadata inventory UnicodeDecodeError is preserved as an evidence-tool error, not a product case.
+
+The independent image is `sha256:f14448a31719d4d38f8ee32c1986aeb6fb0621790c02172bbe5090d2889c5fcd`. Served script/style/HTML bytes match committed blobs; 63 actual Chrome screenshots cover 375/1440 layouts and 40-digit mobile wrapping. Caption contrast remains 5.315248802966871:1. Product containers had 2CPU/2GiB, internal-only networking, no product volumes and tested PORT=9090 as well as default8080. Four tracked build contexts were verified; review containers/network were cleaned after logging. Earlier stage tree, official source and tests remained unchanged. This finite acceptance does not claim hidden-test proof or formal accessibility certification.
 
 ## Committed candidate and Builder evidence
 

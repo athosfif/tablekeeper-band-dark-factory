@@ -4,7 +4,7 @@ Fresh, local Tablekeeper implementation produced by three configured agent seats
 
 ## Current delivery state
 
-Work is in progress. Stage 1 is independently accepted at `ec96785a3aaa611e8519d09869cade8ffddb9224`, with frozen stage tree `dfff49710165dc7d568496f1d230b4fc69eb7b2c`: 120/120 shipped official tests and 86/86 independent cases passed in the repair review. This does not establish hidden-test correctness. Stage 2 is implemented but remains unaccepted while three independently reproduced browser numeric-identity defects are repaired and rechecked. Stages 3–4 have source-blind acceptance plans but no product acceptance or implementation yet. Later stage folders are added only by copying the preceding independently accepted folder and extending that copy.
+Work is in progress. Stage 1 is independently accepted at `ec96785a3aaa611e8519d09869cade8ffddb9224`, with frozen tree `dfff49710165dc7d568496f1d230b4fc69eb7b2c`: 120/120 shipped tests and 86/86 independent cases passed. Stage 2 is independently accepted at `e44838741cc906fbcae88e4248b5dc850af90e7c`, frozen tree `b33e79f9bb65ff730b626f9c774afa4653b11e59`: 145/145 shipped tests and 176 distinct independent cases in 178 passing executions. Original rejections and verified repairs remain preserved. This does not establish hidden-test correctness. Stages 3–4 have source-blind acceptance plans and remain to be implemented and accepted. Later folders are added only by copying the preceding independently accepted folder and extending that copy.
 
 - [plan.md](plan.md) records the sequence and acceptance map.
 - [FACTORY.md](FACTORY.md) records seat responsibilities, reproducibility, decisions, costs and failure handling.
