@@ -48,8 +48,8 @@ def integer(body, name, minimum=1):
 
 def party(body):
     value = body.get('party_size')
-    require(type(value) in (int, float) and math.isfinite(value)
-            and value >= 1 and value == int(value))
+    require((type(value) is int and value >= 1) or
+            (type(value) is float and math.isfinite(value) and value >= 1 and value.is_integer()))
     return int(value)
 
 

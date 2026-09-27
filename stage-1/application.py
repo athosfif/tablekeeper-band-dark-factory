@@ -43,7 +43,8 @@ class Application:
 
     def dispatch(self, method, target, headers, body):
         url = urlsplit(target)
-        path = unquote(url.path)
+        # Split routes before decoding an opaque identifier that may contain '/'.
+        path = url.path
         if method == 'GET' and path == '/health':
             return 200, {'status': 'ok'}
         if method == 'POST' and path == '/_test/reset':
@@ -72,7 +73,7 @@ class Application:
             return 200, {'restaurants': [{k: r[k] for k in ('id', 'name', 'timezone')}
                                          for r in self.state['restaurants'].values()]}
         if method == 'GET' and re.fullmatch(r'/restaurants/[^/]+', path):
-            rid = path.rsplit('/', 1)[1]
+            rid = unquote(path.rsplit('/', 1)[1])
             identifier({'id': rid}, 'id')
             require(rid in self.state['restaurants'], 'not_found', 404)
             return 200, self.state['restaurants'][rid]
@@ -122,7 +123,7 @@ class Application:
             return 200, {'reservations': records}
         match = re.fullmatch(r'/reservations/([^/]+)(/cancel)?', path)
         if match:
-            record = self.owned(match[1], uid)
+            record = self.owned(unquote(match[1]), uid)
             if method == 'GET' and not match[2]:
                 return 200, public_record(record)
             if method == 'POST' and match[2]:
