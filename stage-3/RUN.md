@@ -1,9 +1,9 @@
-# Tablekeeper · Stage 2
+# Tablekeeper · Stage 3
 
 From this folder, build and start the standalone browser product and JSON API:
 
 ```sh
-docker build -t tablekeeper-stage2 . && docker run --rm --name tablekeeper-stage2 -e PORT=8080 -p 8080:8080 tablekeeper-stage2
+docker build -t tablekeeper-stage3 . && docker run --rm --name tablekeeper-stage3 -e PORT=8080 -p 8080:8080 tablekeeper-stage3
 ```
 
 Readiness: `curl http://localhost:8080/health`. Change both the environment variable
@@ -22,7 +22,7 @@ illustrations and icons are included locally; typography uses system fonts.
 
 `POST /_test/reset` with the specified JSON fixture supplies users, restaurants,
 tables and optional confirmed reservations. It returns 204 and replaces every
-account, session, reservation and receipt. `GET /restaurants`, restaurant detail
+account, session, reservation, policy, history, series and receipt. `GET /restaurants`, restaurant detail
 and `GET /availability?restaurant_id=...&date=YYYY-MM-DD&party_size=...` are public.
 `POST /auth/signup` and `POST /auth/login` issue independent, non-expiring bearer
 tokens. Passwords are salted scrypt hashes, including fixture passwords.
@@ -59,7 +59,56 @@ their precision and exponent in ignored fields, receipts and portable snapshots.
 Slot grids use local wall-clock minutes from opening. IANA conversion rejects
 nonexistent local times and uses the first occurrence of a repeated time. Duration,
 overlap and cutoff comparisons use UTC instants; intervals are half-open. Starts
-in the past are valid. Cancellation/amendment cutoffs use the current start.
+in the past are valid. Cancellation/amendment cutoffs use the accepted terms and
+the booking's current start.
+
+## Policies, decisions and history
+
+Fixture restaurants may supply `manager_user_ids` (default empty). Only those
+accounts may `POST /restaurants/{id}/policies`, with an idempotency key and a
+complete policy: effective date, grid, duration, cutoff, hours and every table's
+capacity. Grid/duration are 1–1440, cutoff 0–10080, and published capacities 1–100.
+`GET /restaurants/{id}/policies` is public and lists immutable publications in
+version order. The original restaurant detail never changes. For each local
+start date, the latest eligible effective date wins; publication version breaks
+ties. Policy zero is the fixture configuration.
+
+Live reservations carry `revision` and complete `accepted_terms`. A real change
+checks the old accepted cutoff and then validates every resulting field under
+the resulting date's selected policy. It replaces terms/end time and increments
+revision once. No-op amendments retain those values but still require an editable,
+confirmed booking. Optional positive `expected_revision` rejects a stale change
+before cutoff or field validation. Cancellation increments once; repeated cancel
+does not. Atomic moves apply these same rules to all items before any commit.
+
+`GET /availability?...&explain=true` adds both independent capacity and overlap
+rules for every table in fixture order, including the selected policy version.
+The parameter's only accepted value is `true`; omission adds no explanations.
+The browser takes displayed seating capacities from authoritative availability
+and cancellation terms from the actual receipt/record, never static fixture rules.
+
+`GET /reservations/{reference}/history` returns immutable ordered events with
+contiguous sequence numbers, resulting revision/terms and actual field changes.
+`GET /reservations/{reference}/decision` returns current revision/terms. Both
+return 404 for anyone except the owner, including callers without a token.
+Pair histories use canonical complete member lists; single-to-single changes
+keep `table_id`. Replays, failures, no-ops and publication append no events.
+
+## Recurring agreements
+
+`POST /series` requires an idempotency key and an owned, confirmed, editable
+`anchor_reference`, `count` 2–12 and `interval_weeks` 1–4. It retains the anchor
+unchanged and prepares each following occurrence by local calendar weeks, using
+that date's policy and IANA rules. The first failing index, including occupancy,
+rejects the entire adoption. No records, histories, counters or retry claim remain.
+
+`GET /series/{series_id}` returns current occurrences in fixed index order; only
+the owner can read it, with 404 for other or unauthenticated callers. A real
+individual change permanently marks an exception and increments series revision.
+Cancel increments revision without creating an exception or cancelling siblings.
+A collective move increments each affected series once, even when several of its
+occurrences change. Restaurant revisions are internal; adoption and a real batch
+increment once per operation. No policy, history or series UI screen is required.
 
 ## Portable state
 
@@ -67,10 +116,16 @@ in the past are valid. Cancellation/amendment cutoffs use the current start.
 opaque state. `POST /_test/import` accepts that entire object unchanged and
 atomically replaces all state. It preserves hashes, sessions, identities,
 timestamps, references, current records and original retry receipts. Invalid
-snapshots leave existing state intact. Stage-1 exports from this team import
-unchanged: existing tokens and identities survive, current single-table records
-gain the stage-2 representation, and original stage-1 receipt bodies/responses
-remain untouched. These unauthenticated test controls are
+snapshots leave existing state intact. Stage-1 and stage-2 exports from this team
+import unchanged: tokens and identities survive; live records gain policy-zero
+terms and revision 1 while retaining their original occupancy. Original receipt
+bodies/responses keep their exact old JSON shape. Earlier stages did not record
+history, so imported history starts empty; subsequent real events begin at seq 1
+without inventing pre-upgrade edits. A cancelled reset seed similarly has no
+invented cancellation event, starts at revision 1 and has empty history. A confirmed
+reset seed gets a creation event at initialization. Stage-3 snapshots preserve all
+actual events, publications, series membership/exceptions and original receipts.
+These unauthenticated test controls are
 enabled in the image by contract. Export files contain credentials/session tokens
 and must be kept private.
 
@@ -103,5 +158,5 @@ pending-operation recovery after page reload is implemented or required.
 The container supports the required 2 CPU / 2 GiB deployment. The lock favors
 simple, auditable serializability over multi-process throughput. Run one process
 per service: separate replicas do not share this ephemeral store. There is no
-restart durability requirement. There are no policies, revisions, recurring
-agreements, closures or other stage-3/4 features in this folder.
+restart durability requirement. There are no closures, replanning endpoints or
+stage-4 features in this folder. All four existing browser routes remain available.
