@@ -4,7 +4,8 @@ WORKDIR /app
 # Debian supplies the IANA database locally; assert it during the build.
 RUN python -c "from zoneinfo import ZoneInfo; ZoneInfo('Europe/Berlin'); ZoneInfo('America/New_York')"
 COPY *.py /app/
-RUN chmod 644 /app/*.py
+COPY static /app/static/
+RUN chmod 644 /app/*.py /app/static/* && chmod 755 /app/static
 USER 65534:65534
 EXPOSE 8080
 CMD ["python", "server.py"]

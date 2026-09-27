@@ -3,6 +3,8 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import os
 import sys
 import traceback
+from pathlib import Path
+from urllib.parse import urlsplit
 
 from application import Application
 import json_values as json
@@ -14,6 +16,22 @@ app = Application()
 class Handler(BaseHTTPRequestHandler):
     def serve(self):
         try:
+            route = urlsplit(self.path).path
+            assets = {'/static/app.js': ('app.js', 'text/javascript; charset=utf-8'),
+                      '/static/app.css': ('app.css', 'text/css; charset=utf-8'),
+                      '/static/mark.svg': ('mark.svg', 'image/svg+xml'),
+                      '/static/table.svg': ('table.svg', 'image/svg+xml')}
+            if self.command in ('GET', 'HEAD') and (route in ('/', '/signup', '/login', '/lookup') or route in assets):
+                filename, mime = assets.get(route, ('index.html', 'text/html; charset=utf-8'))
+                data = (Path(__file__).parent / 'static' / filename).read_bytes()
+                self.send_response(200)
+                self.send_header('Content-Type', mime)
+                self.send_header('Content-Length', str(len(data)))
+                self.send_header('Cache-Control', 'no-cache')
+                self.end_headers()
+                if self.command != 'HEAD':
+                    self.wfile.write(data)
+                return
             body = {}
             if self.command in ('POST', 'PATCH', 'PUT'):
                 try:
