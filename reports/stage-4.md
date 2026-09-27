@@ -1,6 +1,6 @@
 # Stage 4 acceptance ledger
 
-Status: independent preparation complete; implementation and acceptance pending prior stages. No stage-4 product checks have run.
+Status: stage 3 is accepted and its frozen tree `3c21f70a1e2d2f2a615c1e1b4a3ab50d2bb699fb` may be copied forward for stage-4 implementation. The source-blind map is complete and executable checking preparation is assigned. No stage-4 product acceptance is claimed.
 
 Reviewer derived 93 additional scenario families (87 requirements, 2 generic-mandate checks, 4 observations), for 394 cumulative prepared families. These are not product executions. Preparation was sealed at `2026-09-27T07:08:33.968823Z`; no stage-3 or stage-4 source folder was present or inspected.
 
