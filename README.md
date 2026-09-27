@@ -45,7 +45,7 @@ python -m harness run --track tablekeeper --repo /absolute/fresh/clone \
 python -m harness check /absolute/fresh/clone --track tablekeeper
 ```
 
-The first command builds all four folders independently and runs each cumulative suite plus the applicable next-stage probe. Required checks and expected probes must be reported separately. The second command checks package and room evidence; the authentic operator room export is intentionally deferred as explained below. Actual expanded commands, UTC timestamps, exits, logs and per-revision results are preserved in the evidence directory.
+The first command builds all four folders independently and runs each cumulative suite plus the applicable next-stage probe. Required checks and expected probes must be reported separately. The second command checks package and room evidence; the authentic whole-room export is now included and passes the offline package check. Actual expanded commands, UTC timestamps, exits, logs and per-revision results are preserved in the evidence directory.
 
 - [plan.md](plan.md) records the sequence and acceptance map.
 - [FACTORY.md](FACTORY.md) records seat responsibilities, reproducibility, decisions, costs and failure handling.
@@ -63,4 +63,4 @@ State is ephemeral and uses one process with a transaction lock; separate replic
 
 No previous submission source, historical room or product-specific bug report was input to this run. Official specifications and tests are not modified. Every agent commit is retained without amending, rebasing or squashing. Shipped official checks are partial conformance evidence, not proof of hidden-check correctness; next-stage probe failures are recorded separately from required suites.
 
-`room.json` is intentionally absent until the operator supplies an authentic whole-room export after completion. It will not be fabricated. Publication, video, media, public verification and platform submission belong to the operator after the local factory outcome. This repository has not been published or submitted by the factory.
+The operator downloaded the authentic full BAND session after completion: `room.json` contains 3,154 events and exactly one human task message. Its original bytes are retained (SHA256 `860531f7e92c47ea06d80e32532eb415d6bfb105f8179a2ede475714aea4e5ce`). The offline package check passes. Public review reports and official results are in [reports/r03-evidence](reports/r03-evidence). This operator packaging adds evidence and documentation only; every accepted stage tree and all agent commits remain unchanged. Platform submission is a separate operator action.

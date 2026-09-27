@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-09-27T09:57:54.027649+00:00",
+  "source_url": "https://app.band.ai/sessions/769c0fe4-0d50-4507-9c8a-1ed742e1c477",
+  "method": "BAND console Conversation options > Download > Download full session",
+  "original_bytes_unchanged": true,
+  "sha256": "860531f7e92c47ea06d80e32532eb415d6bfb105f8179a2ede475714aea4e5ce",
+  "bytes": 5570016,
+  "file": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/BAND-full-session-r03.json",
+  "initial_dispatch_present": true,
+  "final_coordinator_message_present": true,
+  "privacy_review": "Official harness credential scanner passed; full export retained unchanged.",
+  "message_count": 3154,
+  "scope": "full",
+  "human_text_message_ids": [
+    "e6a14ee8-d32c-4f39-a15b-da8485aa7be5"
+  ],
+  "harness_check_exit": 0
+}

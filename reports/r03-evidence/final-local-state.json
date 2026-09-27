@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-09-27T09:45:07.691519+00:00",
+  "commit": "fac2b2fd563d1169f7759558be216226d3e41ee5",
+  "tree": "8c6246061e9f6cea3e1db5d09147d6543b6fc06e",
+  "git_status": "",
+  "final_report_sha256": "d0e1490b47deaa700454cff5972f2cae4458f4aaf99985ca13ea58560e9448db",
+  "final_manifest_sha256": "676a135bc96226fd9a25b9c22d576515ed0047af368e4f28bc536fce2eb74978",
+  "room_export_present": false,
+  "owned_running_containers": [],
+  "unrelated_running_containers_left_untouched": 1,
+  "tracked_changes_after_final_run": false,
+  "published": false,
+  "submitted": false
+}

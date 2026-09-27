@@ -1,0 +1,538 @@
+{
+  "run": "tablekeeper-r03",
+  "room_id": "769c0fe4-0d50-4507-9c8a-1ed742e1c477",
+  "outcome": "all_four_product_stages_independently_accepted_and_final_isolated_checks_pass",
+  "package_commit": "fac2b2fd563d1169f7759558be216226d3e41ee5",
+  "package_tree": "8c6246061e9f6cea3e1db5d09147d6543b6fc06e",
+  "stage_results": {
+    "1": {
+      "accepted_product_commit": "ec96785a3aaa611e8519d09869cade8ffddb9224",
+      "tree": "dfff49710165dc7d568496f1d230b4fc69eb7b2c",
+      "required_passed": 120,
+      "checks": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_1/test_health_reset_auth.py": {
+              "passed": 12,
+              "total": 12
+            },
+            "stage_1/test_reservations.py": {
+              "passed": 37,
+              "total": 37
+            },
+            "stage_1/test_restaurants_availability.py": {
+              "passed": 18,
+              "total": 18
+            },
+            "stage_1/test_retries_time_input.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_sample.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_seeded_state.py": {
+              "passed": 13,
+              "total": 13
+            }
+          }
+        }
+      },
+      "expected_next_stage_probe": {
+        "collected": 25,
+        "executed": 1,
+        "passed": 0,
+        "failed": 1,
+        "unexecuted": 24
+      },
+      "harness_report_elapsed_seconds": 65.880105,
+      "report": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-package-01/official/stage-1/report.json",
+      "suite_digest": "0eb86668d630de3c3c58e51d43135ec08a9cfe341742bff904db86ed4c287312"
+    },
+    "2": {
+      "accepted_product_commit": "e44838741cc906fbcae88e4248b5dc850af90e7c",
+      "tree": "b33e79f9bb65ff730b626f9c774afa4653b11e59",
+      "required_passed": 145,
+      "checks": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_1/test_health_reset_auth.py": {
+              "passed": 12,
+              "total": 12
+            },
+            "stage_1/test_reservations.py": {
+              "passed": 37,
+              "total": 37
+            },
+            "stage_1/test_restaurants_availability.py": {
+              "passed": 18,
+              "total": 18
+            },
+            "stage_1/test_retries_time_input.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_sample.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_seeded_state.py": {
+              "passed": 13,
+              "total": 13
+            }
+          }
+        },
+        "2": {
+          "collected": 25,
+          "passed": 25,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_2/test_sample.py": {
+              "passed": 8,
+              "total": 8
+            },
+            "stage_2/test_ui.py": {
+              "passed": 17,
+              "total": 17
+            }
+          }
+        }
+      },
+      "expected_next_stage_probe": {
+        "collected": 7,
+        "executed": 1,
+        "passed": 0,
+        "failed": 1,
+        "unexecuted": 6
+      },
+      "harness_report_elapsed_seconds": 40.786476,
+      "report": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-package-01/official/stage-2/report.json",
+      "suite_digest": "afc7e875ef640834aff34362321c22ae2059a5a0698a2d2ff07fc1149ee55e36"
+    },
+    "3": {
+      "accepted_product_commit": "6b75841c243ea4722be08834526545ea847bad27",
+      "tree": "3c21f70a1e2d2f2a615c1e1b4a3ab50d2bb699fb",
+      "required_passed": 152,
+      "checks": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_1/test_health_reset_auth.py": {
+              "passed": 12,
+              "total": 12
+            },
+            "stage_1/test_reservations.py": {
+              "passed": 37,
+              "total": 37
+            },
+            "stage_1/test_restaurants_availability.py": {
+              "passed": 18,
+              "total": 18
+            },
+            "stage_1/test_retries_time_input.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_sample.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_seeded_state.py": {
+              "passed": 13,
+              "total": 13
+            }
+          }
+        },
+        "2": {
+          "collected": 25,
+          "passed": 25,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_2/test_sample.py": {
+              "passed": 8,
+              "total": 8
+            },
+            "stage_2/test_ui.py": {
+              "passed": 17,
+              "total": 17
+            }
+          }
+        },
+        "3": {
+          "collected": 7,
+          "passed": 7,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_3/test_sample.py": {
+              "passed": 7,
+              "total": 7
+            }
+          }
+        }
+      },
+      "expected_next_stage_probe": {
+        "collected": 6,
+        "executed": 5,
+        "passed": 4,
+        "failed": 1,
+        "unexecuted": 1
+      },
+      "harness_report_elapsed_seconds": 45.777279,
+      "report": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-package-01/official/stage-3/report.json",
+      "suite_digest": "6390084308a92a58bd0424e7acea0bf53eecaf4d499c2aca0aa44463ad6a4135"
+    },
+    "4": {
+      "accepted_product_commit": "bb417f29a586fe0771fcc728ab308584f00d5b9a",
+      "tree": "2473ec5b52d8ab4ea53e6ce5f75eeb358f2bd719",
+      "required_passed": 158,
+      "checks": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_1/test_health_reset_auth.py": {
+              "passed": 12,
+              "total": 12
+            },
+            "stage_1/test_reservations.py": {
+              "passed": 37,
+              "total": 37
+            },
+            "stage_1/test_restaurants_availability.py": {
+              "passed": 18,
+              "total": 18
+            },
+            "stage_1/test_retries_time_input.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_sample.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_seeded_state.py": {
+              "passed": 13,
+              "total": 13
+            }
+          }
+        },
+        "2": {
+          "collected": 25,
+          "passed": 25,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_2/test_sample.py": {
+              "passed": 8,
+              "total": 8
+            },
+            "stage_2/test_ui.py": {
+              "passed": 17,
+              "total": 17
+            }
+          }
+        },
+        "3": {
+          "collected": 7,
+          "passed": 7,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_3/test_sample.py": {
+              "passed": 7,
+              "total": 7
+            }
+          }
+        },
+        "4": {
+          "collected": 6,
+          "passed": 6,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_4/test_sample.py": {
+              "passed": 6,
+              "total": 6
+            }
+          }
+        }
+      },
+      "expected_next_stage_probe": null,
+      "harness_report_elapsed_seconds": 47.755744,
+      "report": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-package-01/official/stage-4/report.json",
+      "suite_digest": "8fdc10d7858c9fa1038fadc7d1c863099432a297df8f57eb8069e43e220be632"
+    }
+  },
+  "required_cumulative_executions": 575,
+  "required_passed_executions": 575,
+  "distinct_official_cases": 158,
+  "distinct_official_suites": {
+    "1": 120,
+    "2": 25,
+    "3": 7,
+    "4": 6
+  },
+  "expected_probe_totals_separate": {
+    "collected": 38,
+    "executed": 7,
+    "passed": 4,
+    "failed": 3,
+    "unexecuted": 31
+  },
+  "official_summary": {
+    "track": "tablekeeper",
+    "folders": {
+      "1": {
+        "claimed": true,
+        "share": 1.0,
+        "overshoot": null,
+        "highest_contiguous": 1,
+        "report": "stage-1/report.json"
+      },
+      "2": {
+        "claimed": true,
+        "share": 1.0,
+        "overshoot": null,
+        "highest_contiguous": 2,
+        "report": "stage-2/report.json"
+      },
+      "3": {
+        "claimed": true,
+        "share": 1.0,
+        "overshoot": null,
+        "highest_contiguous": 3,
+        "report": "stage-3/report.json"
+      },
+      "4": {
+        "claimed": true,
+        "share": 1.0,
+        "overshoot": null,
+        "highest_contiguous": 4,
+        "report": "stage-4/report.json"
+      }
+    },
+    "run_id": "official",
+    "mode": "isolated",
+    "preview": true
+  },
+  "all_folder_command": {
+    "argv": [
+      "/Users/athvs/.cache/figueira-band-harness/bin/python",
+      "-B",
+      "-m",
+      "harness",
+      "run",
+      "--track",
+      "tablekeeper",
+      "--repo",
+      "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-package-01/checkout",
+      "--all",
+      "--mode",
+      "isolated",
+      "--out",
+      "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-package-01/official"
+    ],
+    "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+    "started_at": "2026-09-27T09:38:45.182663+00:00",
+    "finished_at": "2026-09-27T09:42:08.982532+00:00",
+    "elapsed_seconds": 203.81347841600655,
+    "exit_code": 0,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PATH_prepend": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/bin:/Applications/Docker.app/Contents/Resources/bin"
+    }
+  },
+  "offline_command": {
+    "argv": [
+      "/Users/athvs/.cache/figueira-band-harness/bin/python",
+      "-B",
+      "-m",
+      "harness",
+      "check",
+      "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-package-01/checkout",
+      "--track",
+      "tablekeeper"
+    ],
+    "cwd": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/official-dark-factory-wearedevs",
+    "started_at": "2026-09-27T09:42:09.018411+00:00",
+    "finished_at": "2026-09-27T09:42:11.711117+00:00",
+    "elapsed_seconds": 2.692901750007877,
+    "exit_code": 1,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PATH_prepend": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/bin:/Applications/Docker.app/Contents/Resources/bin"
+    }
+  },
+  "offline_stdout": "",
+  "offline_stderr": "room.json is missing; open the room in the Band console (Band Desktop: the room's \u22ee menu, Open in Band), choose \u22ee, Download, Download full session, and save the file unchanged as room.json at the repository root\n1 problem(s)\n",
+  "room_export_present": false,
+  "offline_interpretation": "See raw output. Authentic operator export is intentionally absent; roster and reciprocal room evidence cannot yet be verified offline.",
+  "source_status": "",
+  "final_provenance": {
+    "official_commit": "803560d2a678ace1414465c098eb0ab5380ffade",
+    "official_tree": "7db03deeb849de4ed517178547bc38e9be77aa08",
+    "official_tracked_status": "",
+    "official_tracked_sha256": {
+      ".gitignore": "f43dd81a2d0679b85d80c9cae71110aa427d7206a5cd2a382934e78b636ddf5d",
+      "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "README.md": "c338ed49dca603cfcec4acab9acf2d744c0c3561918c5ab123385975048aaa2e",
+      "docs/participant-guide.md": "1533d255c833d7a0aa67f2ef06cde0a5e84d94c7d1c97f73d1818f04cfb685e4",
+      "harness/Dockerfile": "34ea5a6e447f81434df9f81c3d291198da959880d068c67ea4dbe810629db2ad",
+      "harness/__init__.py": "d18f143c5d686b1f9ae5f823c205961dbf89e48fad3e3345eb4583f866cbafe2",
+      "harness/__main__.py": "e206e7b4d1cf021f040f3a41a17d54254d9576f56d8564631ef71f7eef627b2d",
+      "harness/artifacts.py": "f8a3acd6eb09019b6e25ad5224e3522424b393964b03ee89a4617f247c4c5403",
+      "harness/check.py": "42a269afdb2d181b70ff0f140a17f7c93a16ca05ce881b91c78806182881b6a1",
+      "harness/cli.py": "02027f20196ceb8eeb0e1aaf90a4abe22a6012a95800b949173272959a1513a3",
+      "harness/concurrent.py": "4ac436a77b37ed8bb3ffa1b6a81c980665d0aff77b03704ec19c6e9781f4e345",
+      "harness/docker_driver.py": "5abfddc77a679fd791297a04f6ce96d59ecfe7fdf626e72e20d04b8472229fe7",
+      "harness/http.py": "a452eecd202f6653828fe2c011002d2ed60101f72b4cff6a1f25777ce143c2c1",
+      "harness/plugin.py": "fc576f3d9ebf1b91c1d969f192b0f1ebeab28b9977e81e00eff71db13cac3c9f",
+      "harness/provenance.py": "ca67e2ba75825366f21ffcc35e7736d0d0e9869e42c822b06a1d691b8e3d7730",
+      "harness/report.py": "1f12dd8ef016e057b4d8c20177880380003fdc00a72293929fc6d8cabba9c1cc",
+      "harness/requirements.txt": "eb28ad5850692f8597e2518d23a3d1979c72e746c9e511a90af825e0aef2a22a",
+      "harness/vocabulary.py": "c3f118a49576de1b605475cf13501eb089770dd29fe1a2db97b72d85a449795a",
+      "kickoff-manifest.json": "d28773b9a68242e2a5375cc344475192ee0ae1a90ef860804f45371bd2e12f4b",
+      "pocketful/spec/stage-1.md": "f5e4c644076cf5b480c072bc17a966f3b3e229272c44b301d333763be2c438a6",
+      "pocketful/spec/stage-2.md": "699fcdd4b410754242945dde50e15d3470160d11b43b84314c042ed26317af12",
+      "pocketful/spec/stage-3.md": "70a428536fdc834dc77538ed78168dfd448d2000c91fa2c002e2d7cfd98ebf94",
+      "pocketful/spec/stage-4.md": "ff79140fc43818909ee473cd24488604f245b3ce480d04c1862f359dde8e9a48",
+      "pocketful/test/conftest.py": "479ecd7ed54a0d471ff0ca2d9fa13b4fddf5d3af02da5213f48b2826573228d8",
+      "pocketful/test/fixtures.py": "e2a3984783705a7a4742f0fb8e099a7b1c85761136095adef53c4d20ea56d1e3",
+      "pocketful/test/stage_1/test_me_payments.py": "c769702f67eeddf113623761ef1c74c1809d645d7656f15fc78517450afba5e9",
+      "pocketful/test/stage_1/test_requests_splits_feed.py": "ef95eed92d4ecd10b7126e48d21589c18b5c0fa4ecf22148b7d75db3b76149f4",
+      "pocketful/test/stage_1/test_retries_splits_input.py": "105652f6855175e9df1aaa8499b842ee1a0168922b4c3eee917da4ab907ea383",
+      "pocketful/test/stage_1/test_sample.py": "a51a30e04019a62c7161a89fb3776f69198c44eb3bc46934825ccf6e4b3c656d",
+      "pocketful/test/stage_1/test_seeded_state.py": "1806a78a3856ed46adaa732b31545c311bca014fc51e827357d5c3b016b04efb",
+      "pocketful/test/stage_2/test_sample.py": "6abbdc74250301f1bd4c8e19c18ff58270bce30908b3ce810e466dcd3dfa6963",
+      "pocketful/test/stage_2/test_ui.py": "aa41b6fb7ece142a62cd180fc2280af2d5acd934cd8dc9ba74bcab98f91b93de",
+      "pocketful/test/stage_3/test_sample.py": "27a123aaaf9f884ddc8f2736d2f0bbfb6e393c179cf38338f1e5dceffda1b6a6",
+      "pocketful/test/stage_4/test_sample.py": "e02202c4765cc14aa18f1c964d06ddadd70bda5fe8b66a630e3f50a06badd606",
+      "scaffold/Dockerfile": "91ed51d329a65853ed574bb55b09d9d20ec3eac07309b7a4c9612fae9739ab4d",
+      "scaffold/app.py": "ed7c6b2771616dd6af0513ffb86ca7e486f7f15c111368a871f748991f698d96",
+      "scaffold/passwords.py": "41127b74c5e5907eb8b380d29ef06fa46744b6739035d884f21b1d5150744176",
+      "tablekeeper/spec/stage-1.md": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f",
+      "tablekeeper/spec/stage-2.md": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc",
+      "tablekeeper/spec/stage-3.md": "36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe",
+      "tablekeeper/spec/stage-4.md": "08d02b5a432d41d71f989ccb30585b3cad0977c9c1dd11145c97fb7ddd4946c4",
+      "tablekeeper/test/conftest.py": "c53fa5207d35a6c4e4cc4500c68e8ab42ab791c2d82c1dfd4f41c88af9da165a",
+      "tablekeeper/test/fixtures.py": "6058f62b7ba42c4c303652442f950549bb5d7ba83e7c70d1399c3a5bb2240897",
+      "tablekeeper/test/stage_1/test_health_reset_auth.py": "72527d0d65d0dc3cb1ed0bcfa6345057d2026ef4294f40b3ad488c67e208b65c",
+      "tablekeeper/test/stage_1/test_reservations.py": "cd390ef00a182e98a786bed60adab3fabc2ee9989fa0bdacb6133c12b1158c17",
+      "tablekeeper/test/stage_1/test_restaurants_availability.py": "9dec076b93ea41d17f92d2a4ba9395e51010e881f17f7044d1f4f1eb114576e5",
+      "tablekeeper/test/stage_1/test_retries_time_input.py": "c15d45c06ecdd66d692ff8884b78ff45e8cd897d3e6887898eec40cbbb2a4d25",
+      "tablekeeper/test/stage_1/test_sample.py": "c9a2b47fdcfa4bf40404331dc50d069edf4de560a27a76b3a2dd5b949d19a8cc",
+      "tablekeeper/test/stage_1/test_seeded_state.py": "9a7eb34a0c1ca0fe8862c4c81dcaf54cf0d5da7276fca9947edf5e55ca673916",
+      "tablekeeper/test/stage_2/test_sample.py": "a386e20bffeafa1894a405230c9ea551a5225e8809c68ff9f2fd1dcc1a5f1c77",
+      "tablekeeper/test/stage_2/test_ui.py": "a95280eac45cf77a14c12ea62122a1d4759c01ed0b3389a4e1b2568aa2bc0105",
+      "tablekeeper/test/stage_3/test_sample.py": "687baf614fcf7801c3091587afb00ea9f8f2d960a2f8c4d005dc22c98b9a04ba",
+      "tablekeeper/test/stage_4/test_sample.py": "555b4f16e043791b369bb9557c66af058dcbc81e6fc8f104a570bcbbb01b3301",
+      "toy/mandates/coordinator.md": "863043e7893048a3a6f946eb07831fd670fd1a614f297f8bb565291a35213761",
+      "toy/mandates/implementer.md": "158640de5bf9891b1f227b34d14164ea386a79492604ab0ccf748a07dd429726",
+      "toy/mandates/reviewer.md": "0429e50f0d17680a0f4001398edf5d20cbee6804b5fffc6de3a16696c29339d2",
+      "toy/spec/stage-1.md": "b3fa4b5341480bc76e4d44a914e4503cbe96460a3d89504a5dd5e1d8fab42d2d",
+      "toy/spec/stage-2.md": "8b4800455e681bedcdded8407fb170766d5a73aa91de6feed65782ac3379b493",
+      "toy/spec/stage-3.md": "2b4e208b30ec0d505f8703bfec1dd38051d7b229868da37b13bab44abdaa485c",
+      "toy/spec/stage-4.md": "f27a23a7cad8f6fbfc67856ab1dab829b6b91908928ae32f4d41b0263525c955",
+      "toy/test/conftest.py": "a85712ec1acfdd6b7749474cde6f15e58fcad2f67952cbafb070314e35317781",
+      "toy/test/stage_1/test_counter.py": "ba22ff6c1504d8eacd10208623ba5b77bd953315395aa840a16ad8b83a6a9b66",
+      "toy/test/stage_2/test_ui.py": "855e811da0b504b5d5e9909f92e472942ee2fd49421ba48e383d813e8d9c57ef",
+      "toy/test/stage_3/test_concurrency.py": "24bb15079739fa8f101d072b6af4bc074ee4566bf8cd565dbe83cd873bf4e6f4",
+      "toy/test/stage_4/test_increment_by.py": "82129e199950ecb02dc258ca66379d5e35c59e155d87bd5ab2f96cc3e88cfb0d"
+    },
+    "result_commit": "fac2b2fd563d1169f7759558be216226d3e41ee5",
+    "result_tree": "8c6246061e9f6cea3e1db5d09147d6543b6fc06e",
+    "result_status": "",
+    "stage_trees": {
+      "stage-1": "dfff49710165dc7d568496f1d230b4fc69eb7b2c",
+      "stage-2": "b33e79f9bb65ff730b626f9c774afa4653b11e59",
+      "stage-3": "3c21f70a1e2d2f2a615c1e1b4a3ab50d2bb699fb",
+      "stage-4": "2473ec5b52d8ab4ea53e6ce5f75eeb358f2bd719"
+    },
+    "mandates": {
+      "figueira-builder.md": {
+        "source_sha256": "5615faff1fbac6d2dc9198d0e99fa3765db10bd48dec23eb1874b9c2f7954057",
+        "result_sha256": "5615faff1fbac6d2dc9198d0e99fa3765db10bd48dec23eb1874b9c2f7954057"
+      },
+      "figueira-planner.md": {
+        "source_sha256": "8567f78b61c90fb979e9f74928dd3b34ce78e59fffbc0792321bfab9ef520c10",
+        "result_sha256": "8567f78b61c90fb979e9f74928dd3b34ce78e59fffbc0792321bfab9ef520c10"
+      },
+      "figueira-reviewer.md": {
+        "source_sha256": "61788090579505aedc4b005fc1ac3d490544c2019f21ac856f3bbbcfcf63267a",
+        "result_sha256": "61788090579505aedc4b005fc1ac3d490544c2019f21ac856f3bbbcfcf63267a"
+      }
+    }
+  },
+  "git_commit_count": 31,
+  "history_path": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-history.txt",
+  "bundle": {
+    "path": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence/coordinator/final-source.bundle",
+    "sha256": "1a601d1c8c76de9eb3cc7cb9a92c8e123d5e8eceea70ce3729e24e4572bad7ef",
+    "size_bytes": 101271,
+    "verify_exit_code": 0,
+    "complete_history": true
+  },
+  "run_started_at": "2026-09-27T05:17:59+00:00",
+  "reconciled_at": "2026-09-27T09:42:36.619435+00:00",
+  "elapsed_wall_seconds_to_reconciliation": 15877.619435,
+  "model_spend": {
+    "measured": false,
+    "reason": "Provider token and monetary usage not available as verified measurements"
+  },
+  "published": false,
+  "submitted": false,
+  "operator_room_export_pending": true,
+  "limitations": [
+    "Finite public and independent checks do not prove hidden-check correctness.",
+    "Case IDs overlap requirements; cumulative/repeated executions are not additional distinct cases.",
+    "Ephemeral single-process storage; exact planner has specified bounded dimensions.",
+    "Authentic room export, media, public verification and platform submission remain operator work."
+  ]
+}
