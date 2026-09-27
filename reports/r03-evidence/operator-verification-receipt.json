@@ -1,0 +1,54 @@
+{
+  "source_revision": "0beeaf8ddeddf5c5206e5aa6aa1b4c5607af0006",
+  "official_revision": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "mode": "isolated",
+  "recording_context": "operator final verification after the autonomous run",
+  "started_at": "2026-09-27T10:02:16.440337+00:00",
+  "finished_at": "2026-09-27T10:05:06.863869+00:00",
+  "elapsed_seconds": 170.423532,
+  "check_exit": 0,
+  "harness_exit": 0,
+  "tracked_source_changes": "",
+  "commands": [
+    {
+      "label": "1 / Repository, mandates and full-room evidence",
+      "command": [
+        "/Users/athvs/.cache/figueira-band-harness/bin/python",
+        "-m",
+        "harness",
+        "check",
+        "/private/tmp/figueira-r03-operator-verification-20260927",
+        "--track",
+        "tablekeeper"
+      ],
+      "cwd": "/Users/athvs/.cache/figueira-band-final-verification/official-dark-factory-wearedevs",
+      "exit_code": 0,
+      "started_at": "2026-09-27T10:02:16.440658+00:00",
+      "finished_at": "2026-09-27T10:02:16.895557+00:00",
+      "log": "harness-check.log"
+    },
+    {
+      "label": "2 / Build and check every stage, with no outbound runtime network",
+      "command": [
+        "/Users/athvs/.cache/figueira-band-harness/bin/python",
+        "-m",
+        "harness",
+        "run",
+        "--track",
+        "tablekeeper",
+        "--repo",
+        "/private/tmp/figueira-r03-operator-verification-20260927",
+        "--all",
+        "--mode",
+        "isolated",
+        "--out",
+        "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/operator-verification-01/harness"
+      ],
+      "cwd": "/Users/athvs/.cache/figueira-band-final-verification/official-dark-factory-wearedevs",
+      "exit_code": 0,
+      "started_at": "2026-09-27T10:02:16.899796+00:00",
+      "finished_at": "2026-09-27T10:05:06.830802+00:00",
+      "log": "harness-all.log"
+    }
+  ]
+}

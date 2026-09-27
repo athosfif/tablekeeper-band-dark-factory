@@ -64,3 +64,7 @@ State is ephemeral and uses one process with a transaction lock; separate replic
 No previous submission source, historical room or product-specific bug report was input to this run. Official specifications and tests are not modified. Every agent commit is retained without amending, rebasing or squashing. Shipped official checks are partial conformance evidence, not proof of hidden-check correctness; next-stage probe failures are recorded separately from required suites.
 
 The operator downloaded the authentic full BAND session after completion: `room.json` contains 3,154 events and exactly one human task message. Its original bytes are retained (SHA256 `860531f7e92c47ea06d80e32532eb415d6bfb105f8179a2ede475714aea4e5ce`). The offline package check passes. Public review reports and official results are in [reports/r03-evidence](reports/r03-evidence). This operator packaging adds evidence and documentation only; every accepted stage tree and all agent commits remain unchanged. Platform submission is a separate operator action.
+
+## Release history
+
+The R03 factory history begins with its fresh source and ends at `fac2b2fd563d1169f7759558be216226d3e41ee5`. Operator commits afterward package evidence only. The original public submission `b99908bf937b6d08a4d79097c681c2fd4650468d` is retained as historical provenance; its code is not the R03 implementation. See [operator release evidence](reports/r03-evidence/OPERATOR-RELEASE.md).
