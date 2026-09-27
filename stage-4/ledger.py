@@ -28,13 +28,16 @@ def changes(before, after):
     return result
 
 
-def append_event(state, record, event, before=None):
+def append_event(state, record, event, before=None, plan_id=None):
     entries = state['histories'].setdefault(record['reference'], [])
     at = record['created_at'] if event == 'created' else now().isoformat()
     if entries and instant(at) < instant(entries[-1]['at']):
         at = entries[-1]['at']
+    delta = [] if event == 'cancelled' else changes(before, record)
+    if event == 'reassigned':
+        delta = [{'field': 'table_ids', 'from': members(before), 'to': members(record)}]
     entries.append(deepcopy({'seq': len(entries) + 1, 'at': at, 'event': event,
-                            'changes': [] if event == 'cancelled' else changes(before, record),
+                            'changes': delta, **({'plan_id': plan_id} if event == 'reassigned' else {}),
                             'revision': record['revision'], 'accepted_terms': record['accepted_terms']}))
 
 
@@ -42,25 +45,26 @@ def bump_restaurant(state, rid):
     state['restaurant_revisions'][rid] += 1
 
 
-def commit_changes(state, candidates, event='changed'):
+def commit_changes(state, candidates, event='changed', *, mark_exceptions=True, bump=True, plan_id=None):
     changed_refs, restaurants = set(), set()
     for record in candidates:
         before = state['reservations'][record['reference']]
         if record['revision'] == before['revision']:
             continue
         state['reservations'][record['reference']] = record
-        append_event(state, record, event, before)
+        append_event(state, record, event, before, plan_id)
         changed_refs.add(record['reference'])
         restaurants.add(record['restaurant_id'])
     for series in state['series'].values():
         affected = [o for o in series['occurrences'] if o['reference'] in changed_refs]
         if affected:
             series['revision'] += 1
-            if event == 'changed':
+            if event == 'changed' and mark_exceptions:
                 for occurrence in affected:
                     occurrence['exception'] = True
-    for rid in restaurants:
-        bump_restaurant(state, rid)
+    if bump:
+        for rid in restaurants:
+            bump_restaurant(state, rid)
 
 
 def public_series(series, state):

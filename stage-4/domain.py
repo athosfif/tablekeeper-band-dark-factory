@@ -97,9 +97,12 @@ def overlaps(a, b):
             and instant(b['starts_at']) < instant(a['ends_at']))
 
 
-def available(candidate, reservations, exclude=()):
-    return all(r['reference'] in exclude or r['status'] != 'confirmed' or not overlaps(candidate, r)
-               for r in reservations.values())
+def available(candidate, reservations, exclude=(), closures=()):
+    return (all(r['reference'] in exclude or r['status'] != 'confirmed' or not overlaps(candidate, r)
+                for r in reservations.values())
+            and all(not overlaps(candidate, {'restaurant_id': c['restaurant_id'], 'table_id': c['table_id'],
+                                             'starts_at': c['from'], 'ends_at': c['to']})
+                    for c in closures))
 
 
 def check_cutoff(reservation, restaurant=None):

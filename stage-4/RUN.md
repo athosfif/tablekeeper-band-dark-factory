@@ -1,9 +1,9 @@
-# Tablekeeper · Stage 3
+# Tablekeeper · Stage 4
 
 From this folder, build and start the standalone browser product and JSON API:
 
 ```sh
-docker build -t tablekeeper-stage3 . && docker run --rm --name tablekeeper-stage3 -e PORT=8080 -p 8080:8080 tablekeeper-stage3
+docker build -t tablekeeper-stage4 . && docker run --rm --name tablekeeper-stage4 -e PORT=8080 -p 8080:8080 tablekeeper-stage4
 ```
 
 Readiness: `curl http://localhost:8080/health`. Change both the environment variable
@@ -22,7 +22,7 @@ illustrations and icons are included locally; typography uses system fonts.
 
 `POST /_test/reset` with the specified JSON fixture supplies users, restaurants,
 tables and optional confirmed reservations. It returns 204 and replaces every
-account, session, reservation, policy, history, series and receipt. `GET /restaurants`, restaurant detail
+account, session, reservation, policy, history, series, plan, closure and receipt. `GET /restaurants`, restaurant detail
 and `GET /availability?restaurant_id=...&date=YYYY-MM-DD&party_size=...` are public.
 `POST /auth/signup` and `POST /auth/login` issue independent, non-expiring bearer
 tokens. Passwords are salted scrypt hashes, including fixture passwords.
@@ -107,8 +107,45 @@ the owner can read it, with 404 for other or unauthenticated callers. A real
 individual change permanently marks an exception and increments series revision.
 Cancel increments revision without creating an exception or cancelling siblings.
 A collective move increments each affected series once, even when several of its
-occurrences change. Restaurant revisions are internal; adoption and a real batch
+occurrences change. Restaurant revisions are exposed by closure previews; adoption and a real batch
 increment once per operation. No policy, history or series UI screen is required.
+
+## Closure plans and collective series amendments
+
+Managers can `POST /restaurants/{id}/replans` with a table and explicit-offset
+`from`/`to` instants, then `POST /restaurants/{id}/replans/{plan_id}/apply` with
+`{}`. Both require idempotency keys. Preview considers all confirmed overlapping
+bookings and solves the exact objective: fewest changed table sets, then least
+unused capacity, then the option-rank vector in reference order. Each booking
+uses its own accepted capacities and full interval. Fixed bookings, prior
+closures and the proposed closure constrain every member of an option. The
+bounded solver supports six tables, four pairs and six considered bookings;
+larger requests return `planning_limit` without mutation.
+
+Previews store only plans and receipts. Apply checks the captured restaurant
+revision and commits the closure with every seating assignment in one transaction.
+Even an empty plan increments the restaurant revision once. Moved records gain
+one revision and a `reassigned` event with complete `table_ids` and `plan_id`;
+terms, times, identity and diner exception flags survive. Each affected series
+increments once. Successful-key retries remain original receipts, while an
+already-applied plan with a different key is refused. Closures participate in
+all availability, explanation, booking and amendment occupancy decisions.
+
+Owners can `POST /series/{id}/amend` with an idempotency key, positive
+`expected_revision`, valid `from_index` and exact `local_time` HH:MM. Eligible
+nonexception, confirmed occurrences keep their original scheduled dates and
+current seating. All real changes validate old cutoff and the resulting policy
+before collective occupancy checking. No-op or empty eligible sets succeed even
+after an occurrence's cutoff, retaining terms and all counters. A real operation
+increments changed bookings and the series/restaurant once, without creating
+exceptions. Failures commit nothing. Original schedules are saved at adoption;
+for stage-3 imports they are recovered from the immutable adoption receipt,
+not inferred from an amended anchor. Portable snapshots preserve plans,
+closures, schedules, reassignment histories and every old or new receipt.
+
+The existing browser lookup and explicit availability search read current seating
+and closures. An unchanged booking retry displays its original confirmation
+receipt; idle confirmations do not poll for operator changes.
 
 ## Portable state
 
@@ -116,7 +153,7 @@ increment once per operation. No policy, history or series UI screen is required
 opaque state. `POST /_test/import` accepts that entire object unchanged and
 atomically replaces all state. It preserves hashes, sessions, identities,
 timestamps, references, current records and original retry receipts. Invalid
-snapshots leave existing state intact. Stage-1 and stage-2 exports from this team
+snapshots leave existing state intact. Stage-1, stage-2 and stage-3 exports from this team
 import unchanged: tokens and identities survive; live records gain policy-zero
 terms and revision 1 while retaining their original occupancy. Original receipt
 bodies/responses keep their exact old JSON shape. Earlier stages did not record
@@ -159,5 +196,4 @@ pending-operation recovery after page reload is implemented or required.
 The container supports the required 2 CPU / 2 GiB deployment. The lock favors
 simple, auditable serializability over multi-process throughput. Run one process
 per service: separate replicas do not share this ephemeral store. There is no
-restart durability requirement. There are no closures, replanning endpoints or
-stage-4 features in this folder. All four existing browser routes remain available.
+restart durability requirement. Closures and agreements remain API workflows; no administrative screens are required. All four existing browser routes remain available.

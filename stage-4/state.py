@@ -2,18 +2,19 @@
 from copy import deepcopy
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from urllib.parse import unquote
 
-from domain import available, proposal, reference, restaurant_config
+from domain import available, proposal, reference, restaurant_config, seating
 from security import hash_password, valid_hash
-from timekeeping import instant, now
+from timekeeping import calendar_date, instant, now
 from policies import base_terms, bounded_integer, policy_body, terms_of
 from ledger import append_event
 from validation import APIError, email, field, identifier, object_body, require, same_json
 
 LEGACY_KEYS = {'users', 'restaurants', 'reservations', 'tokens', 'receipts'}
-STATE_KEYS = LEGACY_KEYS | {'policies', 'histories', 'series', 'restaurant_revisions'}
+STAGE3_KEYS = LEGACY_KEYS | {'policies', 'histories', 'series', 'restaurant_revisions'}
+STATE_KEYS = STAGE3_KEYS | {'closures', 'plans'}
 RECORD_KEYS = {'reservation_id', 'reference', 'restaurant_id', 'party_size',
                'status', 'starts_at_local', 'starts_at', 'ends_at', 'created_at', 'user_id'}
 
@@ -104,7 +105,8 @@ def validate_history(entries, record, state):
     require(type(entries) is list)
     prior_at, prior_revision = None, 0
     for seq, entry in enumerate(entries, 1):
-        require(type(entry) is dict and set(entry) == {'seq', 'at', 'event', 'changes', 'revision', 'accepted_terms'})
+        require(type(entry) is dict and set(entry) == ({'seq', 'at', 'event', 'changes', 'revision', 'accepted_terms'}
+                    | ({'plan_id'} if entry.get('event') == 'reassigned' else set())))
         require(type(entry['seq']) is int and entry['seq'] == seq)
         at = datetime.fromisoformat(field(entry, 'at', str))
         require(at.tzinfo is not None and (prior_at is None or at >= prior_at))
@@ -112,7 +114,7 @@ def validate_history(entries, record, state):
         require(prior_revision < revision <= record['revision'])
         validate_terms(entry['accepted_terms'], state['restaurants'][record['restaurant_id']], state)
         event = entry['event']
-        require(event in ('created', 'changed', 'cancelled'))
+        require(event in ('created', 'changed', 'cancelled', 'reassigned'))
         delta = field(entry, 'changes', list)
         if event == 'cancelled':
             require(not delta and seq == len(entries) and record['status'] == 'cancelled')
@@ -126,6 +128,11 @@ def validate_history(entries, record, state):
                 names.append(change['field'])
             order = {'table_id': 0, 'table_ids': 0, 'starts_at_local': 1, 'party_size': 2}
             require([order[n] for n in names] == sorted(set(order[n] for n in names)))
+            if event == 'reassigned':
+                require(len(delta) == 1 and delta[0]['field'] == 'table_ids')
+                require(type(delta[0]['from']) is list and type(delta[0]['to']) is list)
+                plan = state['plans'][entry['plan_id']]
+                require(plan['applied'] and plan['restaurant_id'] == record['restaurant_id'])
             if event == 'created':
                 require(seq == 1 and revision == 1 and len(delta) == 3 and all(c['from'] is None for c in delta))
         prior_at, prior_revision = at, revision
@@ -136,13 +143,18 @@ def validate_history(entries, record, state):
 
 
 def validate_series(series, state):
-    require(type(series) is dict and set(series) == {'series_id', 'user_id', 'restaurant_id', 'revision', 'interval_weeks', 'occurrences'})
+    require(type(series) is dict and set(series) == {'series_id', 'user_id', 'restaurant_id', 'revision', 'interval_weeks', 'occurrences', 'scheduled_dates'})
     identifier(series, 'series_id')
     require(series['user_id'] in state['users'] and series['restaurant_id'] in state['restaurants'])
     bounded_integer(series['revision'])
     bounded_integer(series['interval_weeks'], 1, 4)
     occurrences = field(series, 'occurrences', list)
     require(2 <= len(occurrences) <= 12)
+    dates = field(series, 'scheduled_dates', list)
+    require(len(dates) == len(occurrences))
+    anchor_date = calendar_date(dates[0])
+    require(all(calendar_date(day) == anchor_date + timedelta(days=i * series['interval_weeks'] * 7)
+                for i, day in enumerate(dates)))
     refs = []
     for i, occurrence in enumerate(occurrences):
         require(type(occurrence) is dict and set(occurrence) == {'index', 'reference', 'exception'})
@@ -160,14 +172,24 @@ def imported_state(envelope):
         require(envelope.get('track') == 'tablekeeper')
         require(type(envelope.get('format_version')) is int and envelope['format_version'] == 1)
         candidate = envelope.get('state')
-        require(type(candidate) is dict and set(candidate) in (STATE_KEYS, LEGACY_KEYS))
+        require(type(candidate) is dict and set(candidate) in (STATE_KEYS, STAGE3_KEYS, LEGACY_KEYS))
         require(all(type(v) is dict for v in candidate.values()))
         legacy = set(candidate) == LEGACY_KEYS
+        previous_stage = set(candidate) != STATE_KEYS
         state = deepcopy(candidate)
         if legacy:
             state.update(policies={rid: [] for rid in state['restaurants']},
                          histories={ref: [] for ref in state['reservations']}, series={},
                          restaurant_revisions={rid: 0 for rid in state['restaurants']})
+        if previous_stage:
+            state.update(closures={}, plans={})
+            # The adoption receipt is the truthful original schedule even when
+            # the anchor was edited before or after it joined this agreement.
+            for series in state['series'].values():
+                receipts = [r['response'] for namespace, r in state['receipts'].items()
+                            if json.loads(namespace)[2] == '/series' and r['response']['series_id'] == series['series_id']]
+                require(len(receipts) == 1)
+                series['scheduled_dates'] = [o['reservation']['starts_at_local'][:10] for o in receipts[0]['occurrences']]
         emails = set()
         for uid, user in state['users'].items():
             require(type(user) is dict and set(user) == {'id', 'email', 'display_name', 'password_hash'})
@@ -202,6 +224,10 @@ def imported_state(envelope):
             if reservation['status'] == 'confirmed':
                 require(available(reservation, checked))
             checked[ref] = reservation
+        validate_plans(state)
+        for record in checked.values():
+            if record['status'] == 'confirmed':
+                require(available(record, {}, closures=state['closures'].values()))
         require(set(state['histories']) == set(state['reservations']))
         for ref, entries in state['histories'].items():
             validate_history(entries, state['reservations'][ref], state)
@@ -216,8 +242,10 @@ def imported_state(envelope):
             uid, method, path, key = parts
             require(namespace == receipt_key(uid, path, key))
             policy_route = re.fullmatch(r'/restaurants/([^/]+)/policies', path)
+            replan_route = re.fullmatch(r'/restaurants/([^/]+)/replans(?:/([^/]+)/apply)?', path)
+            amend_route = re.fullmatch(r'/series/([^/]+)/amend', path)
             require(uid in state['users'] and method == 'POST' and 1 <= len(key) <= 255
-                    and (path in ('/reservations', '/reservation-moves', '/series') or policy_route))
+                    and (path in ('/reservations', '/reservation-moves', '/series') or policy_route or replan_route or amend_route))
             require(type(receipt) is dict and set(receipt) == {'body', 'response'})
             object_body(receipt['body'])
             response = receipt['response']
@@ -226,17 +254,37 @@ def imported_state(envelope):
                 require(uid in state['restaurants'][rid]['manager_user_ids'])
                 require(any(same_json(response, policy) for policy in state['policies'][rid]))
                 continue
-            if path == '/series':
+            if replan_route:
+                rid = unquote(replan_route[1])
+                require(uid in state['restaurants'][rid]['manager_user_ids'])
+                plan = state['plans'][response['plan_id']]
+                require(plan['restaurant_id'] == rid)
+                from planning import public_plan
+                if not replan_route[2]:
+                    require(same_json(response, public_plan(plan)))
+                    continue
+                require(unquote(replan_route[2]) == plan['plan_id'] and plan['applied'])
+                require(set(response) == {'plan_id', 'restaurant_revision', 'reservations'})
+                require(response['restaurant_revision'] == plan['restaurant_revision'] + 1)
+                require([r['reference'] for r in response['reservations']] == [a['reference'] for a in plan['assignments']])
+                for record in response['reservations']:
+                    owner = state['reservations'][record['reference']]['user_id']
+                    validate_receipt_record(record, owner, state)
+                continue
+            if path == '/series' or amend_route:
                 require(type(response) is dict and set(response) == {'series_id', 'revision', 'interval_weeks', 'occurrences'})
                 current = state['series'][response['series_id']]
-                require(current['user_id'] == uid and response['revision'] == 1
+                require(current['user_id'] == uid and bounded_integer(response['revision']) <= current['revision']
                         and response['interval_weeks'] == current['interval_weeks'])
+                require((amend_route and unquote(amend_route[1]) == current['series_id'])
+                        or (path == '/series' and response['revision'] == 1))
                 require(type(response['occurrences']) is list and len(response['occurrences']) == len(current['occurrences']))
                 records = []
                 for occurrence, existing in zip(response['occurrences'], current['occurrences']):
                     require(type(occurrence) is dict and set(occurrence) == {'index', 'reference', 'exception', 'reservation'})
                     require(occurrence['index'] == existing['index'] and occurrence['reference'] == existing['reference']
-                            and occurrence['exception'] is False and occurrence['reservation']['reference'] == occurrence['reference'])
+                            and type(occurrence['exception']) is bool and (amend_route or occurrence['exception'] is False)
+                            and occurrence['reservation']['reference'] == occurrence['reference'])
                     records.append(occurrence['reservation'])
             elif path == '/reservation-moves':
                 require(type(response) is dict and set(response) == {'reservations'})
@@ -245,10 +293,7 @@ def imported_state(envelope):
             else:
                 records = [response]
             for record in records:
-                validate_record({**record, 'user_id': uid}, state, owner=uid, legacy=True)
-                current = state['reservations'][record['reference']]
-                require(current['reservation_id'] == record['reservation_id']
-                        and current['created_at'] == record['created_at'] and current['user_id'] == uid)
+                validate_receipt_record(record, uid, state)
         return state
     except (APIError, ValueError, TypeError, KeyError, OverflowError, RecursionError):
         from validation import fail
@@ -257,3 +302,42 @@ def imported_state(envelope):
 
 def receipt_key(uid, path, key):
     return json.dumps([uid, 'POST', path, key], ensure_ascii=True, separators=(',', ':'))
+
+
+def validate_receipt_record(record, uid, state):
+    validate_record({**record, 'user_id': uid}, state, owner=uid, legacy=True)
+    current = state['reservations'][record['reference']]
+    require(current['reservation_id'] == record['reservation_id']
+            and current['created_at'] == record['created_at'] and current['user_id'] == uid)
+
+
+def validate_plans(state):
+    from planning import closure_body
+    for pid, plan in state['plans'].items():
+        require(type(plan) is dict and set(plan) == {'plan_id', 'restaurant_id', 'applied', 'restaurant_revision',
+                                                     'closure', 'assignments', 'moved_count', 'unused_seats'})
+        require(identifier(plan, 'plan_id') == pid and type(plan['applied']) is bool)
+        rid = plan['restaurant_id']
+        restaurant = state['restaurants'][rid]
+        revision = bounded_integer(plan['restaurant_revision'], 0)
+        require(revision <= state['restaurant_revisions'][rid])
+        require(same_json(closure_body(plan['closure'], restaurant), plan['closure']))
+        assignments = field(plan, 'assignments', list)
+        require(len(assignments) <= 6)
+        refs = []
+        for assignment in assignments:
+            require(type(assignment) is dict and set(assignment) == {'reference', 'table_ids', 'changed'})
+            record = state['reservations'][reference(assignment['reference'])]
+            require(record['restaurant_id'] == rid and type(assignment['changed']) is bool)
+            ids, _ = seating(restaurant, {'table_ids': assignment['table_ids']})
+            require(ids == assignment['table_ids'])
+            refs.append(record['reference'])
+        require(refs == sorted(set(refs)))
+        require(bounded_integer(plan['moved_count'], 0) == sum(a['changed'] for a in assignments))
+        bounded_integer(plan['unused_seats'], 0)
+        if plan['applied']:
+            require(revision < state['restaurant_revisions'][rid])
+            require(same_json(state['closures'][pid], {'restaurant_id': rid, **plan['closure']}))
+        else:
+            require(pid not in state['closures'])
+    require(set(state['closures']) == {pid for pid, p in state['plans'].items() if p['applied']})
