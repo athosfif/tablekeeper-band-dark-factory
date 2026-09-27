@@ -270,7 +270,9 @@ async function submitBooking() {
     if (!valid()) return;
     if (error instanceof RequestError) {
       current.error=message(error);
-      if (error.code==='table_unavailable') runSearch(true);
+      // A dated policy can change capacity or hours while the form is open.
+      // Every confirmed rejection refreshes current choices without discarding it.
+      runSearch(true);
     } else current.uncertain=true;
   } finally {
     if (valid()) { current.busy=false; renderBookingFeedback(); }

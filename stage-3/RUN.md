@@ -141,7 +141,8 @@ An available time opens a form that remains visible after booking. Unchanged
 submissions reuse their original body/key and contact the service again; changing
 the selection or guest count creates a new intent. A confirmed rejection displays
 an error; a connection failure displays uncertainty and preserves the exact retry.
-Conflicts refresh availability while keeping the selected form and edited inputs.
+Confirmed refusals refresh availability while keeping the selected form and edited
+inputs, including when a policy changed after the diner chose a time.
 
 Asynchronous search, authentication, booking, lookup and cancellation callbacks
 check their initiating route, session and interaction generation before changing
