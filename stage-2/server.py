@@ -18,6 +18,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             route = urlsplit(self.path).path
             assets = {'/static/app.js': ('app.js', 'text/javascript; charset=utf-8'),
+                      '/static/exact-json.js': ('exact-json.js', 'text/javascript; charset=utf-8'),
                       '/static/app.css': ('app.css', 'text/css; charset=utf-8'),
                       '/static/mark.svg': ('mark.svg', 'image/svg+xml'),
                       '/static/table.svg': ('table.svg', 'image/svg+xml')}

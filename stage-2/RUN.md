@@ -77,6 +77,11 @@ and must be kept private.
 ## Browser recovery and identity
 
 The browser uses actual API responses for browsing, booking and lookup/cancellation.
+Its local JSON codec reads integer tokens as BigInt and retains other decimal
+tokens without binary-float conversion. Guest input is validated from its exact
+decimal spelling, query counts use plain digits, and JSON request counts remain
+unquoted numbers. Capacity sums, displayed counts and retained retry bodies do
+not acquire a JavaScript safe-integer ceiling or silently round adjacent values.
 An available time opens a form that remains visible after booking. Unchanged
 submissions reuse their original body/key and contact the service again; changing
 the selection or guest count creates a new intent. A confirmed rejection displays
