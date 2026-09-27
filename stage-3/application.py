@@ -10,6 +10,9 @@ from threading import RLock
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from domain import available, changed, check_cutoff, overlaps, proposal, public_record, seating_options
+from policies import effective_config, policy_body, selected_terms
+from ledger import append_event, bump_restaurant, commit_changes, new_record, public_series
+from agreements import adopt
 from security import hash_password, verify_password
 from state import empty_state, fixture_state, imported_state, receipt_key
 from timekeeping import calendar_date, instant, now, starts
@@ -77,8 +80,14 @@ class Application:
             identifier({'id': rid}, 'id')
             require(rid in self.state['restaurants'], 'not_found', 404)
             return 200, self.state['restaurants'][rid]
+        policy_route = re.fullmatch(r'/restaurants/([^/]+)/policies', path)
+        if method == 'GET' and policy_route:
+            rid = identifier({'id': unquote(policy_route[1])}, 'id')
+            require(rid in self.state['restaurants'], 'not_found', 404)
+            return 200, {'policies': self.state['policies'][rid]}
         if method == 'GET' and path == '/availability':
             query = {k: v[0] for k, v in parse_qs(url.query, keep_blank_values=True).items()}
+            require('explain' not in query or query['explain'] == 'true')
             rid = identifier(query, 'restaurant_id')
             day = calendar_date(field(query, 'date', str))
             count = field(query, 'party_size', str)
@@ -86,7 +95,9 @@ class Application:
             size = int(count)
             require(size > 0)
             require(rid in self.state['restaurants'], 'not_found', 404)
-            restaurant = self.state['restaurants'][rid]
+            original = self.state['restaurants'][rid]
+            terms = selected_terms(original, day.isoformat(), self.state['policies'][rid])
+            restaurant = effective_config(original, terms)
             slots = []
             for local, start, end in starts(restaurant, day):
                 options = []
@@ -96,14 +107,41 @@ class Application:
                     if option['capacity'] >= size and available(candidate, self.state['reservations']):
                         options.append(option)
                 tables = [o['table_ids'][0] for o in options if len(o['table_ids']) == 1]
-                slots.append({'starts_at_local': local, 'starts_at': start.isoformat(),
-                              'available_table_ids': tables, 'available_options': options})
+                slot = {'starts_at_local': local, 'starts_at': start.isoformat(),
+                        'available_table_ids': tables, 'available_options': options}
+                if 'explain' in query:
+                    slot['explain'] = []
+                    for table in restaurant['tables']:
+                        candidate = {'restaurant_id': rid, 'table_ids': [table['id']],
+                                     'starts_at': start.isoformat(), 'ends_at': end.isoformat()}
+                        capacity, free = size <= table['capacity'], available(candidate, self.state['reservations'])
+                        slot['explain'].append({'table_id': table['id'], 'policy_version': terms['policy_version'],
+                                                'available': capacity and free,
+                                                'rules': [{'rule': 'capacity', 'holds': capacity},
+                                                          {'rule': 'no_overlap', 'holds': free}]})
+                slots.append(slot)
             return 200, {'restaurant_id': rid, 'date': query['date'], 'timezone': restaurant['timezone'], 'slots': slots}
 
+        private_read = re.fullmatch(r'/reservations/([^/]+)/(history|decision)', path)
+        series_read = re.fullmatch(r'/series/([^/]+)', path)
+        if method == 'GET' and (private_read or series_read):
+            from validation import APIError
+            try:
+                uid = self.user(headers)
+            except APIError:
+                require(False, 'not_found', 404)
+            if private_read:
+                record = self.owned(unquote(private_read[1]), uid)
+                if private_read[2] == 'history':
+                    return 200, {'reference': record['reference'], 'entries': self.state['histories'][record['reference']]}
+                return 200, {k: record[k] for k in ('reference', 'revision', 'accepted_terms')}
+            series = self.state['series'].get(unquote(series_read[1]))
+            require(series is not None and series['user_id'] == uid, 'not_found', 404)
+            return 200, public_series(series, self.state)
         uid = self.user(headers)
         if method in ('POST', 'PATCH'):
             object_body(body)
-        if method == 'POST' and path in ('/reservations', '/reservation-moves'):
+        if method == 'POST' and (path in ('/reservations', '/reservation-moves', '/series') or policy_route):
             key = headers.get('Idempotency-Key', '')
             require(bool(key), 'missing_idempotency_key', 400)
             require(len(key) <= 255)
@@ -115,8 +153,18 @@ class Application:
                 return 200, receipt['response']
             if path == '/reservations':
                 response = self.create(uid, body)
-            else:
+            elif path == '/reservation-moves':
                 response = self.move(uid, body)
+            elif path == '/series':
+                response = adopt(self.state, uid, body)
+            else:
+                rid = identifier({'id': unquote(policy_route[1])}, 'id')
+                require(rid in self.state['restaurants'], 'not_found', 404)
+                restaurant = self.state['restaurants'][rid]
+                require(uid in restaurant['manager_user_ids'], 'forbidden', 403)
+                response = {**policy_body(body, restaurant), 'policy_version': len(self.state['policies'][rid]) + 1}
+                self.state['policies'][rid].append(response)
+                bump_restaurant(self.state, rid)
             self.state['receipts'][namespace] = {'body': deepcopy(body), 'response': deepcopy(response)}
             return 201, response
         if method == 'GET' and path == '/reservations':
@@ -130,26 +178,24 @@ class Application:
                 return 200, public_record(record)
             if method == 'POST' and match[2]:
                 if record['status'] != 'cancelled':
-                    check_cutoff(record, self.state['restaurants'][record['restaurant_id']])
-                    record = {**record, 'status': 'cancelled'}
-                    self.state['reservations'][record['reference']] = record
+                    check_cutoff(record)
+                    record = {**record, 'status': 'cancelled', 'revision': record['revision'] + 1}
+                    commit_changes(self.state, [record], 'cancelled')
                 return 200, public_record(record)
             if method == 'PATCH' and not match[2]:
-                candidate = changed(record, body, self.state['restaurants'])
+                candidate = changed(record, body, self.state['restaurants'], self.state['policies'])
                 require(available(candidate, self.state['reservations'], {record['reference']}), 'table_unavailable', 409)
-                self.state['reservations'][record['reference']] = candidate
+                commit_changes(self.state, [candidate])
                 return 200, public_record(candidate)
         require(False, 'not_found', 404)
 
     def create(self, uid, body):
-        candidate = proposal(self.state['restaurants'], body)
+        candidate = proposal(self.state['restaurants'], body, self.state['policies'])
         require(available(candidate, self.state['reservations']), 'table_unavailable', 409)
-        ref = secrets.token_hex(5).upper()
-        while ref in self.state['reservations']:
-            ref = secrets.token_hex(5).upper()
-        record = {**candidate, 'reservation_id': 'res_' + secrets.token_hex(16), 'reference': ref,
-                  'user_id': uid, 'status': 'confirmed', 'created_at': now().isoformat()}
-        self.state['reservations'][ref] = record
+        record = new_record(candidate, uid, self.state['reservations'])
+        self.state['reservations'][record['reference']] = record
+        append_event(self.state, record, 'created')
+        bump_restaurant(self.state, record['restaurant_id'])
         return public_record(record)
 
     def move(self, uid, body):
@@ -163,10 +209,10 @@ class Application:
             current = self.owned(move['reference'], uid)
             if candidates:
                 require(current['restaurant_id'] == candidates[0]['restaurant_id'])
-            candidates.append(changed(current, move, self.state['restaurants']))
+            candidates.append(changed(current, move, self.state['restaurants'], self.state['policies']))
         # Only the final complete arrangement participates in occupancy checking.
         for i, candidate in enumerate(candidates):
             require(available(candidate, self.state['reservations'], set(refs)), 'table_unavailable', 409)
             require(all(not overlaps(candidate, other) for other in candidates[:i]), 'table_unavailable', 409)
-        self.state['reservations'].update({c['reference']: c for c in candidates})
+        commit_changes(self.state, candidates)
         return {'reservations': [public_record(c) for c in candidates]}

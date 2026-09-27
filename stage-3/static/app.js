@@ -171,10 +171,14 @@ function renderResults() {
     node('p',{class:'results-context'},`${restaurant.name} · ${query.date} · ${query.party_size} guests`),node('p',{class:'muted'},`Times are local to ${restaurant.timezone}.`)),
     node('div',{class:'legend'},node('span',{},'Available'),node('span',{},'Unavailable'))));
   const grid = node('div',{class:'availability-grid',...test('availability-grid')});
-  const options = restaurant.tables.map(t=>({ids:[t.id],capacity:t.capacity}));
+  // Capacity comes from this availability result. Restaurant detail intentionally
+  // remains its original fixture after a dated policy is published.
+  const capacityFor = ids => availability.slots.flatMap(s=>s.available_options||[])
+    .find(o=>JSON.stringify(o.table_ids)===JSON.stringify(ids))?.capacity;
+  const options = restaurant.tables.map(t=>({ids:[t.id],capacity:capacityFor([t.id])}));
   for (const pair of restaurant.combinable || []) {
     if (availability.slots.some(s=>(s.available_options||[]).some(o=>JSON.stringify(o.table_ids)===JSON.stringify(pair))))
-      options.push({ids:pair,capacity:pair.reduce((sum,id)=>sum+ExactJSON.positiveInteger(restaurant.tables.find(t=>t.id===id).capacity),0n)});
+      options.push({ids:pair,capacity:capacityFor(pair)});
   }
   for (const option of options) {
     const labels = tableLabels(restaurant,option.ids), pair=option.ids.length===2;
@@ -187,7 +191,7 @@ function renderResults() {
         onclick:()=>choose(restaurant,option.ids,slot,query)},time);
     });
     grid.append(node('article',{class:`seating-card ${pair?'pair':''}`},node('div',{class:'seating-heading'},node('div',{},node('p',{class:'seating-kind'},pair?'Tables together':'Your own table'),
-      node('h3',{},labels)),node('span',{class:'seating-capacity'},`Up to ${option.capacity}`)),node('div',{class:'slot-list'},buttons)));
+      node('h3',{},labels)),option.capacity===undefined?null:node('span',{class:'seating-capacity'},`Up to ${option.capacity}`)),node('div',{class:'slot-list'},buttons)));
   }
   container.append(grid);
   if (!availability.slots.some(s=>(s.available_options||s.available_table_ids).length)) container.append(notice('No tables fit your party at these times. Try another date or a different party size.'));
@@ -220,7 +224,7 @@ function renderBooking() {
   container.append(node('div',{class:'booking-panel',...test('booking-form')},node('div',{class:'booking-top'},node('div',{},node('p',{class:'eyebrow'},'Your evening, coming together'),
     node('h2',{},'Make it a reservation'),node('p',{class:'booking-summary',...test('booking-summary')},`${tableLabels(current.restaurant,current.ids)} · ${localText(current.local)}`))),
     node('form',{class:'booking-fields',novalidate:true,onsubmit:event=>{event.preventDefault(); submitBooking();}},field('Guests at your table',party),submit),
-    node('p',{class:'booking-note'},`Local time at ${current.restaurant.name}. Cancellation closes ${current.restaurant.cancellation_cutoff_minutes} minutes before your reservation.`),
+    node('p',{class:'booking-note'},`Local time at ${current.restaurant.name}. Your confirmation includes the cancellation terms accepted for this booking.`),
     node('div',{id:'booking-feedback','aria-live':'polite'})));
   renderBookingFeedback();
 }
@@ -239,6 +243,7 @@ function renderBookingFeedback() {
       node('p',{...test('confirmation-details')},`${current.restaurant.name} · ${labels} · ${localText(record.starts_at_local)} · ${record.party_size} guests`),
       node('p',{...test('confirmation-tables')},labels),node('span',{class:'quiet'},'Your confirmation reference'),
       node('strong',{class:'reference',...test('confirmation-reference')},record.reference),
+      record.accepted_terms?node('p',{class:'quiet'},`Cancellation closes ${record.accepted_terms.cancellation_cutoff_minutes} minutes before your reservation.`):null,
       node('a',{href:'/lookup?reference='+encodeURIComponent(record.reference),'data-nav':''},'View or cancel this reservation →')));
   }
 }
@@ -336,7 +341,7 @@ function renderDetail() {
   const detail=node('section',{class:'detail',...test('reservation-detail')},node('div',{class:'detail-heading'},node('h2',{},restaurant.name),
     node('span',{class:`status ${record.status}`,...test('reservation-status')},record.status)),lines);
   if (record.status==='confirmed') detail.append(node('button',{type:'button',class:'secondary danger',...test('reservation-cancel-button'),onclick:event=>cancel(current,event.currentTarget)},'Cancel reservation'),
-    node('p',{class:'quiet'},`Cancellation closes ${restaurant.cancellation_cutoff_minutes} minutes before your reservation.`));
+    node('p',{class:'quiet'},record.accepted_terms?`Cancellation closes ${record.accepted_terms.cancellation_cutoff_minutes} minutes before your reservation.`:'Cancellation follows the terms accepted when you booked.'));
   else detail.append(node('p',{class:'muted'},'This reservation is cancelled. We hope to welcome you another time.'));
   container.replaceChildren(detail);
 }

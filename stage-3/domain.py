@@ -1,6 +1,7 @@
 """Reservation rules independent of transport and storage mutation."""
 import re
 from datetime import timedelta
+from policies import bounded_integer, effective_config, selected_terms
 
 from timekeeping import clock_time, instant, interval, now, zone, WEEKDAYS
 from validation import field, identifier, integer, object_body, party, require
@@ -36,6 +37,8 @@ def restaurant_config(body):
         require(len(set(ids)) == 2 and all(i in [t['id'] for t in result['tables']] for i in ids))
         require(not any(set(ids) == set(p) for p in result['combinable']))
         result['combinable'].append(ids)
+    result['manager_user_ids'] = [identifier({'id': value}, 'id') for value in
+                                  field(body, 'manager_user_ids', list)] if 'manager_user_ids' in body else []
     return result
 
 
@@ -70,17 +73,22 @@ def seating_options(restaurant):
         yield {'table_ids': list(pair), 'capacity': sum(by_id[i]['capacity'] for i in pair)}
 
 
-def proposal(restaurants, body):
+def proposal(restaurants, body, policies=None, *, terms=None):
     rid = identifier(body, 'restaurant_id')
     size = party(body)
     local = field(body, 'starts_at_local', str)
     require(rid in restaurants, 'not_found', 404)
-    restaurant = restaurants[rid]
+    original = restaurants[rid]
+    from timekeeping import local_time
+    day = local_time(local).date().isoformat()
+    terms = terms if terms is not None else selected_terms(original, day, (policies or {}).get(rid, []))
+    restaurant = effective_config(original, terms)
     ids, capacity = seating(restaurant, body)
     require(size <= capacity, 'party_exceeds_capacity')
     start, end = interval(restaurant, local)
     return {'restaurant_id': rid, 'table_ids': ids, **({'table_id': ids[0]} if len(ids) == 1 else {}), 'party_size': size,
-            'starts_at_local': local, 'starts_at': start.isoformat(), 'ends_at': end.isoformat()}
+            'starts_at_local': local, 'starts_at': start.isoformat(), 'ends_at': end.isoformat(),
+            'accepted_terms': terms}
 
 
 def overlaps(a, b):
@@ -94,21 +102,30 @@ def available(candidate, reservations, exclude=()):
                for r in reservations.values())
 
 
-def check_cutoff(reservation, restaurant):
+def check_cutoff(reservation, restaurant=None):
     # Difference avoids overflow from unbounded but valid integer cutoff values.
     remaining = (instant(reservation['starts_at']) - now()).total_seconds()
-    require(remaining > restaurant['cancellation_cutoff_minutes'] * 60, 'cutoff_passed', 409)
+    terms = reservation.get('accepted_terms', restaurant)
+    require(remaining > terms['cancellation_cutoff_minutes'] * 60, 'cutoff_passed', 409)
 
 
-def changed(reservation, body, restaurants):
+def changed(reservation, body, restaurants, policies=None):
+    if 'expected_revision' in body:
+        expected = bounded_integer(body['expected_revision'])
+        require(expected == reservation['revision'], 'stale_revision', 409)
     require(reservation['status'] != 'cancelled', 'reservation_cancelled', 409)
-    check_cutoff(reservation, restaurants[reservation['restaurant_id']])
+    check_cutoff(reservation)
     values = {k: reservation[k] for k in ('restaurant_id', 'starts_at_local', 'party_size')}
     values.update({k: body[k] for k in ('table_id', 'table_ids', 'starts_at_local', 'party_size') if k in body})
     if 'table_id' not in body and 'table_ids' not in body:
         values['table_ids'] = members(reservation)
+    ids, _ = seating(restaurants[reservation['restaurant_id']], values)
+    size = party(values)
+    local = field(values, 'starts_at_local', str)
+    if ids == members(reservation) and size == reservation['party_size'] and local == reservation['starts_at_local']:
+        return reservation
     unchanged = {k: v for k, v in reservation.items() if k not in ('table_id', 'table_ids')}
-    return {**unchanged, **proposal(restaurants, values)}
+    return {**unchanged, **proposal(restaurants, values, policies), 'revision': reservation['revision'] + 1}
 
 
 def public_record(reservation):
