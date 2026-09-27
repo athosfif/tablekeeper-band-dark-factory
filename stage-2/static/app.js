@@ -201,6 +201,7 @@ function choose(restaurant, ids, slot, query) {
     renderBooking();
   }
   renderResults();
+  document.querySelector('#booking')?.scrollIntoView({block:'nearest'});
   document.querySelector('#booking-party')?.focus({preventScroll:true});
 }
 function renderBooking() {
