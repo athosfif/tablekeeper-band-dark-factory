@@ -8,6 +8,7 @@ Work is in progress. Stage 1 is independently accepted at `ec96785a3aaa611e8519d
 
 - [plan.md](plan.md) records the sequence and acceptance map.
 - [FACTORY.md](FACTORY.md) records seat responsibilities, reproducibility, decisions, costs and failure handling.
+- [reports/acceptance.json](reports/acceptance.json) records exact acceptance identities and per-revision counts.
 - `mandates/` contains exact copies of the three supplied generic mandates.
 - `stage-N/RUN.md`, when present, describes that folder's standalone build and runtime.
 

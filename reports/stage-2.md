@@ -12,9 +12,9 @@ The new 20-family numeric supplement was fixed at 07:32:25.420595 UTC before sou
 
 The independent image is `sha256:f14448a31719d4d38f8ee32c1986aeb6fb0621790c02172bbe5090d2889c5fcd`. Served script/style/HTML bytes match committed blobs; 63 actual Chrome screenshots cover 375/1440 layouts and 40-digit mobile wrapping. Caption contrast remains 5.315248802966871:1. Product containers had 2CPU/2GiB, internal-only networking, no product volumes and tested PORT=9090 as well as default8080. Four tracked build contexts were verified; review containers/network were cleaned after logging. Earlier stage tree, official source and tests remained unchanged. This finite acceptance does not claim hidden-test proof or formal accessibility certification.
 
-## Committed candidate and Builder evidence
+## Earlier candidate and Builder evidence
 
-The complete candidate is `97031312f2ddd12b118388b369fcce576827ba43`, stage-2 tree `a0a23761dd71132ffe6c8b8cae29e2407d7e4517`. Builder formally handed it off with unchanged frozen stage 1. Independent review initially received `b85125091c8fd86408725b090fcc7cab77cd7129` and then received the complete cumulative requirements again with the updated target; any earlier revision evidence must retain its original identity.
+The earlier complete Builder candidate was `97031312f2ddd12b118388b369fcce576827ba43`, stage-2 tree `a0a23761dd71132ffe6c8b8cae29e2407d7e4517`. Builder formally handed it off with unchanged frozen stage 1. Independent review initially received `b85125091c8fd86408725b090fcc7cab77cd7129` and then received the complete cumulative requirements again with the updated target; earlier revision evidence retains its original identity.
 
 Builder's final isolated run `stage2-official-02` passed 120/120 stage-1 and 25/25 stage-2 cases, zero required failures/errors/skips/deselections, in 40.588579 seconds total (17.41s and 14.46s suite times). The expected stage-3 probe collected 7 but stopped after one missing-policy-endpoint failure; 6 were not run. The probe is not a required-stage failure. These 145 shipped cases are partial coverage.
 

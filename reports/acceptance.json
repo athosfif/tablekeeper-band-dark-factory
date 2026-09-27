@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "run": "tablekeeper-r03",
+  "room_id": "769c0fe4-0d50-4507-9c8a-1ed742e1c477",
+  "official_commit": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "evidence_root": "/Volumes/FIGUEIRA/LABLAB/BAND DARK FACTORY/TABLEKEEPER/evidence/final-r03-20260927/agent-evidence",
+  "counting_rule": "Counts are per revision and lane. Repeated or cumulative executions are not additional distinct cases. Cases can cover overlapping requirements; HTTP events and prepared scenarios are not product passes.",
+  "stages": {
+    "1": {
+      "status": "accepted",
+      "accepted_commit": "ec96785a3aaa611e8519d09869cade8ffddb9224",
+      "accepted_tree": "dfff49710165dc7d568496f1d230b4fc69eb7b2c",
+      "review_report": "reviewer/review-ec96785/review-report.md",
+      "required_official_passes_at_accepted_revision": 120,
+      "independent_distinct_cases_at_accepted_revision": 86,
+      "independent_executions_at_accepted_revision": 86,
+      "independent_failures_at_accepted_revision": 0,
+      "preserved_rejected_commits": ["d542ba1ac20d8bd4d62a7a938450d4526f64bed0"],
+      "expected_next_stage_probe": {"collected": 25, "executed": 1, "passed": 0, "failed": 1, "unexecuted": 24}
+    },
+    "2": {
+      "status": "accepted",
+      "accepted_commit": "e44838741cc906fbcae88e4248b5dc850af90e7c",
+      "accepted_tree": "b33e79f9bb65ff730b626f9c774afa4653b11e59",
+      "review_report": "reviewer/review-e448387/review-report.md",
+      "required_official_passes_at_accepted_revision": 145,
+      "required_official_command_seconds": 129.845875,
+      "independent_distinct_cases_at_accepted_revision": 176,
+      "independent_executions_at_accepted_revision": 178,
+      "independent_failures_at_accepted_revision": 0,
+      "preserved_rejected_commits": ["97031312f2ddd12b118388b369fcce576827ba43", "050edd1b12d0653e0e35b037bd91e14e52adb2ea"],
+      "superseded_without_gate": ["b85125091c8fd86408725b090fcc7cab77cd7129"],
+      "expected_next_stage_probe": {"collected": 7, "executed": 1, "passed": 0, "failed": 1, "unexecuted": 6}
+    },
+    "3": {
+      "status": "independent_review_pending",
+      "candidate_commit": "6b75841c243ea4722be08834526545ea847bad27",
+      "candidate_tree": "3c21f70a1e2d2f2a615c1e1b4a3ab50d2bb699fb",
+      "builder_report": "builder/stage-3-implementation.md",
+      "independent_acceptance": null
+    },
+    "4": {
+      "status": "source_blind_preparation_only",
+      "preparation_manifest": "reviewer/stage-4-preparation-manifest.json",
+      "product_executions": 0,
+      "independent_acceptance": null
+    }
+  },
+  "final_all_folder_check": null,
+  "operator_room_export": "pending authentic export after factory completion; no fabricated room.json",
+  "published": false,
+  "submitted": false
+}
