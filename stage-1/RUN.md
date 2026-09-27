@@ -43,7 +43,8 @@ Successful writes store the full original response separately from current
 records. The retry namespace includes user, method, path and key. Replays return
 the original receipt, including after amendment/cancellation. Failed requests do
 not reserve a key. Same JSON numbers compare numerically, object order is ignored,
-and array order and Boolean types remain significant.
+and array order and Boolean types remain significant. Decimal JSON numbers retain
+their precision and exponent in ignored fields, receipts and portable snapshots.
 
 Slot grids use local wall-clock minutes from opening. IANA conversion rejects
 nonexistent local times and uses the first occurrence of a repeated time. Duration,

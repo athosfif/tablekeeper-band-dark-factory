@@ -1,19 +1,14 @@
 """Threaded HTTP adapter; response delivery is outside the state transaction."""
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-import json
-import math
 import os
 import sys
 import traceback
 
 from application import Application
+import json_values as json
 from validation import APIError, fail
 
 app = Application()
-
-
-def reject_constant(value):
-    raise ValueError('Non-JSON number')
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -26,11 +21,11 @@ class Handler(BaseHTTPRequestHandler):
                     if length < 0:
                         raise ValueError('Negative length')
                     data = self.rfile.read(length)
-                    body = json.loads(data, parse_constant=reject_constant) if data else {}
+                    body = json.loads(data) if data else {}
                 except (ValueError, UnicodeDecodeError, RecursionError):
                     fail('malformed_request', 400)
             status, payload = app.handle(self.command, self.path, self.headers, body)
-            encoded = b'' if status == 204 else json.dumps(payload, ensure_ascii=True, allow_nan=False, separators=(',', ':')).encode('utf-8')
+            encoded = b'' if status == 204 else json.dumps(payload).encode('utf-8')
         except APIError as error:
             status = error.status
             encoded = json.dumps({'error': {'code': error.code, 'message': error.message}}).encode('utf-8')

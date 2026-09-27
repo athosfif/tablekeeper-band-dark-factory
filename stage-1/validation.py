@@ -1,6 +1,7 @@
 """The API's type, format and domain-error boundary."""
 import math
 import re
+from decimal import Decimal
 
 
 class APIError(Exception):
@@ -49,7 +50,8 @@ def integer(body, name, minimum=1):
 def party(body):
     value = body.get('party_size')
     require((type(value) is int and value >= 1) or
-            (type(value) is float and math.isfinite(value) and value >= 1 and value.is_integer()))
+            (type(value) is float and math.isfinite(value) and value >= 1 and value.is_integer()) or
+            (type(value) is Decimal and value.is_finite() and value >= 1 and value == value.to_integral_value()))
     return int(value)
 
 
@@ -61,7 +63,7 @@ def email(body):
 
 def same_json(left, right):
     """JSON value equality: object order immaterial, booleans are not numbers."""
-    if type(left) in (int, float) and type(right) in (int, float):
+    if type(left) in (int, float, Decimal) and type(right) in (int, float, Decimal):
         return left == right
     if type(left) is not type(right):
         return False
