@@ -4,7 +4,7 @@ This run is authorized by the single dispatch in room `769c0fe4-0d50-4507-9c8a-1
 
 ## Ownership and sequence
 
-Current gate: stage 1 accepted at `ec96785a3aaa611e8519d09869cade8ffddb9224`, frozen stage tree `dfff49710165dc7d568496f1d230b4fc69eb7b2c`. The initial revision was independently rejected and its four reproduced failures were successfully rechecked. Stage-2 preparation is underway; stages 2–4 have no acceptance yet.
+Current gate: stage 1 accepted at `ec96785a3aaa611e8519d09869cade8ffddb9224`, frozen stage tree `dfff49710165dc7d568496f1d230b4fc69eb7b2c`. Stage 2 was independently rejected at `97031312f2ddd12b118388b369fcce576827ba43` and color-only successor `050edd1b12d0653e0e35b037bd91e14e52adb2ea`: three browser flows round valid integer party sizes despite passing official checks. Builder committed the functional repair at `e44838741cc906fbcae88e4248b5dc850af90e7c`, and Reviewer is checking that exact revision; all original and intermediate failures remain evidence. Reviewer has independently prepared stage-3/4 acceptance maps without inspecting their product source. Stages 2–4 have no acceptance yet; no stage-3 source is authorized until stage 2 is accepted.
 
 Planner owns decomposition, requirement decisions, evidence reconciliation and the final report. Builder owns all product implementation and implementation commits. Reviewer derives acceptance cases before implementation inspection and independently accepts or rejects exact commits. Only one seat writes a given file; review artifacts live under the assigned agent-evidence root.
 

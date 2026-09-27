@@ -20,6 +20,8 @@ The product is API only. Past starts remain valid. Cutoff is measured against th
 
 Available singles remain in fixture order, followed by explicitly declared pairs in declared order. A pair is a set for identity and occupancy; reversed input is not a different seating choice. Combining is not transitive. API IDs are opaque; UI presentation uses human-readable names and table labels.
 
+The inherited fixture and party-size requirements impose no JavaScript safe-integer ceiling. Browser number parsing and serialization must preserve a valid integer exactly, including values above 2^53. A receipt matching a silently rounded request is not confirmation of the diner's original intent. Policy publications in stage 3 separately impose their explicit 1..100 capacity range; that does not retroactively constrain original fixtures or policy-0 terms.
+
 The browser must track the initiating search, selection, form body, user and route for in-flight work. Late success, failure or cleanup from a superseded operation cannot overwrite newer intent. A network-uncertain booking preserves its exact retry body/key; confirmed rejection and uncertain outcome are distinct visible states. Refreshing availability after rejection preserves the selected form and user inputs. Repeated unchanged successful submission resolves the original receipt without another booking. Changing a field creates a new request identity.
 
 Upgrade tests preserve an existing browser session and pending retry across import between requests. They do not invent a requirement for migration halfway through a single HTTP request, background polling or cross-tab synchronization.
@@ -32,6 +34,8 @@ History/decision and series reads have the explicit unauthenticated 404 privacy 
 
 An adopted anchor retains its identity and record. Occurrences have independent identities, scheduled local dates and exceptions. Individual real changes permanently mark exceptions; cancellation keeps an occurrence without creating an exception. Collective real changes increment each affected series once, and the restaurant once per whole operation.
 
+Adoption reports the first failing generated occurrence in index order, including an earlier occupancy error before a later non-occupancy error. This differs from the explicitly stated non-occupancy priority for batch moves and stage-4 recurring amendments. No artificial restaurant-revision endpoint is required before stage 4 exposes the counter through a preview.
+
 ## Stage 4
 
 A preview may store a plan but must not store a closure or change occupancy, history or revisions. Plan assignment uses each booking's accepted capacities and preserves its accepted time/terms. Considered bookings are selected by overlap with the proposed closure; candidate assignments must still be checked for the booking's entire interval against fixed bookings and previous closures.
@@ -39,6 +43,8 @@ A preview may store a plan but must not store a closure or change occupancy, his
 The deterministic objective is lexicographic: changed-booking count, total unused seats, then option-rank vector in reservation-reference order. A feasible plan that is merely convenient is insufficient. Atomic application records closure and seating changes together; intervening restaurant changes invalidate it, while unrelated restaurants do not.
 
 Recurring amendments use original scheduled dates and current seating, exclude cancelled/permanent exceptions, retain terms for no-ops, and use expected series revision before occurrence cutoff/booking validation. Operator seating repairs preserve exception flags and accepted terms. No new manager or recurring-management screen is required; the existing diner interface must reflect authoritative applied state when it reads it.
+
+An all-no-op recurring amendment or empty eligible set succeeds without checking occurrence cutoffs, because stage 4 applies that check to real changes. Input validation and expected-revision checks still apply. Immutable API replay receipts may retain old seating, while explicit current-state reads must reflect applied repairs. The specification does not require background polling of an idle confirmation page.
 
 ## Evidence limitations
 
