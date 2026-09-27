@@ -236,10 +236,12 @@ function renderBookingFeedback() {
   box.replaceChildren();
   if (current.busy) box.append(notice('Your reservation is being sent.','loading'));
   if (current.error) box.append(notice(current.error,'error','booking-error'));
-  if (current.uncertain) box.append(notice('We could not confirm whether your reservation was received. Keep these details and retry to safely retrieve the original result.','uncertain','booking-uncertain'));
+  if (current.uncertain) box.append(notice(current.intent?.received
+    ? `Reservation ${current.intent.received.reference} was received, but we could not load its current seating. Retry to retrieve the latest details safely.`
+    : 'We could not confirm whether your reservation was received. Keep these details and retry to safely retrieve the original result.','uncertain','booking-uncertain'));
   if (current.receipt) {
     const record=current.receipt, labels=tableLabels(current.restaurant,memberIds(record));
-    box.append(node('section',{class:'confirmation',...test('confirmation')},node('p',{class:'eyebrow'},'We’ll save you a seat'),node('h3',{},'Your table is reserved.'),
+    box.append(node('section',{class:'confirmation',...test('confirmation')},node('p',{class:'eyebrow'},'We’ll save you a seat'),node('h3',{},record.status==='cancelled'?'This reservation is cancelled.':'Your table is reserved.'),
       node('p',{...test('confirmation-details')},`${current.restaurant.name} · ${labels} · ${localText(record.starts_at_local)} · ${record.party_size} guests`),
       node('p',{...test('confirmation-tables')},labels),node('span',{class:'quiet'},'Your confirmation reference'),
       node('strong',{class:'reference',...test('confirmation-reference')},record.reference),
@@ -265,11 +267,17 @@ async function submitBooking() {
     const record=await api('/reservations',{method:'POST',body:intent.body,token:intent.token,key:intent.key});
     if (!record || typeof record.reference!=='string') throw new Error('Incomplete confirmation');
     if (!valid()) return;
-    current.receipt=record;
+    // Preserve the original receipt on the intent, but present current seating.
+    // Both requests belong to this same captured form, route and signed-in user.
+    intent.received=record;
+    const latest=await api('/reservations/'+encodeURIComponent(record.reference),{token:intent.token});
+    if (!valid()) return;
+    if (!latest || latest.reference!==record.reference || latest.restaurant_id!==current.restaurant.id) throw new Error('Incomplete current reservation');
+    current.receipt=latest;
   } catch (error) {
     if (!valid()) return;
     if (error instanceof RequestError) {
-      current.error=message(error);
+      current.error=(intent.received?'Your reservation was received, but its current details could not be loaded. ':'')+message(error);
       // A dated policy can change capacity or hours while the form is open.
       // Every confirmed rejection refreshes current choices without discarding it.
       runSearch(true);

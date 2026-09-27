@@ -144,8 +144,10 @@ not inferred from an amended anchor. Portable snapshots preserve plans,
 closures, schedules, reassignment histories and every old or new receipt.
 
 The existing browser lookup and explicit availability search read current seating
-and closures. An unchanged booking retry displays its original confirmation
-receipt; idle confirmations do not poll for operator changes.
+and closures. An unchanged booking retry retains its original API receipt and key, then reads
+the current booking before rendering confirmation. Both responses are guarded
+by the initiating form, route and session; a failed current read shows an explicit
+refusal or uncertainty instead of stale seating. Idle confirmations do not poll.
 
 ## Portable state
 
