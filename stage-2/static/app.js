@@ -5,7 +5,7 @@
 const main = document.querySelector('main');
 const sessionKey = 'tablekeeper.session.v1';
 let session = null;
-try { session = JSON.parse(localStorage.getItem(sessionKey)); } catch (_) { /* no retained session */ }
+try { session = ExactJSON.parse(localStorage.getItem(sessionKey) || 'null'); } catch (_) { /* no retained session */ }
 if (!session || typeof session.token !== 'string' || typeof session.user_id !== 'string') session = null;
 let sessionVersion = 0, routeVersion = 0, searchVersion = 0, lookupVersion = 0;
 let restaurants = [], restaurantLoad = null;
@@ -52,9 +52,9 @@ async function api(path, {method='GET', body, token, key} = {}) {
   if (body !== undefined) headers['Content-Type'] = 'application/json';
   if (token) headers.Authorization = `Bearer ${token}`;
   if (key) headers['Idempotency-Key'] = key;
-  const response = await fetch(path, {method, headers, body:body === undefined ? undefined : typeof body === 'string' ? body : JSON.stringify(body)});
+  const response = await fetch(path, {method, headers, body:body === undefined ? undefined : typeof body === 'string' ? body : ExactJSON.stringify(body)});
   let data;
-  try { data = await response.json(); }
+  try { data = ExactJSON.parse(await response.text()); }
   catch (error) {
     if (response.status >= 400 && response.status < 500) throw new RequestError(response.status, '', 'The request was refused. Please check your details.');
     throw error;
@@ -67,7 +67,7 @@ async function api(path, {method='GET', body, token, key} = {}) {
 }
 function saveSession(value) {
   session = value; sessionVersion++; selection = null; lookupDetail = null; lookupVersion++;
-  try { if (value) localStorage.setItem(sessionKey, JSON.stringify(value)); else localStorage.removeItem(sessionKey); } catch (_) { /* current page still works */ }
+  try { if (value) localStorage.setItem(sessionKey, ExactJSON.stringify(value)); else localStorage.removeItem(sessionKey); } catch (_) { /* current page still works */ }
   renderAccount();
 }
 function renderAccount() {
@@ -110,9 +110,9 @@ function renderHome() {
     node('figure', {class:'hero-art'}, node('img', {src:'/static/table.svg', alt:'', width:'400', height:'240'}), node('figcaption', {}, 'A PLACE FOR YOUR NEXT GATHERING')));
   const select = node('select', {id:'restaurant', ...test('restaurant-select'), required:true}, node('option', {value:''}, 'Loading restaurants…'));
   const date = node('input', {id:'date', type:'date', value:draft.date, required:true, ...test('date-input')});
-  const party = node('input', {id:'party', type:'number', min:'1', step:'1', value:draft.party_size, required:true, inputmode:'numeric', ...test('party-size-input')});
+  const party = node('input', {id:'party', type:'number', min:'1', step:'any', value:draft.party_size, required:true, inputmode:'numeric', ...test('party-size-input')});
   const submit = node('button', {type:'submit', class:'primary', ...test('search-button')}, 'Find a table', node('span', {'aria-hidden':'true'}, '↗'));
-  const form = node('form', {class:'search-fields', onsubmit:event=>{event.preventDefault(); runSearch();}},
+  const form = node('form', {class:'search-fields', novalidate:true, onsubmit:event=>{event.preventDefault(); runSearch();}},
     field('Restaurant', select), field('Date', date), field('Guests', party), submit);
   for (const [element, key] of [[select,'restaurant_id'], [date,'date'], [party,'party_size']]) element.addEventListener('input', ()=>{
     draft[key] = element.value; searchVersion++; results = null; selection = null;
@@ -145,6 +145,8 @@ async function runSearch(refresh=false) {
   if (!feedback) return;
   const valid = ()=>route === routeVersion && version === searchVersion && feedback.isConnected;
   if (!refresh) { results=null; selection=null; document.querySelector('#results').replaceChildren(); document.querySelector('#booking').replaceChildren(); }
+  try { query.party_size = ExactJSON.positiveInteger(query.party_size).toString(); }
+  catch (error) { feedback.replaceChildren(notice(message(error), 'error')); return; }
   feedback.replaceChildren(notice(refresh ? 'Updating availability. Your booking details are saved.' : 'Finding a place for your party…','loading'));
   try {
     const params = new URLSearchParams(query);
@@ -172,7 +174,7 @@ function renderResults() {
   const options = restaurant.tables.map(t=>({ids:[t.id],capacity:t.capacity}));
   for (const pair of restaurant.combinable || []) {
     if (availability.slots.some(s=>(s.available_options||[]).some(o=>JSON.stringify(o.table_ids)===JSON.stringify(pair))))
-      options.push({ids:pair,capacity:pair.reduce((sum,id)=>sum+restaurant.tables.find(t=>t.id===id).capacity,0)});
+      options.push({ids:pair,capacity:pair.reduce((sum,id)=>sum+ExactJSON.positiveInteger(restaurant.tables.find(t=>t.id===id).capacity),0n)});
   }
   for (const option of options) {
     const labels = tableLabels(restaurant,option.ids), pair=option.ids.length===2;
@@ -208,7 +210,7 @@ function renderBooking() {
   const container=document.querySelector('#booking'); if (!container) return;
   container.replaceChildren(); if (!selection) return;
   const current=selection;
-  const party=node('input',{id:'booking-party',type:'number',min:'1',step:'1',required:true,value:current.party,...test('booking-party-size')});
+  const party=node('input',{id:'booking-party',type:'number',min:'1',step:'any',required:true,value:current.party,...test('booking-party-size')});
   const submit=node('button',{class:'primary',type:'submit',...test('booking-submit')},'Confirm reservation');
   party.addEventListener('input',()=>{
     if (selection!==current) return;
@@ -217,7 +219,7 @@ function renderBooking() {
   });
   container.append(node('div',{class:'booking-panel',...test('booking-form')},node('div',{class:'booking-top'},node('div',{},node('p',{class:'eyebrow'},'Your evening, coming together'),
     node('h2',{},'Make it a reservation'),node('p',{class:'booking-summary',...test('booking-summary')},`${tableLabels(current.restaurant,current.ids)} · ${localText(current.local)}`))),
-    node('form',{class:'booking-fields',onsubmit:event=>{event.preventDefault(); submitBooking();}},field('Guests at your table',party),submit),
+    node('form',{class:'booking-fields',novalidate:true,onsubmit:event=>{event.preventDefault(); submitBooking();}},field('Guests at your table',party),submit),
     node('p',{class:'booking-note'},`Local time at ${current.restaurant.name}. Cancellation closes ${current.restaurant.cancellation_cutoff_minutes} minutes before your reservation.`),
     node('div',{id:'booking-feedback','aria-live':'polite'})));
   renderBookingFeedback();
@@ -234,7 +236,7 @@ function renderBookingFeedback() {
   if (current.receipt) {
     const record=current.receipt, labels=tableLabels(current.restaurant,memberIds(record));
     box.append(node('section',{class:'confirmation',...test('confirmation')},node('p',{class:'eyebrow'},'We’ll save you a seat'),node('h3',{},'Your table is reserved.'),
-      node('p',{...test('confirmation-details')},`${current.restaurant.name} · ${labels} · ${localText(record.starts_at_local)}`),
+      node('p',{...test('confirmation-details')},`${current.restaurant.name} · ${labels} · ${localText(record.starts_at_local)} · ${record.party_size} guests`),
       node('p',{...test('confirmation-tables')},labels),node('span',{class:'quiet'},'Your confirmation reference'),
       node('strong',{class:'reference',...test('confirmation-reference')},record.reference),
       node('a',{href:'/lookup?reference='+encodeURIComponent(record.reference),'data-nav':''},'View or cancel this reservation →')));
@@ -245,8 +247,11 @@ async function submitBooking() {
   if (!session) { current.error='Please sign in before reserving a table.'; renderBookingFeedback(); return; }
   const revision=current.revision, route=routeVersion, identity=sessionVersion;
   const valid=()=>selection===current && current.revision===revision && routeVersion===route && sessionVersion===identity;
-  const body={restaurant_id:current.restaurant.id, ...(current.ids.length===1?{table_id:current.ids[0]}:{table_ids:[...current.ids]}), starts_at_local:current.local, party_size:Number(current.party)};
-  const encoded=JSON.stringify(body);
+  let partySize;
+  try { partySize=ExactJSON.positiveInteger(current.party); }
+  catch (error) { current.error=message(error); current.uncertain=false; current.receipt=null; renderBookingFeedback(); return; }
+  const body={restaurant_id:current.restaurant.id, ...(current.ids.length===1?{table_id:current.ids[0]}:{table_ids:[...current.ids]}), starts_at_local:current.local, party_size:partySize};
+  const encoded=ExactJSON.stringify(body);
   if (!current.intent || current.intent.body!==encoded || current.intent.user!==session.user_id)
     current.intent={key:crypto.randomUUID(),body:encoded,user:session.user_id,token:session.token};
   const intent=current.intent;
