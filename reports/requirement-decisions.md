@@ -46,6 +46,8 @@ Recurring amendments use original scheduled dates and current seating, exclude c
 
 An all-no-op recurring amendment or empty eligible set succeeds without checking occurrence cutoffs, because stage 4 applies that check to real changes. Input validation and expected-revision checks still apply. Immutable API replay receipts may retain old seating, while explicit current-state reads must reflect applied repairs. The specification does not require background polling of an idle confirmation page.
 
+An explicit request to view confirmation again after a plan application must present the current booking's seating, even if its unchanged POST replay returns the original receipt. A separate guarded current-record GET satisfies both requirements. Current cancellation and failed current reads must be represented truthfully, with the same initiating user/route/form context protection as the initial request.
+
 ## Evidence limitations
 
 The authentic room export is supplied by the operator after completion. Missing `room.json` must remain an explicit offline-check limitation. Provider monetary spend is unmeasured unless a verified runtime source supplies it. Scenario plans, distinct cases, repeated scenario executions and raw HTTP-request counts must be reported separately.

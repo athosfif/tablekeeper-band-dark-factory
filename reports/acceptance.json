@@ -73,9 +73,10 @@
       }
     },
     "4": {
-      "status": "implementation_authorized",
-      "preparation_manifest": "reviewer/stage-4-preparation-manifest.json",
-      "product_executions": 0,
+      "status": "independent_review_pending",
+      "candidate_commit": "bb417f29a586fe0771fcc728ab308584f00d5b9a",
+      "candidate_tree": "2473ec5b52d8ab4ea53e6ce5f75eeb358f2bd719",
+      "builder_report": "builder/stage-4-implementation.md",
       "independent_acceptance": null
     }
   },

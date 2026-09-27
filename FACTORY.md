@@ -26,6 +26,8 @@ This run uses sequential stage gates and separate implementation/review ownershi
 
 The initial API candidate uses Python standard-library modules, a threaded HTTP adapter and one transactional in-memory store. A single lock serializes state decisions; detached snapshots and immutable receipts separate current records from retry results. This favors auditable atomicity over multiple-worker throughput. State is intentionally ephemeral, as permitted by the specification. No runtime external services or assets are required by this design; container checks must verify the actual result.
 
+Stage 3 separates dated policy selection, immutable event recording and recurring preparation into small modules under that transaction boundary. The stage-4 candidate adds an exact bounded seating optimizer with precomputed domains/conflict masks. It preserves each booking's accepted terms rather than substituting current policy. Original series schedules survive later edits and migration through recorded adoption data. Browser current-state reads remain separate from immutable original API receipts, with captured interaction context across both requests. The specified planning bound controls computation; it is not presented as unlimited scheduling capacity.
+
 Recorded run start: `2026-09-27T05:17:59Z`. Individual command timing is stored with execution evidence. Final elapsed time and actual suite counts will be stated in the terminal run report. Provider token usage and monetary/model spend are not available as verified measurements; no estimate is presented as measured spend. There were no authorized purchases or paid infrastructure activations.
 
 ## Failure handling and evidence integrity
