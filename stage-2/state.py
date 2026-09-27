@@ -9,7 +9,7 @@ from timekeeping import now
 from validation import APIError, email, field, identifier, object_body, require, same_json
 
 STATE_KEYS = {'users', 'restaurants', 'reservations', 'tokens', 'receipts'}
-RECORD_KEYS = {'reservation_id', 'reference', 'restaurant_id', 'table_id', 'party_size',
+RECORD_KEYS = {'reservation_id', 'reference', 'restaurant_id', 'party_size',
                'status', 'starts_at_local', 'starts_at', 'ends_at', 'created_at', 'user_id'}
 
 
@@ -42,25 +42,37 @@ def fixture_state(body):
         rid = identifier(body, 'id')
         ref = reference(field(body, 'reference', str))
         require(uid in state['users'] and rid not in ids and ref not in state['reservations'])
-        require(available(candidate, state['reservations']), 'table_unavailable', 409)
+        status = field(body, 'status', str) if 'status' in body else 'confirmed'
+        require(status in ('confirmed', 'cancelled'))
+        if status == 'confirmed':
+            require(available(candidate, state['reservations']), 'table_unavailable', 409)
         state['reservations'][ref] = {**candidate, 'reservation_id': rid, 'reference': ref,
-                                      'user_id': uid, 'status': 'confirmed', 'created_at': now().isoformat()}
+                                      'user_id': uid, 'status': status, 'created_at': now().isoformat()}
         ids.add(rid)
     return state
 
 
 def validate_record(record, state, *, owner=None):
-    require(type(record) is dict and set(record) == RECORD_KEYS)
+    require(type(record) is dict)
+    require(set(record) in (RECORD_KEYS | {'table_id'}, RECORD_KEYS | {'table_ids'},
+                           RECORD_KEYS | {'table_id', 'table_ids'}))
     identifier(record, 'reservation_id')
     reference(record['reference'])
     require(record['user_id'] in state['users'])
     if owner is not None:
         require(record['user_id'] == owner)
     require(record['status'] in ('confirmed', 'cancelled'))
-    expected = proposal(state['restaurants'], record)
-    require(all(same_json(record[k], v) for k, v in expected.items()))
+    body = {k: v for k, v in record.items() if k != 'table_id' or 'table_ids' not in record}
+    expected = proposal(state['restaurants'], body)
+    # Old stage-1 receipts legitimately have no table_ids. Validate without
+    # decorating those immutable responses; only live records are migrated.
+    require(all(same_json(record[k], v) for k, v in expected.items()
+                if k != 'table_ids' or 'table_ids' in record))
+    if 'table_ids' in record:
+        require(('table_id' in record) == (len(record['table_ids']) == 1))
     created = datetime.fromisoformat(field(record, 'created_at', str))
     require(created.tzinfo is not None)
+    return {**record, **expected}
 
 
 def imported_state(envelope):
@@ -83,13 +95,16 @@ def imported_state(envelope):
             require(valid_hash(user['password_hash']))
         for rid, restaurant in state['restaurants'].items():
             validated = restaurant_config(restaurant)
-            require(validated['id'] == rid and same_json(validated, restaurant))
+            comparable = validated if 'combinable' in restaurant else {k: v for k, v in validated.items() if k != 'combinable'}
+            require(validated['id'] == rid and same_json(comparable, restaurant))
+            state['restaurants'][rid] = validated
         for token, uid in state['tokens'].items():
             require(type(token) is str and bool(token) and type(uid) is str and uid in state['users'])
         checked = {}
         ids = set()
         for ref, reservation in state['reservations'].items():
-            validate_record(reservation, state)
+            reservation = validate_record(reservation, state)
+            state['reservations'][ref] = reservation
             require(ref == reservation['reference'] and reservation['reservation_id'] not in ids)
             ids.add(reservation['reservation_id'])
             if reservation['status'] == 'confirmed':

@@ -9,7 +9,7 @@ import secrets
 from threading import RLock
 from urllib.parse import parse_qs, unquote, urlsplit
 
-from domain import available, changed, check_cutoff, overlaps, proposal, public_record
+from domain import available, changed, check_cutoff, overlaps, proposal, public_record, seating_options
 from security import hash_password, verify_password
 from state import empty_state, fixture_state, imported_state, receipt_key
 from timekeeping import calendar_date, instant, now, starts
@@ -89,13 +89,15 @@ class Application:
             restaurant = self.state['restaurants'][rid]
             slots = []
             for local, start, end in starts(restaurant, day):
-                tables = []
-                for table in restaurant['tables']:
-                    candidate = {'restaurant_id': rid, 'table_id': table['id'],
+                options = []
+                for option in seating_options(restaurant):
+                    candidate = {'restaurant_id': rid, 'table_ids': option['table_ids'],
                                  'starts_at': start.isoformat(), 'ends_at': end.isoformat()}
-                    if table['capacity'] >= size and available(candidate, self.state['reservations']):
-                        tables.append(table['id'])
-                slots.append({'starts_at_local': local, 'starts_at': start.isoformat(), 'available_table_ids': tables})
+                    if option['capacity'] >= size and available(candidate, self.state['reservations']):
+                        options.append(option)
+                tables = [o['table_ids'][0] for o in options if len(o['table_ids']) == 1]
+                slots.append({'starts_at_local': local, 'starts_at': start.isoformat(),
+                              'available_table_ids': tables, 'available_options': options})
             return 200, {'restaurant_id': rid, 'date': query['date'], 'timezone': restaurant['timezone'], 'slots': slots}
 
         uid = self.user(headers)

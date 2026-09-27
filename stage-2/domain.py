@@ -28,26 +28,63 @@ def restaurant_config(body):
                  'capacity': integer(entry, 'capacity')}
         require(table['id'] not in [t['id'] for t in result['tables']])
         result['tables'].append(table)
+    result['combinable'] = []
+    for pair in field(body, 'combinable', list) if 'combinable' in body else []:
+        require(type(pair) is list, 'malformed_request', 400)
+        require(len(pair) == 2)
+        ids = [identifier({'id': value}, 'id') for value in pair]
+        require(len(set(ids)) == 2 and all(i in [t['id'] for t in result['tables']] for i in ids))
+        require(not any(set(ids) == set(p) for p in result['combinable']))
+        result['combinable'].append(ids)
     return result
+
+
+def members(record):
+    return record['table_ids'] if 'table_ids' in record else [record['table_id']]
+
+
+def seating(restaurant, body):
+    require(not ('table_id' in body and 'table_ids' in body))
+    if 'table_ids' in body:
+        values = field(body, 'table_ids', list)
+        require(bool(values))
+        ids = [identifier({'id': value}, 'id') for value in values]
+    else:
+        ids = [identifier(body, 'table_id')]
+    require(len(set(ids)) == len(ids))
+    require(len(ids) <= 2, 'combination_not_allowed')
+    by_id = {t['id']: t for t in restaurant['tables']}
+    require(all(i in by_id for i in ids), 'not_found', 404)
+    if len(ids) == 2:
+        pair = next((p for p in restaurant.get('combinable', []) if set(p) == set(ids)), None)
+        require(pair is not None, 'combination_not_allowed')
+        ids = list(pair)
+    return ids, sum(by_id[i]['capacity'] for i in ids)
+
+
+def seating_options(restaurant):
+    for table in restaurant['tables']:
+        yield {'table_ids': [table['id']], 'capacity': table['capacity']}
+    by_id = {t['id']: t for t in restaurant['tables']}
+    for pair in restaurant.get('combinable', []):
+        yield {'table_ids': list(pair), 'capacity': sum(by_id[i]['capacity'] for i in pair)}
 
 
 def proposal(restaurants, body):
     rid = identifier(body, 'restaurant_id')
-    tid = identifier(body, 'table_id')
     size = party(body)
     local = field(body, 'starts_at_local', str)
     require(rid in restaurants, 'not_found', 404)
     restaurant = restaurants[rid]
-    table = next((t for t in restaurant['tables'] if t['id'] == tid), None)
-    require(table is not None, 'not_found', 404)
-    require(size <= table['capacity'], 'party_exceeds_capacity')
+    ids, capacity = seating(restaurant, body)
+    require(size <= capacity, 'party_exceeds_capacity')
     start, end = interval(restaurant, local)
-    return {'restaurant_id': rid, 'table_id': tid, 'party_size': size,
+    return {'restaurant_id': rid, 'table_ids': ids, **({'table_id': ids[0]} if len(ids) == 1 else {}), 'party_size': size,
             'starts_at_local': local, 'starts_at': start.isoformat(), 'ends_at': end.isoformat()}
 
 
 def overlaps(a, b):
-    return (a['restaurant_id'] == b['restaurant_id'] and a['table_id'] == b['table_id']
+    return (a['restaurant_id'] == b['restaurant_id'] and bool(set(members(a)) & set(members(b)))
             and instant(a['starts_at']) < instant(b['ends_at'])
             and instant(b['starts_at']) < instant(a['ends_at']))
 
@@ -66,9 +103,12 @@ def check_cutoff(reservation, restaurant):
 def changed(reservation, body, restaurants):
     require(reservation['status'] != 'cancelled', 'reservation_cancelled', 409)
     check_cutoff(reservation, restaurants[reservation['restaurant_id']])
-    values = {k: reservation[k] for k in ('restaurant_id', 'table_id', 'starts_at_local', 'party_size')}
-    values.update({k: body[k] for k in ('table_id', 'starts_at_local', 'party_size') if k in body})
-    return {**reservation, **proposal(restaurants, values)}
+    values = {k: reservation[k] for k in ('restaurant_id', 'starts_at_local', 'party_size')}
+    values.update({k: body[k] for k in ('table_id', 'table_ids', 'starts_at_local', 'party_size') if k in body})
+    if 'table_id' not in body and 'table_ids' not in body:
+        values['table_ids'] = members(reservation)
+    unchanged = {k: v for k, v in reservation.items() if k not in ('table_id', 'table_ids')}
+    return {**unchanged, **proposal(restaurants, values)}
 
 
 def public_record(reservation):
