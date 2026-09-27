@@ -4,6 +4,8 @@ This run is authorized by the single dispatch in room `769c0fe4-0d50-4507-9c8a-1
 
 ## Ownership and sequence
 
+Current gate: stage 1 accepted at `ec96785a3aaa611e8519d09869cade8ffddb9224`, frozen stage tree `dfff49710165dc7d568496f1d230b4fc69eb7b2c`. The initial revision was independently rejected and its four reproduced failures were successfully rechecked. Stage-2 preparation is underway; stages 2–4 have no acceptance yet.
+
 Planner owns decomposition, requirement decisions, evidence reconciliation and the final report. Builder owns all product implementation and implementation commits. Reviewer derives acceptance cases before implementation inspection and independently accepts or rejects exact commits. Only one seat writes a given file; review artifacts live under the assigned agent-evidence root.
 
 1. Build stage 1 as a standalone JSON API. Review atomicity, errors, authorization, time/DST, replay receipts and state portability; run isolated official checks. Repair verified failures before acceptance.
